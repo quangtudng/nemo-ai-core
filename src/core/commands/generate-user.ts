@@ -18,7 +18,7 @@ export default function GenerateUser(plop: NodePlopAPI) {
         connection = await createConnection(typeOrmConfig as any);
         const userRepository = connection.getRepository(User);
         const roleRepository = connection.getRepository(Role);
-        const roles = await roleRepository.find({
+        const role = await roleRepository.findOne({
           where: {
             label: In(data.roles),
           },
@@ -29,7 +29,7 @@ export default function GenerateUser(plop: NodePlopAPI) {
         user.lastname = data.lastname;
         user.email = data.email;
         user.password = data.password;
-        user.roles = roles;
+        user.role = role;
         user.status = 1;
         user.auth = auth;
         await userRepository.save(user);

@@ -31,6 +31,7 @@ module.exports = {
         "endOfLine": "auto"
       },
     ],
+    "@typescript-eslint/no-inferrable-types": "off",
     "@typescript-eslint/naming-convention": [
       "warn",
       {
