@@ -21,15 +21,13 @@ export class BaseCrudService<T> {
   async findMany(param: BaseFilterDTO) {
     const data = await this.baseRepository.findMany(param);
     const totalPageCount = data[1] / (param.limit || 5);
-    const result = {
+    return {
       data: data[0],
       count: data[0].length,
       total: data[1],
       page: Number(param.page || 1),
       pageCount: Math.ceil(totalPageCount ? totalPageCount : 0),
     };
-
-    return result;
   }
 
   updateOne(id: number, dto: DeepPartial<T>): Promise<T> {
@@ -57,6 +55,7 @@ export class BaseCrudService<T> {
     conditions?: any,
     options?: FindOneOptions<T>,
   ): Promise<T> {
+    // @ts-ignore: Override code
     return this.baseRepository.findOneOrFail(conditions, options);
   }
 
@@ -77,6 +76,7 @@ export class BaseCrudService<T> {
     conditions?: any,
     options?: FindOneOptions<T>,
   ): Promise<T | undefined> {
+    // @ts-ignore: Override code
     return this.baseRepository.findOne(conditions, options);
   }
 }
