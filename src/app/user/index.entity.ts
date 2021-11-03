@@ -1,6 +1,7 @@
 import { AuthIdentity } from "@app/auth/index.entity";
 import { Role } from "@app/role/index.entity";
 import UserStatus from "@core/constants/user-status";
+import { BaseTimeStampEntity } from "@core/utils/crud/base-entity";
 import { hashString } from "@core/utils/hash/bcrypt";
 import {
   BeforeInsert,
@@ -13,7 +14,7 @@ import {
 } from "typeorm";
 
 @Entity("users")
-export class User {
+export class User extends BaseTimeStampEntity {
   @PrimaryGeneratedColumn()
   id: number;
 
