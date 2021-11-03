@@ -3,3 +3,4 @@ logs
 .github
 .husky
 node_modules
+src/database/migrations
