@@ -7,8 +7,7 @@ import {
   BeforeUpdate,
   Column,
   Entity,
-  JoinTable,
-  ManyToMany,
+  ManyToOne,
   OneToOne,
   PrimaryGeneratedColumn,
 } from "typeorm";
@@ -49,19 +48,8 @@ export class User {
   })
   status: number;
 
-  @ManyToMany(() => Role, (role) => role.users)
-  @JoinTable({
-    name: "users_roles",
-    joinColumn: {
-      name: "user_id",
-      referencedColumnName: "id",
-    },
-    inverseJoinColumn: {
-      name: "role_id",
-      referencedColumnName: "id",
-    },
-  })
-  roles: Role[];
+  @ManyToOne(() => Role, (role) => role.users)
+  role: Role;
 
   @OneToOne(() => AuthIdentity, (info) => info.user)
   auth: AuthIdentity;

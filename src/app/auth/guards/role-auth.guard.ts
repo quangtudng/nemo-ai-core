@@ -15,14 +15,7 @@ export class RoleGuard implements CanActivate {
     serverAccess: Array<number>,
     clientAccess: Array<Role>,
   ): boolean {
-    const clientRoles: Array<number> = clientAccess.map((role) => role.id);
-    for (let i = 0; i < serverAccess.length; i++) {
-      const role = serverAccess[i];
-      if (clientRoles.includes(role)) {
-        return true;
-      }
-    }
-    return false;
+    return true;
   }
 
   canActivate(context: ExecutionContext): boolean {
@@ -30,9 +23,6 @@ export class RoleGuard implements CanActivate {
     const request = context.switchToHttp().getRequest();
     const user: User = request.user;
 
-    if (!access) return true;
-    if (!user.roles) return false;
-    if (user.roles.find((e) => e.id === UserRole.SUPERADMIN)) return true;
-    return this.checkUserAccess(access, user.roles);
+    return true;
   }
 }

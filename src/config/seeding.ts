@@ -9,6 +9,7 @@ import {
 } from "@config/env";
 import { LoggerFactory } from "@core/utils/loggers/factory";
 import { join } from "path";
+import { SnakeNamingStrategy } from "typeorm-naming-strategies";
 
 const seedingConfig = {
   name: "seeding",
@@ -22,6 +23,7 @@ const seedingConfig = {
   seeds: [join(__dirname, "../", "database/seeds/**/*{.ts,.js}")],
   factories: [join(__dirname, "../", "database/factories/**/*{.ts,.js}")],
   logger: LoggerFactory.getInstance(SYSTEM_LOG_INFO),
+  namingStrategy: new SnakeNamingStrategy(),
 };
 
 export default seedingConfig;

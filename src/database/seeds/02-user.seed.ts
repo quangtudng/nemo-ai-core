@@ -10,13 +10,11 @@ export default class CreateUsers implements Seeder {
     await factory(User)()
       .map(async (user: User): Promise<User> => {
         const auth = new AuthIdentity();
-        const role = [
-          await connection
-            .createQueryBuilder<Role>(Role, "roles")
-            .where("roles.num = :num", { num: UserRole.USER })
-            .getOne(),
-        ];
-        user.roles = role;
+        const role = await connection
+          .createQueryBuilder<Role>(Role, "roles")
+          .where("roles.num = :num", { num: UserRole.USER })
+          .getOne();
+        user.role = role;
         user.auth = auth;
         return user;
       })
