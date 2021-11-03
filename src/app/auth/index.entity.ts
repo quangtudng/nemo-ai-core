@@ -19,7 +19,6 @@ export class AuthIdentity {
     length: 500,
     type: "varchar",
     nullable: true,
-    name: "refresh_token",
   })
   refreshToken: string;
 
@@ -28,7 +27,6 @@ export class AuthIdentity {
     length: 500,
     type: "varchar",
     nullable: true,
-    name: "email_verification_token",
   })
   emailVerificationToken: string;
 
@@ -36,7 +34,6 @@ export class AuthIdentity {
   @Column({
     type: "datetime",
     nullable: true,
-    name: "email_verification_valid_until",
   })
   emailVerificationValidUntil: string;
 
@@ -52,7 +49,6 @@ export class AuthIdentity {
   @Column({
     type: "datetime",
     nullable: true,
-    name: "password_reset_valid_until",
   })
   passwordResetValidUntil: string;
 

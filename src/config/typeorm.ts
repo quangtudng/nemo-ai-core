@@ -11,6 +11,7 @@ import {
 import { LoggerFactory } from "@core/utils/loggers/factory";
 import { TypeOrmModuleOptions } from "@nestjs/typeorm";
 import { join } from "path";
+import { SnakeNamingStrategy } from "typeorm-naming-strategies";
 
 const typeOrmConfig: TypeOrmModuleOptions = {
   type: <any>RDS_TYPE,
@@ -30,5 +31,6 @@ const typeOrmConfig: TypeOrmModuleOptions = {
   },
   maxQueryExecutionTime: RDS_MAX_QUERY_TIME,
   logger: LoggerFactory.getInstance(SYSTEM_LOG_INFO),
+  namingStrategy: new SnakeNamingStrategy(),
 };
 export default typeOrmConfig;
