@@ -34,12 +34,14 @@ export class User extends BaseTimeStampEntity {
   @Column({
     length: 50,
     type: "varchar",
+    nullable: true,
   })
   firstname: string;
 
   @Column({
     length: 50,
     type: "varchar",
+    nullable: true,
   })
   lastname: string;
 
@@ -52,7 +54,7 @@ export class User extends BaseTimeStampEntity {
   @ManyToOne(() => Role, (role) => role.users)
   role: Role;
 
-  @OneToOne(() => AuthIdentity, (info) => info.user)
+  @OneToOne(() => AuthIdentity, (info) => info.user, { onDelete: "CASCADE" })
   auth: AuthIdentity;
 
   @BeforeInsert()
