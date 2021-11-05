@@ -53,7 +53,7 @@ export class AuthIdentity {
   passwordResetValidUntil: string;
 
   @ApiProperty()
-  @OneToOne(() => User, (user) => user.auth)
+  @OneToOne(() => User, (user) => user.auth, { onDelete: "CASCADE" })
   @JoinColumn({ name: "user_id" })
   user: User;
 }

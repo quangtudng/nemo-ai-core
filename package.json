@@ -24,12 +24,12 @@
     "typeorm": "ts-node -r tsconfig-paths/register ./node_modules/typeorm/cli.js --config src/config/typeorm.ts",
     "typeorm-seeding": "ts-node -r tsconfig-paths/register ./node_modules/typeorm-seeding/dist/cli.js",
     "seed:run": "yarn typeorm-seeding seed -n seeding.ts -r src/config",
-    "migrate:create": "yarn typeorm migration:create -n",
-    "migrate:generate": "yarn typeorm migration:generate -n",
-    "migrate:run": "yarn typeorm migration:run",
-    "migrate:revert": "yarn typeorm migration:revert",
+    "schema:create": "yarn typeorm migration:create -n",
+    "schema:generate": "yarn typeorm migration:generate -n",
+    "schema:migrate": "yarn typeorm migration:run",
+    "schema:revert": "yarn typeorm migration:revert",
     "schema:drop": "yarn typeorm schema:drop",
-    "schema:reset": "yarn schema:drop && yarn migrate:run && yarn seed:run",
+    "schema:reset": "yarn schema:drop && yarn schema:migrate && yarn seed:run",
     "prepare-husky": "husky install"
   },
   "dependencies": {
