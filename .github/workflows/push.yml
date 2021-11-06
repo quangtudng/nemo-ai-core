@@ -6,7 +6,7 @@ name: Automation build and deploy
 jobs:
   deployment:
     name: Trigger deployment stage
-    runs-on: ubuntu18.04
+    runs-on: ubuntu-18.04
     steps:
       - name: Checkout Branch
         uses: actions/checkout@v2
