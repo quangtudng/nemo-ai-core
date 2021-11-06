@@ -29,7 +29,7 @@ export class LocationController {
     return this.service.createNode(dto);
   }
 
-  @ApiOperation({ summary: "Find all locations" })
+  @ApiOperation({ summary: "Get many locations" })
   @Get()
   findMany(@Query() param: FilterLocationDTO) {
     return this.service.findAllNodes(param);
