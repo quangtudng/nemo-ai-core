@@ -1,0 +1,23 @@
+on:
+  push:
+    branches:
+      - master
+name: Automation build and deploy
+jobs:
+  deployment:
+    name: Trigger deployment stage
+    runs-on: ubuntu18.04
+    steps:
+      - name: Checkout Branch
+        uses: actions/checkout@v2
+        with:
+          ref: 'master'
+      - name: Add SSH Key
+        uses: shimataro/ssh-key-action@v2
+        with:
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          known_hosts: 'placeholder-value'
+      - name: Add Known Hosts
+        run: ssh-keyscan -H ${{ secrets.SERVER_HOST }} >> ~/.ssh/known_hosts
+      - name: Execute build script
+        run: cd .github/workflows && chmod +x ./deploy.sh && ./deploy.sh
