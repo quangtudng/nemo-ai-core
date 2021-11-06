@@ -32,10 +32,8 @@ async function bootstrap() {
   const document: OpenAPIObject = SwaggerModule.createDocument(
     app,
     new DocumentBuilder()
-      .setTitle("TheCodeOrigin")
-      .setDescription(
-        "This is NestJS Simple Base with NestJSX Crud microframework",
-      )
+      .setTitle("NemoAI")
+      .setDescription("This is the API Documentation for NemoAI")
       .addBearerAuth()
       .setVersion("1.0.0")
       .setContact(

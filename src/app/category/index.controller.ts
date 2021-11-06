@@ -24,7 +24,7 @@ export class CategoryController {
     return this.service.createOne(dto);
   }
 
-  @ApiOperation({ summary: "Find many categories" })
+  @ApiOperation({ summary: "Get many categories" })
   @Get()
   findMany(@Query() param: FilterCategoryDTO) {
     return this.service.findMany(param);
