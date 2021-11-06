@@ -1,0 +1,512 @@
+{
+  "31": {
+    "name": "Hải Phòng",
+    "slug": "hai-phong",
+    "type": "thanh-pho",
+    "parent_code": null
+  },
+  "48": {
+    "name": "Đà Nẵng",
+    "slug": "da-nang",
+    "type": "thanh-pho",
+    "parent_code": null
+  },
+  "79": {
+    "name": "Hồ Chí Minh",
+    "slug": "ho-chi-minh",
+    "type": "thanh-pho",
+    "parent_code": null
+  },
+  "92": {
+    "name": "Cần Thơ",
+    "slug": "can-tho",
+    "type": "thanh-pho",
+    "parent_code": null
+  },
+  "105": {
+    "name": "Lai Châu",
+    "type": "thanh-pho",
+    "slug": "lai-chau",
+    "parent_code": "12"
+  },
+  "116": {
+    "name": "Sơn La",
+    "type": "thanh-pho",
+    "slug": "son-la",
+    "parent_code": "14"
+  },
+  "132": {
+    "name": "Yên Bái",
+    "type": "thanh-pho",
+    "slug": "yen-bai",
+    "parent_code": "15"
+  },
+  "148": {
+    "name": "Hòa Bình",
+    "type": "thanh-pho",
+    "slug": "hoa-binh",
+    "parent_code": "17"
+  },
+  "164": {
+    "name": "Thái Nguyên",
+    "type": "thanh-pho",
+    "slug": "thai-nguyen",
+    "parent_code": "19"
+  },
+  "165": {
+    "name": "Sông Công",
+    "type": "thanh-pho",
+    "slug": "song-cong",
+    "parent_code": "19"
+  },
+  "178": {
+    "name": "Lạng Sơn",
+    "type": "thanh-pho",
+    "slug": "lang-son",
+    "parent_code": "20"
+  },
+  "193": {
+    "name": "Hạ Long",
+    "type": "thanh-pho",
+    "slug": "ha-long",
+    "parent_code": "22"
+  },
+  "194": {
+    "name": "Móng Cái",
+    "type": "thanh-pho",
+    "slug": "mong-cai",
+    "parent_code": "22"
+  },
+  "195": {
+    "name": "Cẩm Phả",
+    "type": "thanh-pho",
+    "slug": "cam-pha",
+    "parent_code": "22"
+  },
+  "196": {
+    "name": "Uông Bí",
+    "type": "thanh-pho",
+    "slug": "uong-bi",
+    "parent_code": "22"
+  },
+  "213": {
+    "name": "Bắc Giang",
+    "type": "thanh-pho",
+    "slug": "bac-giang",
+    "parent_code": "24"
+  },
+  "227": {
+    "name": "Việt Trì",
+    "type": "thanh-pho",
+    "slug": "viet-tri",
+    "parent_code": "25"
+  },
+  "243": {
+    "name": "Vĩnh Yên",
+    "type": "thanh-pho",
+    "slug": "vinh-yen",
+    "parent_code": "26"
+  },
+  "244": {
+    "name": "Phúc Yên",
+    "type": "thanh-pho",
+    "slug": "phuc-yen",
+    "parent_code": "26"
+  },
+  "256": {
+    "name": "Bắc Ninh",
+    "type": "thanh-pho",
+    "slug": "bac-ninh",
+    "parent_code": "27"
+  },
+  "288": {
+    "name": "Hải Dương",
+    "type": "thanh-pho",
+    "slug": "hai-duong",
+    "parent_code": "30"
+  },
+  "290": {
+    "name": "Chí Linh",
+    "type": "thanh-pho",
+    "slug": "chi-linh",
+    "parent_code": "30"
+  },
+  "323": {
+    "name": "Hưng Yên",
+    "type": "thanh-pho",
+    "slug": "hung-yen",
+    "parent_code": "33"
+  },
+  "336": {
+    "name": "Thái Bình",
+    "type": "thanh-pho",
+    "slug": "thai-binh",
+    "parent_code": "34"
+  },
+  "347": {
+    "name": "Phủ Lý",
+    "type": "thanh-pho",
+    "slug": "phu-ly",
+    "parent_code": "35"
+  },
+  "356": {
+    "name": "Nam Định",
+    "type": "thanh-pho",
+    "slug": "nam-dinh",
+    "parent_code": "36"
+  },
+  "369": {
+    "name": "Ninh Bình",
+    "type": "thanh-pho",
+    "slug": "ninh-binh",
+    "parent_code": "37"
+  },
+  "370": {
+    "name": "Tam Điệp",
+    "type": "thanh-pho",
+    "slug": "tam-diep",
+    "parent_code": "37"
+  },
+  "380": {
+    "name": "Thanh Hóa",
+    "type": "thanh-pho",
+    "slug": "thanh-hoa",
+    "parent_code": "38"
+  },
+  "382": {
+    "name": "Sầm Sơn",
+    "type": "thanh-pho",
+    "slug": "sam-son",
+    "parent_code": "38"
+  },
+  "412": {
+    "name": "Vinh",
+    "type": "thanh-pho",
+    "slug": "vinh",
+    "parent_code": "40"
+  },
+  "436": {
+    "name": "Hà Tĩnh",
+    "type": "thanh-pho",
+    "slug": "ha-tinh",
+    "parent_code": "42"
+  },
+  "450": {
+    "name": "Đồng Hới",
+    "type": "thanh-pho",
+    "slug": "dong-hoi",
+    "parent_code": "44"
+  },
+  "461": {
+    "name": "Đông Hà",
+    "type": "thanh-pho",
+    "slug": "dong-ha",
+    "parent_code": "45"
+  },
+  "474": {
+    "name": "Huế",
+    "type": "thanh-pho",
+    "slug": "hue",
+    "parent_code": "46"
+  },
+  "502": {
+    "name": "Tam Kỳ",
+    "type": "thanh-pho",
+    "slug": "tam-ky",
+    "parent_code": "49"
+  },
+  "503": {
+    "name": "Hội An",
+    "type": "thanh-pho",
+    "slug": "hoi-an",
+    "parent_code": "49"
+  },
+  "522": {
+    "name": "Quảng Ngãi",
+    "type": "thanh-pho",
+    "slug": "quang-ngai",
+    "parent_code": "51"
+  },
+  "540": {
+    "name": "Quy Nhơn",
+    "type": "thanh-pho",
+    "slug": "quy-nhon",
+    "parent_code": "52"
+  },
+  "555": {
+    "name": "Tuy Hoà",
+    "type": "thanh-pho",
+    "slug": "tuy-hoa",
+    "parent_code": "54"
+  },
+  "568": {
+    "name": "Nha Trang",
+    "type": "thanh-pho",
+    "slug": "nha-trang",
+    "parent_code": "56"
+  },
+  "569": {
+    "name": "Cam Ranh",
+    "type": "thanh-pho",
+    "slug": "cam-ranh",
+    "parent_code": "56"
+  },
+  "582": {
+    "name": "Phan Rang-Tháp Chàm",
+    "type": "thanh-pho",
+    "slug": "phan-rang-thap-cham",
+    "parent_code": "58"
+  },
+  "593": {
+    "name": "Phan Thiết",
+    "type": "thanh-pho",
+    "slug": "phan-thiet",
+    "parent_code": "60"
+  },
+  "608": {
+    "name": "Kon Tum",
+    "type": "thanh-pho",
+    "slug": "kon-tum",
+    "parent_code": "62"
+  },
+  "622": {
+    "name": "Pleiku",
+    "type": "thanh-pho",
+    "slug": "pleiku",
+    "parent_code": "64"
+  },
+  "643": {
+    "name": "Buôn Ma Thuột",
+    "type": "thanh-pho",
+    "slug": "buon-ma-thuot",
+    "parent_code": "66"
+  },
+  "660": {
+    "name": "Gia Nghĩa",
+    "type": "thanh-pho",
+    "slug": "gia-nghia",
+    "parent_code": "67"
+  },
+  "672": {
+    "name": "Đà Lạt",
+    "type": "thanh-pho",
+    "slug": "da-lat",
+    "parent_code": "68"
+  },
+  "673": {
+    "name": "Bảo Lộc",
+    "type": "thanh-pho",
+    "slug": "bao-loc",
+    "parent_code": "68"
+  },
+  "689": {
+    "name": "Đồng Xoài",
+    "type": "thanh-pho",
+    "slug": "dong-xoai",
+    "parent_code": "70"
+  },
+  "703": {
+    "name": "Tây Ninh",
+    "type": "thanh-pho",
+    "slug": "tay-ninh",
+    "parent_code": "72"
+  },
+  "718": {
+    "name": "Thủ Dầu Một",
+    "type": "thanh-pho",
+    "slug": "thu-dau-mot",
+    "parent_code": "74"
+  },
+  "724": {
+    "name": "Dĩ An",
+    "type": "thanh-pho",
+    "slug": "di-an",
+    "parent_code": "74"
+  },
+  "725": {
+    "name": "Thuận An",
+    "type": "thanh-pho",
+    "slug": "thuan-an",
+    "parent_code": "74"
+  },
+  "731": {
+    "name": "Biên Hòa",
+    "type": "thanh-pho",
+    "slug": "bien-hoa",
+    "parent_code": "75"
+  },
+  "732": {
+    "name": "Long Khánh",
+    "type": "thanh-pho",
+    "slug": "long-khanh",
+    "parent_code": "75"
+  },
+  "747": {
+    "name": "Vũng Tàu",
+    "type": "thanh-pho",
+    "slug": "vung-tau",
+    "parent_code": "77"
+  },
+  "748": {
+    "name": "Bà Rịa",
+    "type": "thanh-pho",
+    "slug": "ba-ria",
+    "parent_code": "77"
+  },
+  "769": {
+    "name": "Thủ Đức",
+    "type": "thanh-pho",
+    "slug": "thu-duc",
+    "parent_code": "79"
+  },
+  "794": {
+    "name": "Tân An",
+    "type": "thanh-pho",
+    "slug": "tan-an",
+    "parent_code": "80"
+  },
+  "815": {
+    "name": "Mỹ Tho",
+    "type": "thanh-pho",
+    "slug": "my-tho",
+    "parent_code": "82"
+  },
+  "829": {
+    "name": "Bến Tre",
+    "type": "thanh-pho",
+    "slug": "ben-tre",
+    "parent_code": "83"
+  },
+  "842": {
+    "name": "Trà Vinh",
+    "type": "thanh-pho",
+    "slug": "tra-vinh",
+    "parent_code": "84"
+  },
+  "855": {
+    "name": "Vĩnh Long",
+    "type": "thanh-pho",
+    "slug": "vinh-long",
+    "parent_code": "86"
+  },
+  "866": {
+    "name": "Cao Lãnh",
+    "type": "thanh-pho",
+    "slug": "cao-lanh",
+    "parent_code": "87"
+  },
+  "867": {
+    "name": "Sa Đéc",
+    "type": "thanh-pho",
+    "slug": "sa-dec",
+    "parent_code": "87"
+  },
+  "868": {
+    "name": "Hồng Ngự",
+    "type": "thanh-pho",
+    "slug": "hong-ngu",
+    "parent_code": "87"
+  },
+  "883": {
+    "name": "Long Xuyên",
+    "type": "thanh-pho",
+    "slug": "long-xuyen",
+    "parent_code": "89"
+  },
+  "884": {
+    "name": "Châu Đốc",
+    "type": "thanh-pho",
+    "slug": "chau-doc",
+    "parent_code": "89"
+  },
+  "899": {
+    "name": "Rạch Giá",
+    "type": "thanh-pho",
+    "slug": "rach-gia",
+    "parent_code": "91"
+  },
+  "900": {
+    "name": "Hà Tiên",
+    "type": "thanh-pho",
+    "slug": "ha-tien",
+    "parent_code": "91"
+  },
+  "911": {
+    "name": "Phú Quốc",
+    "type": "thanh-pho",
+    "slug": "phu-quoc",
+    "parent_code": "91"
+  },
+  "930": {
+    "name": "Vị Thanh",
+    "type": "thanh-pho",
+    "slug": "vi-thanh",
+    "parent_code": "93"
+  },
+  "931": {
+    "name": "Ngã Bảy",
+    "type": "thanh-pho",
+    "slug": "nga-bay",
+    "parent_code": "93"
+  },
+  "941": {
+    "name": "Sóc Trăng",
+    "type": "thanh-pho",
+    "slug": "soc-trang",
+    "parent_code": "94"
+  },
+  "954": {
+    "name": "Bạc Liêu",
+    "type": "thanh-pho",
+    "slug": "bac-lieu",
+    "parent_code": "95"
+  },
+  "964": {
+    "name": "Cà Mau",
+    "type": "thanh-pho",
+    "slug": "ca-mau",
+    "parent_code": "96"
+  },
+  "094": {
+    "name": "Điện Biên Phủ",
+    "type": "thanh-pho",
+    "slug": "dien-bien-phu",
+    "parent_code": "11"
+  },
+  "070": {
+    "name": "Tuyên Quang",
+    "type": "thanh-pho",
+    "slug": "tuyen-quang",
+    "parent_code": "08"
+  },
+  "040": {
+    "name": "Cao Bằng",
+    "type": "thanh-pho",
+    "slug": "cao-bang",
+    "parent_code": "04"
+  },
+  "080": {
+    "name": "Lào Cai",
+    "type": "thanh-pho",
+    "slug": "lao-cai",
+    "parent_code": "10"
+  },
+  "024": {
+    "name": "Hà Giang",
+    "type": "thanh-pho",
+    "slug": "ha-giang",
+    "parent_code": "02"
+  },
+  "058": {
+    "name": "Bắc Kạn",
+    "type": "thanh-pho",
+    "slug": "bac-kan",
+    "parent_code": "06"
+  },
+  "01": {
+    "name": "Hà Nội",
+    "slug": "ha-noi",
+    "type": "thanh-pho",
+    "parent_code": null
+  }
+}

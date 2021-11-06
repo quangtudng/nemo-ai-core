@@ -1,14 +1,18 @@
+import slugify from "slugify";
 import {
   BeforeInsert,
   BeforeUpdate,
   Column,
   Entity,
   PrimaryGeneratedColumn,
+  Tree,
+  TreeChildren,
+  TreeParent,
 } from "typeorm";
-import slugify from "slugify";
 
-@Entity("category")
-export class Category {
+@Entity("locations")
+@Tree("materialized-path")
+export class Location {
   @PrimaryGeneratedColumn()
   id: number;
 
@@ -16,24 +20,30 @@ export class Category {
     length: 100,
     type: "varchar",
   })
-  title: string;
+  name: string;
 
   @Column({
-    type: "text",
-    nullable: true,
+    length: 100,
+    type: "varchar",
   })
-  description: string;
+  type: string;
 
   @Column({
-    length: 200,
+    length: 100,
     type: "varchar",
   })
   slug: string;
 
+  @TreeParent({ onDelete: "CASCADE" })
+  parent: Location;
+
+  @TreeChildren()
+  children: Location[];
+
   @BeforeInsert()
   @BeforeUpdate()
   slugify() {
-    this.slug = slugify(this.title, {
+    this.slug = slugify(this.name, {
       replacement: "-",
       lower: true,
       trim: true,
