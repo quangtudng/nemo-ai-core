@@ -1,3 +1,4 @@
+import { AmenityModule } from "@app/amenity/index.module";
 import { AuthModule } from "@app/auth/index.module";
 import { CategoryModule } from "@app/category/index.module";
 import { LocationModule } from "@app/location/index.module";
@@ -13,6 +14,7 @@ import { TypeOrmModule } from "@nestjs/typeorm";
     AuthModule,
     CategoryModule,
     LocationModule,
+    AmenityModule,
   ],
   controllers: [],
   providers: [],
