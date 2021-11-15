@@ -16,6 +16,8 @@ import { UserService } from "./index.service";
 import { DeleteResult } from "typeorm";
 import { FilterUserDTO } from "./dto/filter-many";
 import { ApiOperation, ApiTags } from "@nestjs/swagger";
+import { IsAuth } from "@app/auth/decorators/is-auth.decorator";
+import USER_ROLE from "@core/constants/user-role";
 
 @ApiTags("users")
 @Controller("users")
@@ -24,24 +26,28 @@ export class UserController {
 
   @ApiOperation({ summary: "Create a user" })
   @Post()
+  @IsAuth([USER_ROLE.SUPERADMIN, USER_ROLE.MODERATOR])
   createOne(@Body() dto: CreateUserDto): Promise<User> {
     return this.service.createOne(dto);
   }
 
   @ApiOperation({ summary: "Get many users" })
   @Get()
+  @IsAuth([USER_ROLE.SUPERADMIN, USER_ROLE.MODERATOR])
   findMany(@Query() param: FilterUserDTO) {
     return this.service.findMany(param);
   }
 
   @ApiOperation({ summary: "Get a user" })
   @Get(":id")
+  @IsAuth([USER_ROLE.SUPERADMIN, USER_ROLE.MODERATOR])
   getOne(@Param("id", ParseIntPipe) id: number): Promise<User> {
     return this.service.findOneOrFail(id);
   }
 
   @ApiOperation({ summary: "Update a user" })
   @Patch(":id")
+  @IsAuth([USER_ROLE.SUPERADMIN, USER_ROLE.MODERATOR])
   updateOne(
     @Param("id", ParseIntPipe) id: number,
     @Body() dto: UpdateUserDTO,
@@ -51,6 +57,7 @@ export class UserController {
 
   @ApiOperation({ summary: "Delete a user" })
   @Delete(":id")
+  @IsAuth([USER_ROLE.SUPERADMIN])
   deleteOne(@Param("id", ParseIntPipe) id: number): Promise<DeleteResult> {
     return this.service.deleteOne(id);
   }

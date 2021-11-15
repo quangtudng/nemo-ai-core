@@ -1,8 +1,8 @@
 import { Role } from "@app/role/index.entity";
 import { ApiProperty } from "@nestjs/swagger";
 import {
-  IsArray,
   IsEmail,
+  IsNotIn,
   IsNumber,
   IsOptional,
   IsString,
@@ -43,15 +43,11 @@ export class UpdateUserDTO {
   @IsOptional()
   lastname: string;
 
-  @ApiProperty({
-    type: [Number],
-    example: [1, 2, 3],
-    required: false,
-  })
-  @IsNumber({}, { each: true })
-  @IsArray()
+  @ApiProperty({ example: [1, 2, 3], required: false })
+  @IsNumber()
+  @IsNotIn([1])
   @IsOptional()
-  roleIds: number[];
+  roleId: number;
 
-  roles: Array<Role>;
+  role: Role;
 }

@@ -17,15 +17,15 @@ export class UserService extends BaseCrudService<User> {
 
   async createOne(dto: CreateUserDto): Promise<User> {
     await this.repo.checkDuplicateEmail(dto.email);
-    const roles = await this.roleRepository.findByIds(dto.roleIds);
-    dto.roles = roles;
+    const role = await this.roleRepository.findOne(dto.roleId);
+    dto.role = role;
     return super.createOne(dto);
   }
 
   async updateOne(id: number, dto: UpdateUserDTO): Promise<User> {
     await this.repo.checkDuplicateEmail(dto.email);
-    const roles = await this.roleRepository.findByIds(dto.roleIds);
-    dto.roles = roles;
+    const role = await this.roleRepository.findOne(dto.roleId);
+    dto.role = role;
     return super.updateOne(id, dto);
   }
 }

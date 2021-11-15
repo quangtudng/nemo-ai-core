@@ -1,0 +1,37 @@
+{
+  "01": {
+    "email": "nemo.superadmin@gmail.com",
+    "firstname": "NemoAI",
+    "lastname": "SuperAdmin",
+    "status": 1,
+    "role": "SUPERADMIN"
+  },
+  "02": {
+    "email": "nemo.moderator@gmail.com",
+    "firstname": "NemoAI",
+    "lastname": "Moderator",
+    "status": 1,
+    "role": "MODERATOR"
+  },
+  "03": {
+    "email": "paradox.partner@gmail.com",
+    "firstname": "Paradox",
+    "lastname": "Partner",
+    "status": 1,
+    "role": "PARTNER"
+  },
+  "04": {
+    "email": "sannatour.partner@gmail.com",
+    "firstname": "SannaTour",
+    "lastname": "Partner",
+    "status": 1,
+    "role": "PARTNER"
+  },
+  "05": {
+    "email": "tripadvisor.partner@gmail.com",
+    "firstname": "TripAdvisor",
+    "lastname": "Partner",
+    "status": 1,
+    "role": "PARTNER"
+  }
+}

@@ -50,11 +50,11 @@ export class TokenService {
         secret,
       });
     } catch (error) {
-      if (error.message == "jwt expired") {
-        throw new UnauthorizedException("Authentication info expired");
+      if (error.message === "jwt expired") {
+        throw new UnauthorizedException(HTTP_MESSAGE.AUTHENTICATION_EXPIRED);
       }
-      if (error.message == "invalid signature") {
-        throw new UnauthorizedException("Authentication info incorrect");
+      if (error.message === "invalid signature") {
+        throw new UnauthorizedException(HTTP_MESSAGE.AUTHENTICATED_FAILED);
       }
       ProjectLogger.exception(error.stack);
       throw new InternalServerErrorException(HTTP_MESSAGE.UNKNOWN_SERVER_ERROR);
