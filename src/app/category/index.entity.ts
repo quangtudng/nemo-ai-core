@@ -6,9 +6,10 @@ import {
   PrimaryGeneratedColumn,
 } from "typeorm";
 import slugify from "slugify";
+import { BaseTimeStampEntity } from "@core/utils/crud/base-entity";
 
 @Entity("category")
-export class Category {
+export class Category extends BaseTimeStampEntity {
   @PrimaryGeneratedColumn()
   id: number;
 
