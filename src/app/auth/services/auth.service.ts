@@ -1,6 +1,9 @@
-import { BadRequestException, Injectable } from "@nestjs/common";
+import {
+  BadRequestException,
+  Injectable,
+  UnauthorizedException,
+} from "@nestjs/common";
 import { UserService } from "@app/user/index.service";
-import { CreateUserDto } from "@app/user/dto/create-one";
 import { User } from "@app/user/index.entity";
 import { AuthCredentialsDto } from "../dto/auth-credentials.dto";
 import { BaseCrudService } from "@core/utils/crud/base-service";
@@ -9,8 +12,15 @@ import { AuthRepository } from "../index.repository";
 import { compareHashString } from "@core/utils/hash/bcrypt";
 import { REFRESH_TOKEN_SECRET } from "@config/env";
 import { RefreshTokenDTO } from "../dto/refresh-token.dto";
-import { VALIDATION_MESSAGE } from "@core/constants/error-message";
+import {
+  ENTITY_MESSAGE,
+  HTTP_MESSAGE,
+  VALIDATION_MESSAGE,
+} from "@core/constants/error-message";
 import { TokenService } from "./jwt.service";
+import USER_ROLE from "@core/constants/user-role";
+import USER_STATUS from "@core/constants/user-status";
+import { UserRepository } from "@app/user/index.repository";
 
 @Injectable()
 export class AuthService extends BaseCrudService<AuthIdentity> {
@@ -18,33 +28,35 @@ export class AuthService extends BaseCrudService<AuthIdentity> {
     private tokenService: TokenService,
     private userService: UserService,
     private repo: AuthRepository,
+    private userRepository: UserRepository,
   ) {
     super(repo);
   }
 
   async signin(dto: AuthCredentialsDto) {
-    const user = await this.userService.findOneOrFail({
+    const user = await this.userService.findOne({
       where: {
         email: dto.email,
       },
-      select: ["id", "password"],
+      select: ["id", "password", "status"],
     });
+
+    if (!user)
+      throw new BadRequestException(VALIDATION_MESSAGE.INCORRECT_CREDENTIAL);
+    if (user.status === USER_STATUS.DISABLED)
+      throw new BadRequestException(ENTITY_MESSAGE.USER_IS_DISABLED);
+
     const isSamePassword = await compareHashString(dto.password, user.password);
-    if (!isSamePassword) {
-      throw new BadRequestException(VALIDATION_MESSAGE.PASSWORD_NOT_MATCH);
-    }
+
+    if (!isSamePassword)
+      throw new BadRequestException(VALIDATION_MESSAGE.INCORRECT_CREDENTIAL);
+
     const { accessToken, refreshToken } = this.tokenService.generateAuthToken(
       { id: user.id },
       true,
     );
     await this.repo.saveRefreshToken(user, refreshToken);
     return { accessToken, refreshToken };
-  }
-
-  async signUp(dto: CreateUserDto): Promise<any> {
-    const user = await this.userService.createOne(dto);
-    user.password = dto.password;
-    return this.signin(user);
   }
 
   async getMe(id: number): Promise<User> {
@@ -71,5 +83,29 @@ export class AuthService extends BaseCrudService<AuthIdentity> {
 
   async revokeToken(dto: RefreshTokenDTO) {
     return this.repo.updateTokenOrFail(dto.refreshToken, null);
+  }
+
+  async enableUserAccount(id: number) {
+    const user = await this.userService.findOneOrFail(id, {
+      relations: ["role"],
+    });
+    if (user.role.num === USER_ROLE.SUPERADMIN)
+      throw new UnauthorizedException(HTTP_MESSAGE.UNAUTHORIZED);
+    if (user.status === USER_STATUS.ACTIVE)
+      throw new BadRequestException(HTTP_MESSAGE.USER_ALREADY_ACTIVE);
+    user.status = USER_STATUS.ACTIVE;
+    return this.userRepository.save(user);
+  }
+
+  async disableUserAccount(id: number) {
+    const user = await this.userService.findOneOrFail(id, {
+      relations: ["role"],
+    });
+    if (user.role.num === USER_ROLE.SUPERADMIN)
+      throw new UnauthorizedException(HTTP_MESSAGE.UNAUTHORIZED);
+    if (user.status === USER_STATUS.DISABLED)
+      throw new BadRequestException(HTTP_MESSAGE.USER_ALREADY_DISABLED);
+    user.status = USER_STATUS.DISABLED;
+    return this.userRepository.save(user);
   }
 }

@@ -16,6 +16,8 @@ import { CreateLocationDto } from "./dto/create-one";
 import { Location } from "./index.entity";
 import { UpdateLocationDTO } from "./dto/update-one";
 import { DeleteResult } from "typeorm";
+import { IsAuth } from "@app/auth/decorators/is-auth.decorator";
+import USER_ROLE from "@core/constants/user-role";
 
 @ApiTags("locations")
 @Controller("locations")
@@ -25,18 +27,21 @@ export class LocationController {
   @ApiOperation({ summary: "Create a location" })
   @ApiResponse({ status: 200, type: Location })
   @Post()
+  @IsAuth([USER_ROLE.SUPERADMIN, USER_ROLE.MODERATOR])
   createOne(@Body() dto: CreateLocationDto): Promise<Location> {
     return this.service.createNode(dto);
   }
 
   @ApiOperation({ summary: "Get many locations" })
   @Get()
+  @IsAuth([USER_ROLE.SUPERADMIN, USER_ROLE.MODERATOR])
   findMany(@Query() param: FilterLocationDTO) {
     return this.service.findAllNodes(param);
   }
 
   @ApiOperation({ summary: "Update a location" })
   @Patch(":id")
+  @IsAuth([USER_ROLE.SUPERADMIN, USER_ROLE.MODERATOR])
   updateOne(
     @Param("id", ParseIntPipe) id: number,
     @Body() dto: UpdateLocationDTO,
@@ -46,6 +51,7 @@ export class LocationController {
 
   @ApiOperation({ summary: "Delete a location" })
   @Delete(":id")
+  @IsAuth([USER_ROLE.SUPERADMIN, USER_ROLE.MODERATOR])
   deleteOne(@Param("id", ParseIntPipe) id: number): Promise<DeleteResult> {
     return this.service.deleteNode(id);
   }
