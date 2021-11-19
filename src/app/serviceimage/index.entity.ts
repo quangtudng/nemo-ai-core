@@ -1,5 +1,6 @@
+import { Service } from "@app/service/index.entity";
 import { BaseTimeStampEntity } from "@core/utils/crud/base-entity";
-import { Column, Entity, PrimaryGeneratedColumn } from "typeorm";
+import { Column, Entity, ManyToOne, PrimaryGeneratedColumn } from "typeorm";
 
 @Entity("service_image")
 export class ServiceImage extends BaseTimeStampEntity {
@@ -17,4 +18,7 @@ export class ServiceImage extends BaseTimeStampEntity {
     type: "varchar",
   })
   fallbackUrl: string;
+
+  @ManyToOne(() => Service, (service) => service.serviceImages)
+  service: Service;
 }

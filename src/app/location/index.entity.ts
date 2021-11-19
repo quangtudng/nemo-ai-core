@@ -1,9 +1,11 @@
+import { Service } from "@app/service/index.entity";
 import slugify from "slugify";
 import {
   BeforeInsert,
   BeforeUpdate,
   Column,
   Entity,
+  OneToMany,
   PrimaryGeneratedColumn,
   Tree,
   TreeChildren,
@@ -33,6 +35,9 @@ export class Location {
     type: "varchar",
   })
   slug: string;
+
+  @OneToMany(() => Service, (service) => service.location)
+  services: Service[];
 
   @TreeParent({ onDelete: "CASCADE" })
   parent: Location;
