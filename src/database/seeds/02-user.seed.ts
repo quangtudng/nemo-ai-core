@@ -12,8 +12,7 @@ export default class CreateUsers implements Seeder {
       const userData = users[i];
       const user = new User();
       user.email = userData.email;
-      user.firstname = userData.firstname;
-      user.lastname = userData.lastname;
+      user.fullname = userData.fullname;
       user.status = userData.status;
       const role = await connection
         .createQueryBuilder<Role>(Role, "roles")

@@ -36,20 +36,26 @@ export class User extends BaseTimeStampEntity {
     type: "varchar",
     nullable: true,
   })
-  firstname: string;
+  fullname: string;
 
   @Column({
     length: 50,
     type: "varchar",
     nullable: true,
   })
-  lastname: string;
+  phoneNumber: string;
 
   @Column({
     default: UserStatus.DISABLED,
     type: "tinyint",
   })
   status: number;
+
+  @Column({
+    type: "text",
+    nullable: true,
+  })
+  bio: string;
 
   @ManyToOne(() => Role, (role) => role.users)
   role: Role;
