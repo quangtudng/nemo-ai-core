@@ -4,7 +4,6 @@ import {
   UnauthorizedException,
 } from "@nestjs/common";
 import { UserService } from "@app/user/index.service";
-import { User } from "@app/user/index.entity";
 import { AuthCredentialsDto } from "../dto/auth-credentials.dto";
 import { BaseCrudService } from "@core/utils/crud/base-service";
 import { AuthIdentity } from "../index.entity";
@@ -38,7 +37,16 @@ export class AuthService extends BaseCrudService<AuthIdentity> {
       where: {
         email: dto.email,
       },
-      select: ["id", "password", "status"],
+      relations: ["role"],
+      select: [
+        "id",
+        "email",
+        "password",
+        "fullname",
+        "status",
+        "bio",
+        "phoneNumber",
+      ],
     });
 
     if (!user)
@@ -56,11 +64,46 @@ export class AuthService extends BaseCrudService<AuthIdentity> {
       true,
     );
     await this.repo.saveRefreshToken(user, refreshToken);
-    return { accessToken, refreshToken };
+    delete user["password"];
+    return {
+      accessToken,
+      refreshToken,
+      id: user.id,
+      email: user.email,
+      fullname: user.fullname,
+      status: user.status,
+      role: user.role.label,
+      phoneNumber: user.phoneNumber,
+      bio: user.bio,
+    };
   }
 
-  async getMe(id: number): Promise<User> {
-    return this.userService.findOneOrFail(id);
+  async getMe(id: number) {
+    const user = await this.userService.findOneOrFail({
+      where: {
+        id,
+      },
+      relations: ["role"],
+      select: [
+        "id",
+        "email",
+        "password",
+        "fullname",
+        "status",
+        "bio",
+        "phoneNumber",
+      ],
+    });
+    delete user["password"];
+    return {
+      id: user.id,
+      email: user.email,
+      fullname: user.fullname,
+      status: user.status,
+      role: user.role.label,
+      phoneNumber: user.phoneNumber,
+      bio: user.bio,
+    };
   }
 
   async refreshToken(dto: RefreshTokenDTO) {

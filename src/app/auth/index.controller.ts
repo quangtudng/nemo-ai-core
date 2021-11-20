@@ -27,7 +27,7 @@ export class AuthController {
   @ApiOperation({ summary: "Get current user using token" })
   @Get("/me")
   @IsAuth()
-  getProfile(@GetAuthUser() user: any): any {
+  getProfile(@GetAuthUser() user: any) {
     return this.authService.getMe(user.id);
   }
 

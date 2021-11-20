@@ -23,11 +23,8 @@ export class UserRepository extends BaseCrudRepository<User> {
     const offset = param.page && param.page > 1 ? (param.page - 1) * limit : 0;
     return this.createQueryBuilder("user")
       .where("user.email like :email", { email: `%${param.email}%` })
-      .andWhere("user.firstname like :firstname", {
-        firstname: `%${param.firstname}%`,
-      })
-      .andWhere("user.lastname like :lastname", {
-        lastname: `%${param.lastname}%`,
+      .andWhere("user.fullname like :fullname", {
+        fullname: `%${param.fullname}%`,
       })
       .take(limit)
       .skip(offset)
