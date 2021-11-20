@@ -2,6 +2,8 @@ import { SERVER_PORT } from "@config/env";
 import { GlobalExceptionsFilter } from "@core/filters/global-exception-filter";
 import { ValidationPipe } from "@nestjs/common";
 import { NestFactory } from "@nestjs/core";
+import * as basicAuth from "express-basic-auth";
+
 import {
   SwaggerModule,
   DocumentBuilder,
@@ -21,6 +23,17 @@ async function bootstrap() {
       transform: true,
     }),
   );
+  // Swagger Basic authentication
+  app.use(
+    ["/docs"],
+    basicAuth({
+      challenge: true,
+      users: {
+        ["nemo.superadmin"]: "nemoai1345",
+      },
+    }),
+  );
+
   const swaggerSetupOptions: SwaggerCustomOptions = {
     explorer: true,
     swaggerOptions: {

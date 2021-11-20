@@ -44,6 +44,7 @@
     "class-transformer": "^0.4.0",
     "class-validator": "^0.13.1",
     "dotenv": "^10.0.0",
+    "express-basic-auth": "^1.2.0",
     "faker": "^5.5.3",
     "logform": "^2.2.0",
     "mysql": "^2.18.1",
