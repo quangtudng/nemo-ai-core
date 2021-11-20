@@ -1,6 +1,8 @@
 import { User } from "@app/user/index.entity";
-import { ENTITY_MESSAGE } from "@core/constants/error-message";
+import { ENTITY_MESSAGE, HTTP_MESSAGE } from "@core/constants/error-message";
+import USER_STATUS from "@core/constants/user-status";
 import {
+  BadRequestException,
   Injectable,
   NotFoundException,
   UnauthorizedException,
@@ -14,15 +16,16 @@ import { AuthGuard } from "@nestjs/passport";
 export class JwtAuthGuard extends AuthGuard("jwt") {
   handleRequest(err: any, user: User, info: any): any {
     if (info?.message === "No auth token")
-      throw new UnauthorizedException("Authentication info missing");
+      throw new UnauthorizedException(HTTP_MESSAGE.AUTHENTICATED_FAILED);
     if (info?.message === "jwt expired")
-      throw new UnauthorizedException("Authentication info expired");
+      throw new UnauthorizedException(HTTP_MESSAGE.AUTHENTICATION_EXPIRED);
     if (info?.message)
-      throw new UnauthorizedException(
-        "Authentication info incorrect or missing",
-      );
+      throw new UnauthorizedException(HTTP_MESSAGE.AUTHENTICATED_FAILED);
     if (!user) {
       throw new NotFoundException(ENTITY_MESSAGE.USER_NOT_FOUND);
+    }
+    if (user.status === USER_STATUS.DISABLED) {
+      throw new BadRequestException(ENTITY_MESSAGE.USER_IS_DISABLED);
     }
     return user;
   }

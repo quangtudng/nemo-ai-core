@@ -1,11 +1,13 @@
 import { Role } from "@app/role/index.entity";
 import { ApiProperty } from "@nestjs/swagger";
 import {
-  IsArray,
   IsEmail,
   IsNotEmpty,
+  IsNotIn,
   IsNumber,
+  IsOptional,
   IsString,
+  Length,
   MaxLength,
   MinLength,
 } from "class-validator";
@@ -31,20 +33,26 @@ export class CreateUserDto {
   @MaxLength(50)
   @IsString()
   @IsNotEmpty()
-  firstname: string;
+  fullname: string;
 
-  @ApiProperty({ example: "Nguyen", nullable: false })
+  @ApiProperty({ example: "Quang Tu", nullable: false })
   @MinLength(5)
   @MaxLength(50)
   @IsString()
-  @IsNotEmpty()
-  lastname: string;
+  @IsOptional()
+  phoneNumber: string;
 
-  @ApiProperty({ type: [Number], example: [1, 2, 3], nullable: false })
-  @IsNumber({}, { each: true })
-  @IsArray()
-  @IsNotEmpty()
-  roleIds: number[];
+  @ApiProperty({ example: "Example description" })
+  @IsString()
+  @Length(1, 1000)
+  @IsOptional()
+  bio: string;
 
-  roles: Array<Role>;
+  @ApiProperty({ example: 2, nullable: false })
+  @IsNumber()
+  @IsNotIn([1])
+  @IsNotEmpty()
+  roleId: number;
+
+  role: Role;
 }

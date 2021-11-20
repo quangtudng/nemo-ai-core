@@ -13,11 +13,5 @@ export class FilterUserDTO extends BaseFilterDTO {
   @MaxLength(255)
   @IsString()
   @IsOptional()
-  firstname: string = "";
-
-  @ApiProperty({ example: "Nguyen", required: false })
-  @MaxLength(255)
-  @IsString()
-  @IsOptional()
-  lastname: string = "";
+  fullname: string = "";
 }

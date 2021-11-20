@@ -16,7 +16,7 @@ export class JwtStrategy extends PassportStrategy(Strategy) {
   async validate(payload: any): Promise<any> {
     if (payload.id)
       return this.usersRepository.findOne(payload.id, {
-        relations: ["roles"],
+        relations: ["role"],
       });
     return null;
   }

@@ -3,12 +3,15 @@ import {
   BeforeUpdate,
   Column,
   Entity,
+  OneToMany,
   PrimaryGeneratedColumn,
 } from "typeorm";
 import slugify from "slugify";
+import { BaseTimeStampEntity } from "@core/utils/crud/base-entity";
+import { Service } from "@app/service/index.entity";
 
 @Entity("category")
-export class Category {
+export class Category extends BaseTimeStampEntity {
   @PrimaryGeneratedColumn()
   id: number;
 
@@ -29,6 +32,9 @@ export class Category {
     type: "varchar",
   })
   slug: string;
+
+  @OneToMany(() => Service, (service) => service.category)
+  services: Service[];
 
   @BeforeInsert()
   @BeforeUpdate()

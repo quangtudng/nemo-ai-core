@@ -1,0 +1,32 @@
+{
+  "01": {
+    "email": "nemo.superadmin@gmail.com",
+    "fullname": "NemoAI SuperAdmin",
+    "status": 1,
+    "role": "SUPERADMIN"
+  },
+  "02": {
+    "email": "nemo.moderator@gmail.com",
+    "fullname": "NemoAI Moderator",
+    "status": 1,
+    "role": "MODERATOR"
+  },
+  "03": {
+    "email": "paradox.partner@gmail.com",
+    "fullname": "Paradox Partner",
+    "status": 1,
+    "role": "PARTNER"
+  },
+  "04": {
+    "email": "sannatour.partner@gmail.com",
+    "fullname": "SannaTour Partner",
+    "status": 1,
+    "role": "PARTNER"
+  },
+  "05": {
+    "email": "tripadvisor.partner@gmail.com",
+    "fullname": "TripAdvisor Partner",
+    "status": 1,
+    "role": "PARTNER"
+  }
+}

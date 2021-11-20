@@ -121,8 +121,6 @@ $ yarn command
 # Generate API module inside your project
 $ yarn command generate-module
 
-# Generate a user (Require database connection)
-$ yarn command generate-user
 ```
 
 ## Test (Coming soon)
