@@ -3,6 +3,7 @@ import { User } from "@app/user/index.entity";
 import * as CoreUsers from "@app/user/data/users.json";
 import { Connection } from "typeorm";
 import { Factory, Seeder } from "typeorm-seeding";
+import { hashString } from "@core/utils/hash/bcrypt";
 
 export default class CreateUsers implements Seeder {
   public async run(factory: Factory, connection: Connection): Promise<any> {
@@ -14,12 +15,13 @@ export default class CreateUsers implements Seeder {
       user.email = userData.email;
       user.fullname = userData.fullname;
       user.status = userData.status;
+      user.phoneNumber = userData.phoneNumber;
       const role = await connection
         .createQueryBuilder<Role>(Role, "roles")
         .where("roles.label = :label", { label: userData.role })
         .getOne();
       user.role = role;
-      user.password = "nemoai1345";
+      user.password = await hashString("nemoai1345");
       result.push(user);
     }
     await connection
