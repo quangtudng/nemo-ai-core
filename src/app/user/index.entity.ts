@@ -2,10 +2,7 @@ import { AuthIdentity } from "@app/auth/index.entity";
 import { Role } from "@app/role/index.entity";
 import UserStatus from "@core/constants/user-status";
 import { BaseTimeStampEntity } from "@core/utils/crud/base-entity";
-import { hashString } from "@core/utils/hash/bcrypt";
 import {
-  BeforeInsert,
-  BeforeUpdate,
   Column,
   Entity,
   ManyToOne,
@@ -62,10 +59,4 @@ export class User extends BaseTimeStampEntity {
 
   @OneToOne(() => AuthIdentity, (info) => info.user, { onDelete: "CASCADE" })
   auth: AuthIdentity;
-
-  @BeforeInsert()
-  @BeforeUpdate()
-  async hashUserPassword() {
-    this.password = await hashString(this.password);
-  }
 }

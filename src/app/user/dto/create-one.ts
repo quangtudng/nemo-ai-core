@@ -2,6 +2,7 @@ import { Role } from "@app/role/index.entity";
 import { ApiProperty } from "@nestjs/swagger";
 import {
   IsEmail,
+  IsIn,
   IsNotEmpty,
   IsNotIn,
   IsNumber,
@@ -47,6 +48,12 @@ export class CreateUserDto {
   @Length(1, 1000)
   @IsOptional()
   bio: string;
+
+  @ApiProperty({ example: 0, nullable: false })
+  @IsNumber()
+  @IsIn([0, 1])
+  @IsNotEmpty()
+  status: number;
 
   @ApiProperty({ example: 2, nullable: false })
   @IsNumber()

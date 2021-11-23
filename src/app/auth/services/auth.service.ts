@@ -1,25 +1,21 @@
-import {
-  BadRequestException,
-  Injectable,
-  UnauthorizedException,
-} from "@nestjs/common";
+import { BadRequestException, Injectable } from "@nestjs/common";
 import { UserService } from "@app/user/index.service";
 import { AuthCredentialsDto } from "../dto/auth-credentials.dto";
 import { BaseCrudService } from "@core/utils/crud/base-service";
 import { AuthIdentity } from "../index.entity";
 import { AuthRepository } from "../index.repository";
-import { compareHashString } from "@core/utils/hash/bcrypt";
+import { compareHashString, hashString } from "@core/utils/hash/bcrypt";
 import { REFRESH_TOKEN_SECRET } from "@config/env";
 import { RefreshTokenDTO } from "../dto/refresh-token.dto";
 import {
   ENTITY_MESSAGE,
-  HTTP_MESSAGE,
   VALIDATION_MESSAGE,
 } from "@core/constants/error-message";
 import { TokenService } from "./jwt.service";
-import USER_ROLE from "@core/constants/user-role";
 import USER_STATUS from "@core/constants/user-status";
 import { UserRepository } from "@app/user/index.repository";
+import { User } from "@app/user/index.entity";
+import { UpdateMeDTO } from "../dto/update-me.dto";
 
 @Injectable()
 export class AuthService extends BaseCrudService<AuthIdentity> {
@@ -72,7 +68,7 @@ export class AuthService extends BaseCrudService<AuthIdentity> {
       email: user.email,
       fullname: user.fullname,
       status: user.status,
-      role: user.role.label,
+      role: user.role,
       phoneNumber: user.phoneNumber,
       bio: user.bio,
     };
@@ -100,10 +96,17 @@ export class AuthService extends BaseCrudService<AuthIdentity> {
       email: user.email,
       fullname: user.fullname,
       status: user.status,
-      role: user.role.label,
+      role: user.role,
       phoneNumber: user.phoneNumber,
       bio: user.bio,
     };
+  }
+
+  async updateMe(id: number, dto: UpdateMeDTO): Promise<User> {
+    if (dto.password) {
+      dto.password = await hashString(dto.password);
+    }
+    return this.userRepository.updateOne(id, dto);
   }
 
   async refreshToken(dto: RefreshTokenDTO) {
@@ -126,29 +129,5 @@ export class AuthService extends BaseCrudService<AuthIdentity> {
 
   async revokeToken(dto: RefreshTokenDTO) {
     return this.repo.updateTokenOrFail(dto.refreshToken, null);
-  }
-
-  async enableUserAccount(id: number) {
-    const user = await this.userService.findOneOrFail(id, {
-      relations: ["role"],
-    });
-    if (user.role.num === USER_ROLE.SUPERADMIN)
-      throw new UnauthorizedException(HTTP_MESSAGE.UNAUTHORIZED);
-    if (user.status === USER_STATUS.ACTIVE)
-      throw new BadRequestException(HTTP_MESSAGE.USER_ALREADY_ACTIVE);
-    user.status = USER_STATUS.ACTIVE;
-    return this.userRepository.save(user);
-  }
-
-  async disableUserAccount(id: number) {
-    const user = await this.userService.findOneOrFail(id, {
-      relations: ["role"],
-    });
-    if (user.role.num === USER_ROLE.SUPERADMIN)
-      throw new UnauthorizedException(HTTP_MESSAGE.UNAUTHORIZED);
-    if (user.status === USER_STATUS.DISABLED)
-      throw new BadRequestException(HTTP_MESSAGE.USER_ALREADY_DISABLED);
-    user.status = USER_STATUS.DISABLED;
-    return this.userRepository.save(user);
   }
 }

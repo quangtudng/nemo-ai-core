@@ -17,6 +17,12 @@ export class Role extends BaseTimeStampEntity {
   })
   label: string;
 
+  @Column({
+    type: "text",
+    nullable: true,
+  })
+  description: string;
+
   @OneToMany(() => User, (user) => user.role, { onDelete: "SET NULL" })
   users: User[];
 }
