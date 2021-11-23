@@ -41,8 +41,12 @@ export class UserController {
   @ApiOperation({ summary: "Get a user" })
   @Get(":id")
   @IsAuth([USER_ROLE.SUPERADMIN, USER_ROLE.MODERATOR])
-  getOne(@Param("id", ParseIntPipe) id: number): Promise<User> {
-    return this.service.findOneOrFail(id);
+  async getOne(@Param("id", ParseIntPipe) id: number): Promise<User> {
+    const result = await this.service.findOneOrFail(id, {
+      relations: ["role"],
+    });
+    delete result["password"];
+    return result;
   }
 
   @ApiOperation({ summary: "Update a user" })

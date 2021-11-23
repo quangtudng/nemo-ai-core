@@ -10,7 +10,7 @@ export class UserRepository extends BaseCrudRepository<User> {
   async checkDuplicateEmail(email: string) {
     const isUserExists = await this.findOne({
       where: {
-        email: email,
+        email,
       },
     });
     if (isUserExists) {
@@ -21,13 +21,17 @@ export class UserRepository extends BaseCrudRepository<User> {
   async findMany(param: FilterUserDTO): Promise<[User[], number]> {
     const limit = param.limit || 5;
     const offset = param.page && param.page > 1 ? (param.page - 1) * limit : 0;
-    return this.createQueryBuilder("user")
-      .where("user.email like :email", { email: `%${param.email}%` })
-      .andWhere("user.fullname like :fullname", {
+    let builder = this.createQueryBuilder("user")
+      .leftJoinAndSelect("user.role", "role")
+      .where("(user.email like :email OR user.fullname like :fullname)", {
+        email: `%${param.email}%`,
         fullname: `%${param.fullname}%`,
-      })
-      .take(limit)
-      .skip(offset)
-      .getManyAndCount();
+      });
+    if (param.roleId) {
+      builder = builder.andWhere("user.role = :roleId", {
+        roleId: param.roleId,
+      });
+    }
+    return builder.take(limit).skip(offset).getManyAndCount();
   }
 }

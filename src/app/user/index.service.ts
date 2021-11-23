@@ -5,6 +5,7 @@ import { UserRepository } from "./index.repository";
 import { CreateUserDto } from "./dto/create-one";
 import { RoleRepository } from "@app/role/index.repository";
 import { UpdateUserDTO } from "./dto/update-one";
+import { hashString } from "@core/utils/hash/bcrypt";
 
 @Injectable()
 export class UserService extends BaseCrudService<User> {
@@ -18,13 +19,18 @@ export class UserService extends BaseCrudService<User> {
   async createOne(dto: CreateUserDto): Promise<User> {
     await this.repo.checkDuplicateEmail(dto.email);
     const role = await this.roleRepository.findOne(dto.roleId);
+    if (dto.password) {
+      dto.password = await hashString(dto.password);
+    }
     dto.role = role;
     return super.createOne(dto);
   }
 
   async updateOne(id: number, dto: UpdateUserDTO): Promise<User> {
-    await this.repo.checkDuplicateEmail(dto.email);
     const role = await this.roleRepository.findOne(dto.roleId);
+    if (dto.password) {
+      dto.password = await hashString(dto.password);
+    }
     dto.role = role;
     return super.updateOne(id, dto);
   }

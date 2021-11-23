@@ -1,9 +1,5 @@
-import { Role } from "@app/role/index.entity";
 import { ApiProperty } from "@nestjs/swagger";
 import {
-  IsIn,
-  IsNotIn,
-  IsNumber,
   IsOptional,
   IsString,
   Length,
@@ -11,7 +7,7 @@ import {
   MinLength,
 } from "class-validator";
 
-export class UpdateUserDTO {
+export class UpdateMeDTO {
   @ApiProperty({ example: "123456", required: false })
   @MinLength(5)
   @MaxLength(100)
@@ -38,18 +34,4 @@ export class UpdateUserDTO {
   @Length(1, 1000)
   @IsOptional()
   bio: string;
-
-  @ApiProperty({ example: 0, nullable: false })
-  @IsNumber()
-  @IsIn([0, 1])
-  @IsOptional()
-  status: number;
-
-  @ApiProperty({ example: [1, 2, 3], required: false })
-  @IsNumber()
-  @IsNotIn([1])
-  @IsOptional()
-  roleId: number;
-
-  role: Role;
 }

@@ -3,30 +3,35 @@
     "email": "nemo.superadmin@gmail.com",
     "fullname": "NemoAI SuperAdmin",
     "status": 1,
+    "phoneNumber": "+84928701036",
     "role": "SUPERADMIN"
   },
   "02": {
     "email": "nemo.moderator@gmail.com",
     "fullname": "NemoAI Moderator",
     "status": 1,
+    "phoneNumber": "+84928721054",
     "role": "MODERATOR"
   },
   "03": {
-    "email": "paradox.partner@gmail.com",
-    "fullname": "Paradox Partner",
+    "email": "paradox.agent@gmail.com",
+    "fullname": "Paradox Agent",
     "status": 1,
-    "role": "PARTNER"
+    "phoneNumber": "+84935488244",
+    "role": "AGENT"
   },
   "04": {
-    "email": "sannatour.partner@gmail.com",
-    "fullname": "SannaTour Partner",
+    "email": "sannatour.agent@gmail.com",
+    "fullname": "SannaTour agent",
     "status": 1,
-    "role": "PARTNER"
+    "phoneNumber": "+84928215752",
+    "role": "AGENT"
   },
   "05": {
-    "email": "tripadvisor.partner@gmail.com",
-    "fullname": "TripAdvisor Partner",
+    "email": "tripadvisor.agent@gmail.com",
+    "fullname": "TripAdvisor Agent",
     "status": 1,
-    "role": "PARTNER"
+    "phoneNumber": "+84905456233",
+    "role": "AGENT"
   }
 }
