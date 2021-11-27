@@ -17,4 +17,14 @@ export class CategoryRepository extends BaseCrudRepository<Category> {
       .skip(offset)
       .getManyAndCount();
   }
+
+  async findCategoryCountByLocation(locationIds: number[]) {
+    return this.createQueryBuilder("category")
+      .leftJoinAndSelect("category.services", "services")
+      .where("services.location_id IN (:...locationIds)", { locationIds })
+      .groupBy("category.id")
+      .select("COUNT(category.id)", "count")
+      .addSelect(["category.id", "category.title", "category.slug"])
+      .getRawMany();
+  }
 }

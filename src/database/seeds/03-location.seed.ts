@@ -16,6 +16,7 @@ export default class CreateLocations implements Seeder {
     const location = new Location();
     location.name = "Việt Nam";
     location.type = "country";
+    location.description = `Việt Nam, tên gọi chính thức là Cộng hòa Xã hội chủ nghĩa Việt Nam, là quốc gia nằm ở cực Đông của bán đảo Đông Dương thuộc khu vực Đông Nam Á,giáp với Lào, Campuchia, Trung Quốc, biển Đông và vịnh Thái Lan. Lãnh thổ Việt Nam xuất hiện con người sinh sống từ thời đại đồ đá cũ.`;
     await connection
       .createQueryBuilder()
       .insert()
@@ -31,6 +32,7 @@ export default class CreateLocations implements Seeder {
       const location = new Location();
       location.name = province.name;
       location.type = "province";
+      location.description = province.description;
       location.parent = parent;
       provinceToAdd.push(location);
     });
@@ -45,6 +47,7 @@ export default class CreateLocations implements Seeder {
         const location = new Location();
         location.name = city.name;
         location.type = "city";
+        location.description = city.description;
         location.parent = parent;
         municipalCitiesToAdd.push(location);
       }
@@ -66,6 +69,7 @@ export default class CreateLocations implements Seeder {
         const location = new Location();
         location.name = city.name;
         location.type = "city";
+        location.description = city.description;
         const parent = provinces[city.parent_code] || cities[city.parent_code];
         if (parent) {
           const parentLocation = await this.findParentLocation(
