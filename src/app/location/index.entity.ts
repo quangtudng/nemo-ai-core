@@ -36,6 +36,12 @@ export class Location {
   })
   slug: string;
 
+  @Column({
+    type: "text",
+    nullable: true,
+  })
+  description: string;
+
   @OneToMany(() => Service, (service) => service.location)
   services: Service[];
 
@@ -48,7 +54,7 @@ export class Location {
   @BeforeInsert()
   @BeforeUpdate()
   slugify() {
-    this.slug = slugify(this.name, {
+    this.slug = slugify(`${this.name} ${this.type}`, {
       replacement: "-",
       lower: true,
       trim: true,
