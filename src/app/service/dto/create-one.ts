@@ -72,7 +72,7 @@ export class CreateServiceDto {
   @IsOptional()
   serviceImageUrls: string[];
 
-  @ApiProperty()
+  @ApiProperty({ example: [1, 2, 3] })
   @IsNumber({}, { each: true })
   @IsArray()
   @IsOptional()

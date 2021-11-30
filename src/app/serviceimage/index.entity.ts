@@ -19,6 +19,9 @@ export class ServiceImage extends BaseTimeStampEntity {
   })
   fallbackUrl: string;
 
-  @ManyToOne(() => Service, (service) => service.serviceImages)
+  @ManyToOne(() => Service, (service) => service.serviceImages, {
+    onDelete: "CASCADE",
+    onUpdate: "CASCADE",
+  })
   service: Service;
 }

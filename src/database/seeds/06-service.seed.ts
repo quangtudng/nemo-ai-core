@@ -15,6 +15,7 @@ import { Location } from "@app/location/index.entity";
 import { ServiceImage } from "@app/serviceimage/index.entity";
 import { Category } from "@app/category/index.entity";
 import { Amenity } from "@app/amenity/index.entity";
+import slugify from "slugify";
 
 export default class CreateServices implements Seeder {
   public async run(factory: Factory, connection: Connection): Promise<any> {
@@ -68,6 +69,11 @@ export default class CreateServices implements Seeder {
       );
 
       const images = await this.addServiceImages(connection, service.images);
+      const slug = slugify(`${service.title} ${Date.now()}`, {
+        replacement: "-",
+        lower: true,
+        trim: true,
+      });
       // Create new service object
       const serviceObj = connection.createEntityManager().create(Service);
       serviceObj.title = service.title || "";
@@ -76,6 +82,7 @@ export default class CreateServices implements Seeder {
       serviceObj.phoneNumber = service.phoneNumber || "";
       serviceObj.category = category;
       serviceObj.price = price;
+      serviceObj.slug = slug;
       serviceObj.serviceImages = images;
       serviceObj.originUrl = service.url || "";
       serviceObj.thumbnail = service.thumbnail || "";
