@@ -13,13 +13,13 @@ import { CreateServiceDto } from "./dto/create-one";
 import { UpdateServiceDTO } from "./dto/update-one";
 import { Service } from "./index.entity";
 import { ServiceService } from "./index.service";
-import { BaseFilterDTO } from "@core/dto/filter-many";
 import { DeleteResult } from "typeorm";
 import { ApiOperation, ApiTags } from "@nestjs/swagger";
 import { IsAuth } from "@app/auth/decorators/is-auth.decorator";
+import { FilterServiceDTO } from "./dto/filter-many";
 
-@ApiTags("service")
-@Controller("service")
+@ApiTags("services")
+@Controller("services")
 export class ServiceController {
   constructor(public service: ServiceService) {}
 
@@ -32,16 +32,16 @@ export class ServiceController {
 
   @ApiOperation({ summary: "Find many service" })
   @Get()
-  @IsAuth()
-  findMany(@Query() param: BaseFilterDTO) {
+  findMany(@Query() param: FilterServiceDTO) {
     return this.service.findMany(param);
   }
 
   @ApiOperation({ summary: "Get a service" })
   @Get(":id")
-  @IsAuth()
   getOne(@Param("id", ParseIntPipe) id: number): Promise<Service> {
-    return this.service.findOneOrFail(id);
+    return this.service.findOneOrFail(id, {
+      relations: ["location", "category", "serviceImages", "amenities"],
+    });
   }
 
   @ApiOperation({ summary: "Update a service" })

@@ -3,10 +3,7 @@ import { Category } from "@app/category/index.entity";
 import { Location } from "@app/location/index.entity";
 import { ServiceImage } from "@app/serviceimage/index.entity";
 import { BaseTimeStampEntity } from "@core/utils/crud/base-entity";
-import slugify from "slugify";
 import {
-  BeforeInsert,
-  BeforeUpdate,
   Column,
   Entity,
   JoinTable,
@@ -36,6 +33,7 @@ export class Service extends BaseTimeStampEntity {
   @Column({
     length: 200,
     type: "varchar",
+    unique: true,
   })
   slug: string;
 
@@ -73,29 +71,18 @@ export class Service extends BaseTimeStampEntity {
   })
   price: number;
 
-  @OneToMany(() => ServiceImage, (serviceImage) => serviceImage.service, {
-    cascade: ["insert", "update"],
-    onDelete: "CASCADE",
-  })
-  serviceImages: ServiceImage[];
-
   @ManyToOne(() => Location, (location) => location.services)
   location: Location;
 
   @ManyToOne(() => Category, (category) => category)
   category: Category;
 
+  @OneToMany(() => ServiceImage, (serviceImage) => serviceImage.service, {
+    cascade: ["insert", "update"],
+  })
+  serviceImages: ServiceImage[];
+
   @ManyToMany(() => Amenity)
   @JoinTable({ name: "services_amenities_pivot" })
   amenities: Amenity[];
-
-  @BeforeInsert()
-  @BeforeUpdate()
-  slugify() {
-    this.slug = slugify(this.title, {
-      replacement: "-",
-      lower: true,
-      trim: true,
-    });
-  }
 }
