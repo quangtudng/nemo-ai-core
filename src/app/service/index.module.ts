@@ -1,4 +1,5 @@
 import { AmenityModule } from "@app/amenity/index.module";
+import { CategoryModule } from "@app/category/index.module";
 import { LocationModule } from "@app/location/index.module";
 import { ServiceImageModule } from "@app/serviceimage/index.module";
 import { forwardRef, Module } from "@nestjs/common";
@@ -12,6 +13,7 @@ import { ServiceService } from "./index.service";
     forwardRef(() => LocationModule),
     AmenityModule,
     ServiceImageModule,
+    CategoryModule,
   ],
   controllers: [ServiceController],
   providers: [ServiceService],

@@ -5,7 +5,7 @@ import { IsNumber, IsOptional, Max, Min } from "class-validator";
 export class BaseFilterDTO {
   @ApiProperty({ type: Number, example: 5, required: false })
   @Min(1)
-  @Max(100)
+  @Max(1000)
   @IsNumber()
   @Type(() => Number)
   @IsOptional()
