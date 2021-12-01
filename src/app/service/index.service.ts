@@ -9,6 +9,7 @@ import slugify from "slugify";
 import { UpdateServiceDTO } from "./dto/update-one";
 import { AmenityRepository } from "@app/amenity/index.repository";
 import { ServiceImageRepository } from "@app/serviceimage/index.repository";
+import { CategoryRepository } from "@app/category/index.repository";
 
 @Injectable()
 export class ServiceService extends BaseCrudService<Service> {
@@ -17,6 +18,7 @@ export class ServiceService extends BaseCrudService<Service> {
     private locationRepo: LocationRepository,
     private amenityRepo: AmenityRepository,
     private serviceImageRepo: ServiceImageRepository,
+    private categoryRepo: CategoryRepository,
   ) {
     super(serviceRepo);
   }
@@ -39,12 +41,18 @@ export class ServiceService extends BaseCrudService<Service> {
           "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/No_image_available.svg/1024px-No_image_available.svg.png",
       }),
     );
+    // Find category
+    const location = await this.locationRepo.findOneOrFail(dto.locationId);
+    // Find location
+    const category = await this.categoryRepo.findOneOrFail(dto.categoryId);
     // Create service
     const entity = this.serviceRepo.create({
       ...dto,
       slug,
       amenities,
       serviceImages,
+      location,
+      category,
     });
     return this.serviceRepo.save(entity);
   }
@@ -72,6 +80,22 @@ export class ServiceService extends BaseCrudService<Service> {
           "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/No_image_available.svg/1024px-No_image_available.svg.png",
       }),
     );
+    // Find category
+    if (dto.locationId) {
+      const location = await this.locationRepo.findOneOrFail(dto.locationId);
+      entity = {
+        ...entity,
+        location,
+      };
+    }
+    // Find location
+    if (dto.categoryId) {
+      const category = await this.categoryRepo.findOneOrFail(dto.categoryId);
+      entity = {
+        ...entity,
+        category,
+      };
+    }
     entity = {
       ...entity,
       ...dto,

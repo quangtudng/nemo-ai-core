@@ -18,6 +18,7 @@ export class ServiceRepository extends BaseCrudRepository<Service> {
         .leftJoinAndSelect("service.location", "location")
         .leftJoinAndSelect("service.category", "category")
         .leftJoinAndSelect("service.serviceImages", "images")
+        .leftJoinAndSelect("service.amenities", "amenities")
         .where("service.title like :title", {
           title: `%${param.title}%`,
         });
