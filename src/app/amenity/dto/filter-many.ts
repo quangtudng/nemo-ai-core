@@ -1,3 +1,4 @@
+import { BaseFilterDTO } from "@core/dto/filter-many";
 import { ApiProperty } from "@nestjs/swagger";
 import {
   IsNotEmpty,
@@ -7,18 +8,12 @@ import {
   ValidateIf,
 } from "class-validator";
 
-export class CreateAmenityDto {
-  @ApiProperty({ example: "Example title" })
+export class FilterAmenityDTO extends BaseFilterDTO {
+  @ApiProperty({ example: "Example Title", required: false })
   @Length(1, 100)
-  @IsString()
-  @IsNotEmpty()
-  title: string;
-
-  @ApiProperty({ example: "Example description" })
-  @Length(1, 1000)
   @IsString()
   @IsNotEmpty()
   @IsOptional()
   @ValidateIf((object, value) => value !== "")
-  description: string = "";
+  title: string = "";
 }
