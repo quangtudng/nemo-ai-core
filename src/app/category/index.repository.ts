@@ -10,9 +10,6 @@ export class CategoryRepository extends BaseCrudRepository<Category> {
     const offset = param.page && param.page > 1 ? (param.page - 1) * limit : 0;
     return this.createQueryBuilder("category")
       .where("category.title like :title", { title: `%${param.title}%` })
-      .andWhere("category.description like :description", {
-        description: `%${param.description}%`,
-      })
       .take(limit)
       .skip(offset)
       .getManyAndCount();

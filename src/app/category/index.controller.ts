@@ -1,9 +1,11 @@
 import {
   Body,
   Controller,
+  Delete,
   Get,
   Param,
   ParseIntPipe,
+  Patch,
   Post,
   Query,
 } from "@nestjs/common";
@@ -14,6 +16,8 @@ import { ApiOperation, ApiTags } from "@nestjs/swagger";
 import { FilterCategoryDTO } from "./dto/filter-many";
 import { IsAuth } from "@app/auth/decorators/is-auth.decorator";
 import USER_ROLE from "@core/constants/user-role";
+import { UpdateCategoryDTO } from "./dto/update-one";
+import { DeleteResult } from "typeorm";
 
 @ApiTags("categories")
 @Controller("categories")
@@ -39,5 +43,22 @@ export class CategoryController {
   @IsAuth([USER_ROLE.SUPERADMIN, USER_ROLE.MODERATOR])
   getOne(@Param("id", ParseIntPipe) id: number): Promise<Category> {
     return this.service.findOneOrFail(id);
+  }
+
+  @ApiOperation({ summary: "Update a category" })
+  @Patch(":id")
+  @IsAuth([USER_ROLE.SUPERADMIN])
+  updateOne(
+    @Param("id", ParseIntPipe) id: number,
+    @Body() dto: UpdateCategoryDTO,
+  ): Promise<Category> {
+    return this.service.updateOne(id, dto);
+  }
+
+  @ApiOperation({ summary: "Delete a category" })
+  @Delete(":id")
+  @IsAuth([USER_ROLE.SUPERADMIN])
+  deleteOne(@Param("id", ParseIntPipe) id: number): Promise<DeleteResult> {
+    return this.service.deleteOne(id);
   }
 }

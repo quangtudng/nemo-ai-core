@@ -8,10 +8,4 @@ export class FilterCategoryDTO extends BaseFilterDTO {
   @IsString()
   @IsOptional()
   title: string = "";
-
-  @ApiProperty({ example: "Example description", required: false })
-  @MaxLength(255)
-  @IsString()
-  @IsOptional()
-  description: string = "";
 }
