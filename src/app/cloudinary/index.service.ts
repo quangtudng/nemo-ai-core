@@ -6,9 +6,10 @@ import toStream = require("buffer-to-stream");
 export class CloudinaryService {
   async uploadImageToCloudinary(
     file: Express.Multer.File,
+    folder: string,
   ): Promise<UploadApiResponse | UploadApiErrorResponse> {
     return new Promise((resolve, reject) => {
-      const upload = v2.uploader.upload_stream((error, result) => {
+      const upload = v2.uploader.upload_stream({ folder }, (error, result) => {
         if (error) return reject(error);
         resolve(result);
       });
@@ -16,7 +17,7 @@ export class CloudinaryService {
     });
   }
 
-  async deleteCloudinaryImage(urls: string[]): Promise<any> {
+  async deleteCloudinaryImages(urls: string[]): Promise<any> {
     try {
       if (urls && urls.length !== 0) {
         const publicIds = urls.map((imageUrl) => {

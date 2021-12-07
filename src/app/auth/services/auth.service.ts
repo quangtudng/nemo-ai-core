@@ -16,16 +16,18 @@ import USER_STATUS from "@core/constants/user-status";
 import { UserRepository } from "@app/user/index.repository";
 import { User } from "@app/user/index.entity";
 import { UpdateMeDTO } from "../dto/update-me.dto";
+import { CloudinaryService } from "@app/cloudinary/index.service";
 
 @Injectable()
 export class AuthService extends BaseCrudService<AuthIdentity> {
   constructor(
     private tokenService: TokenService,
     private userService: UserService,
-    private repo: AuthRepository,
+    private cloudinaryService: CloudinaryService,
+    private authRepository: AuthRepository,
     private userRepository: UserRepository,
   ) {
-    super(repo);
+    super(authRepository);
   }
 
   async signin(dto: AuthCredentialsDto) {
@@ -42,6 +44,7 @@ export class AuthService extends BaseCrudService<AuthIdentity> {
         "status",
         "bio",
         "phoneNumber",
+        "avatar",
       ],
     });
 
@@ -59,7 +62,7 @@ export class AuthService extends BaseCrudService<AuthIdentity> {
       { id: user.id },
       true,
     );
-    await this.repo.saveRefreshToken(user, refreshToken);
+    await this.authRepository.saveRefreshToken(user, refreshToken);
     delete user["password"];
     return {
       accessToken,
@@ -71,6 +74,7 @@ export class AuthService extends BaseCrudService<AuthIdentity> {
       role: user.role,
       phoneNumber: user.phoneNumber,
       bio: user.bio,
+      avatar: user.avatar,
     };
   }
 
@@ -88,6 +92,7 @@ export class AuthService extends BaseCrudService<AuthIdentity> {
         "status",
         "bio",
         "phoneNumber",
+        "avatar",
       ],
     });
     delete user["password"];
@@ -99,18 +104,19 @@ export class AuthService extends BaseCrudService<AuthIdentity> {
       role: user.role,
       phoneNumber: user.phoneNumber,
       bio: user.bio,
+      avatar: user.avatar,
     };
   }
 
-  async updateMe(id: number, dto: UpdateMeDTO): Promise<User> {
+  async updateMe(user: User, dto: UpdateMeDTO): Promise<User> {
     if (dto.password) {
       dto.password = await hashString(dto.password);
     }
-    return this.userRepository.updateOne(id, dto);
+    return this.userRepository.updateOne(user.id, dto);
   }
 
   async refreshToken(dto: RefreshTokenDTO) {
-    const identity = await this.repo.findOneOrFail({
+    const identity = await this.authRepository.findOneOrFail({
       where: { refreshToken: dto.refreshToken },
       relations: ["user"],
       select: ["id", "refreshToken", "user"],
@@ -123,11 +129,11 @@ export class AuthService extends BaseCrudService<AuthIdentity> {
       { id: identity.user.id },
       true,
     );
-    await this.repo.updateTokenOrFail(dto.refreshToken, refreshToken);
+    await this.authRepository.updateTokenOrFail(dto.refreshToken, refreshToken);
     return { accessToken, refreshToken };
   }
 
   async revokeToken(dto: RefreshTokenDTO) {
-    return this.repo.updateTokenOrFail(dto.refreshToken, null);
+    return this.authRepository.updateTokenOrFail(dto.refreshToken, null);
   }
 }

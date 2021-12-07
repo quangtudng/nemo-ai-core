@@ -8,6 +8,7 @@ import { IsAuth } from "./decorators/is-auth.decorator";
 import { ApiOperation, ApiTags } from "@nestjs/swagger";
 import USER_ROLE from "@core/constants/user-role";
 import { UpdateMeDTO } from "./dto/update-me.dto";
+import { User } from "@app/user/index.entity";
 
 @ApiTags("auth")
 @Controller("auth")
@@ -27,8 +28,8 @@ export class AuthController {
   @ApiOperation({ summary: "Update current user using token" })
   @Post("/me")
   @IsAuth()
-  updateProfile(@GetAuthUser() user: any, @Body() dto: UpdateMeDTO) {
-    return this.authService.updateMe(user.id, dto);
+  updateProfile(@GetAuthUser() user: User, @Body() dto: UpdateMeDTO) {
+    return this.authService.updateMe(user, dto);
   }
 
   @ApiOperation({ summary: "Login and get current user" })

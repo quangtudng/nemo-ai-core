@@ -31,7 +31,6 @@ export class User extends BaseTimeStampEntity {
   @Column({
     length: 50,
     type: "varchar",
-    nullable: true,
   })
   fullname: string;
 
@@ -41,6 +40,13 @@ export class User extends BaseTimeStampEntity {
     nullable: true,
   })
   phoneNumber: string;
+
+  @Column({
+    length: 500,
+    type: "varchar",
+    nullable: true,
+  })
+  avatar: string;
 
   @Column({
     default: UserStatus.DISABLED,

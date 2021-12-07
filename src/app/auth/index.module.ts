@@ -9,6 +9,7 @@ import { TypeOrmModule } from "@nestjs/typeorm";
 import { AuthRepository } from "./index.repository";
 import { ACCESS_TOKEN_SECRET, ACCESS_TOKEN_EXPIRES } from "@config/env";
 import { TokenService } from "./services/jwt.service";
+import { CloudinaryModule } from "@app/cloudinary/index.module";
 
 @Module({
   imports: [
@@ -19,6 +20,7 @@ import { TokenService } from "./services/jwt.service";
     }),
     UserModule,
     TypeOrmModule.forFeature([AuthRepository]),
+    CloudinaryModule,
   ],
   controllers: [AuthController],
   providers: [AuthService, JwtStrategy, TokenService],
