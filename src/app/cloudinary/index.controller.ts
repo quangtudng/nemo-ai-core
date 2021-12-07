@@ -1,5 +1,6 @@
 import { ProjectLogger } from "@core/utils/loggers/log-service";
 import {
+  Body,
   Controller,
   Post,
   UploadedFiles,
@@ -7,6 +8,7 @@ import {
 } from "@nestjs/common";
 import { FilesInterceptor } from "@nestjs/platform-express";
 import { ApiOperation, ApiTags } from "@nestjs/swagger";
+import { UploadCloudinaryDTO } from "./dto/create-one";
 import { CloudinaryService } from "./index.service";
 
 @ApiTags("cloudinary")
@@ -17,7 +19,10 @@ export class CloudinaryController {
   @ApiOperation({ summary: "Upload an image" })
   @Post("upload")
   @UseInterceptors(FilesInterceptor("files"))
-  async uploadFile(@UploadedFiles() files: Array<Express.Multer.File>) {
+  async uploadFile(
+    @UploadedFiles() files: Array<Express.Multer.File>,
+    @Body() dto: UploadCloudinaryDTO,
+  ) {
     const imageResults = [];
     try {
       if (files && files.length !== 0) {
@@ -25,6 +30,7 @@ export class CloudinaryController {
           const file = files[i];
           const uploadedResult = await this.service.uploadImageToCloudinary(
             file,
+            dto.folder,
           );
           const urlObj = new URL(uploadedResult.url);
           urlObj.searchParams.set("public_id", uploadedResult.public_id);

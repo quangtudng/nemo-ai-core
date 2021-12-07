@@ -16,6 +16,7 @@ export default class CreateUsers implements Seeder {
       user.fullname = userData.fullname;
       user.status = userData.status;
       user.phoneNumber = userData.phoneNumber;
+      user.avatar = null;
       const role = await connection
         .createQueryBuilder<Role>(Role, "roles")
         .where("roles.label = :label", { label: userData.role })
