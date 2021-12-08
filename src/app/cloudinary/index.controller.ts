@@ -18,7 +18,7 @@ export class CloudinaryController {
 
   @ApiOperation({ summary: "Upload an image" })
   @Post("upload")
-  @UseInterceptors(FilesInterceptor("files"))
+  @UseInterceptors(FilesInterceptor("file"))
   async uploadFile(
     @UploadedFiles() files: Array<Express.Multer.File>,
     @Body() dto: UploadCloudinaryDTO,

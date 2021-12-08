@@ -10,7 +10,9 @@ import { UpdateServiceDTO } from "./dto/update-one";
 import { AmenityRepository } from "@app/amenity/index.repository";
 import { ServiceImageRepository } from "@app/serviceimage/index.repository";
 import { CategoryRepository } from "@app/category/index.repository";
-
+import { unlink } from "fs/promises";
+import * as XLSX from "xlsx";
+import { PhoneNumberUtil } from "@core/utils/phone";
 @Injectable()
 export class ServiceService extends BaseCrudService<Service> {
   constructor(
@@ -128,5 +130,46 @@ export class ServiceService extends BaseCrudService<Service> {
       page: Number(param.page || 1),
       pageCount: Math.ceil(totalPageCount ? totalPageCount : 0),
     };
+  }
+
+  async createManyByExcel(file: Express.Multer.File): Promise<Array<Service>> {
+    const categories = await this.categoryRepo.find();
+    const workbook = XLSX.readFile(file.path);
+    const sheetName = workbook.SheetNames;
+    const rawData: any[] = XLSX.utils.sheet_to_json(
+      workbook.Sheets[sheetName[0]],
+    );
+    // Delete the file after finish extracting the data
+    await unlink(file.path);
+    // Format the service data
+    const formattedData = [];
+    for (let i = 0; i < rawData.length; i++) {
+      const service = rawData[i];
+      const category = categories.find((e) => e.title === service.Category);
+      const title = service.Title || "Default title";
+      const slug = slugify(`${title} ${Date.now()}`, {
+        replacement: "-",
+        lower: true,
+        trim: true,
+      });
+      const location = await this.locationRepo.findOneOrFail({
+        name: service.Location || "Việt Nam",
+      });
+      const phoneNumber = PhoneNumberUtil.format(service.PhoneNumber);
+      const data = this.serviceRepo.create({
+        title,
+        description: service.Description || "",
+        originUrl: service.OriginURL || "",
+        fullAddress: service.FullAddress || "",
+        phoneNumber,
+        thumbnail: service.Thumbnail || "",
+        price: service.Price || null,
+        location,
+        category,
+        slug,
+      });
+      formattedData.push(data);
+    }
+    return this.serviceRepo.save(formattedData);
   }
 }
