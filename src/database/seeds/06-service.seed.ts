@@ -16,6 +16,7 @@ import { ServiceImage } from "@app/serviceimage/index.entity";
 import { Category } from "@app/category/index.entity";
 import { Amenity } from "@app/amenity/index.entity";
 import slugify from "slugify";
+import { PhoneNumberUtil } from "@core/utils/phone";
 
 export default class CreateServices implements Seeder {
   public async run(factory: Factory, connection: Connection): Promise<any> {
@@ -79,7 +80,9 @@ export default class CreateServices implements Seeder {
       serviceObj.title = service.title || "";
       serviceObj.location = location;
       serviceObj.fullAddress = service.fullAddress || "";
-      serviceObj.phoneNumber = service.phoneNumber || "";
+      serviceObj.phoneNumber = PhoneNumberUtil.format(
+        service.phoneNumber || "",
+      );
       serviceObj.category = category;
       serviceObj.price = price;
       serviceObj.slug = slug;

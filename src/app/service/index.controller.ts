@@ -3,11 +3,14 @@ import {
   Controller,
   Delete,
   Get,
+  NotFoundException,
   Param,
   ParseIntPipe,
   Patch,
   Post,
   Query,
+  UploadedFile,
+  UseInterceptors,
 } from "@nestjs/common";
 import { CreateServiceDto } from "./dto/create-one";
 import { UpdateServiceDTO } from "./dto/update-one";
@@ -17,6 +20,8 @@ import { DeleteResult } from "typeorm";
 import { ApiOperation, ApiTags } from "@nestjs/swagger";
 import { IsAuth } from "@app/auth/decorators/is-auth.decorator";
 import { FilterServiceDTO } from "./dto/filter-many";
+import { FileInterceptor } from "@nestjs/platform-express";
+import { diskStorage } from "multer";
 
 @ApiTags("services")
 @Controller("services")
@@ -28,6 +33,27 @@ export class ServiceController {
   @IsAuth()
   createOne(@Body() dto: CreateServiceDto) {
     return this.service.createOne(dto);
+  }
+
+  @ApiOperation({ summary: "Create multiple services using excel file" })
+  @Post("upload")
+  @UseInterceptors(
+    FileInterceptor("file", {
+      storage: diskStorage({
+        destination: "./src/app/service/uploads",
+        filename: (req, file, cb) => {
+          return cb(null, `${Date.now()}-${file.originalname}`);
+        },
+      }),
+    }),
+  )
+  async uploadExcelFile(@UploadedFile() file: Express.Multer.File) {
+    if (file) {
+      return this.service.createManyByExcel(file);
+    }
+    throw new NotFoundException(
+      "You must include your excel file contaning the service file to proceed",
+    );
   }
 
   @ApiOperation({ summary: "Find many service" })

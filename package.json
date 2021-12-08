@@ -40,6 +40,7 @@
     "@nestjs/platform-express": "^8.0.0",
     "@nestjs/swagger": "^5.0.9",
     "@nestjs/typeorm": "^8.0.1",
+    "awesome-phonenumber": "^2.64.0",
     "bcrypt": "^5.0.1",
     "buffer-to-stream": "^1.0.0",
     "class-transformer": "^0.4.0",
@@ -62,7 +63,8 @@
     "typeorm-naming-strategies": "^2.0.0",
     "typeorm-seeding": "^1.6.1",
     "winston": "^3.3.3",
-    "winston-daily-rotate-file": "^4.5.5"
+    "winston-daily-rotate-file": "^4.5.5",
+    "xlsx": "^0.17.4"
   },
   "devDependencies": {
     "@commitlint/cli": "^13.1.0",
