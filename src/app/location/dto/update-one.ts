@@ -1,22 +1,14 @@
 import { ApiProperty } from "@nestjs/swagger";
-import { IsNotEmpty, IsNumber, IsOptional, IsString } from "class-validator";
+import { IsNotEmpty, IsOptional, Length, ValidateIf } from "class-validator";
 
 export class UpdateLocationDTO {
-  @ApiProperty({ example: "Location name example" })
-  @IsString()
+  @ApiProperty({
+    example:
+      "Đà Nẵng là một thành phố trực thuộc trung ương, nằm trong vùng Duyên hải Nam Trung Bộ Việt Nam, là thành phố trung tâm và lớn nhất khu vực miền Trung - Tây Nguyên.",
+  })
+  @Length(1, 1000)
   @IsNotEmpty()
+  @ValidateIf((object, value) => value !== "")
   @IsOptional()
-  name: string;
-
-  @ApiProperty({ example: "city" })
-  @IsString()
-  @IsNotEmpty()
-  @IsOptional()
-  type: string;
-
-  @ApiProperty({ example: 1 })
-  @IsNumber()
-  @IsNotEmpty()
-  @IsOptional()
-  parentId: number;
+  description: string;
 }

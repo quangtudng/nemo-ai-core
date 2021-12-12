@@ -3,348 +3,406 @@
     "name": "Lào Cai",
     "slug": "lao-cai",
     "type": "tinh",
+    "description": "Lào Cai là một tỉnh vùng cao biên giới thuộc vùng Tây Bắc Bộ, Việt Nam.",
     "parent_code": null
   },
   "11": {
     "name": "Điện Biên",
     "slug": "dien-bien",
     "type": "tinh",
+    "description": "Điện Biên là tỉnh miền núi thuộc vùng Tây Bắc Bộ của Việt Nam, gắn liền với chiến dịch Điện Biên Phủ và lễ hội hoa ban.",
     "parent_code": null
   },
   "12": {
     "name": "Lai Châu",
     "slug": "lai-chau",
     "type": "tinh",
+    "description": "Lai Châu là một tỉnh thuộc vùng Tây Bắc Bộ, Việt Nam.",
     "parent_code": null
   },
   "14": {
     "name": "Sơn La",
     "slug": "son-la",
     "type": "tinh",
+    "description": "Sơn La là tỉnh miền núi nằm ở vùng Tây Bắc Bộ, Việt Nam.",
     "parent_code": null
   },
   "15": {
     "name": "Yên Bái",
     "slug": "yen-bai",
     "type": "tinh",
+    "description": "Yên Bái là một tỉnh ở Tây Bắc, phía Bắc của Bắc Trung Bộ Việt Nam. Tỉnh có chung đường biên giới với sáu tỉnh là tỉnh Hà Giang, tỉnh Lào Cai, tỉnh Lai Châu, tỉnh Sơn La, tỉnh Phú Thọ và tỉnh Tuyên Quang.",
     "parent_code": null
   },
   "17": {
     "name": "Hoà Bình",
     "slug": "hoa-binh",
     "type": "tinh",
+    "description": "Hòa Bình là một tỉnh miền núi thuộc vùng Tây Bắc, Việt Nam. Tỉnh Hòa Bình có diện tích lớn thứ 29 trong 63 tỉnh thành của Việt Nam và là đơn vị hành chính Việt Nam đông thứ 49 về số dân.",
     "parent_code": null
   },
   "19": {
     "name": "Thái Nguyên",
     "slug": "thai-nguyen",
     "type": "tinh",
+    "description": "Thái Nguyên là một tỉnh trung du thuộc vùng Đông Bắc Bộ, tỉnh lỵ là thành phố Thái Nguyên, cách trung tâm thủ đô Hà Nội 75 km, và là tỉnh nằm trong Vùng thủ đô Hà Nội.",
     "parent_code": null
   },
   "20": {
     "name": "Lạng Sơn",
     "slug": "lang-son",
     "type": "tinh",
+    "description": "Lạng Sơn là một tỉnh miền núi ở vùng Đông Bắc Việt Nam.",
     "parent_code": null
   },
   "22": {
     "name": "Quảng Ninh",
     "slug": "quang-ninh",
     "type": "tinh",
+    "description": "Quảng Ninh là tỉnh ven biển thuộc vùng Đông Bắc Việt Nam. Theo quy hoạch phát triển kinh tế, Quảng Ninh vừa thuộc vùng kinh tế trọng điểm phía bắc vừa thuộc Vùng duyên hải Bắc Bộ. Đây là tỉnh khai thác than đá chính của Việt Nam, có vịnh Hạ Long là di sản, kỳ quan thiên nhiên thế giới.",
     "parent_code": null
   },
   "24": {
     "name": "Bắc Giang",
     "slug": "bac-giang",
     "type": "tinh",
+    "description": "Bắc Giang là một tỉnh trung du thuộc vùng Đông Bắc Bộ, Việt Nam. Đây là tỉnh nằm trong quy hoạch vùng thủ đô Hà Nội. Bắc Giang chiếm phần lớn diện tích của vùng Kinh Bắc xưa và có nền văn hoá phong phú, đặc trưng của Kinh Bắc, là một trong những cái nôi của Dân ca Quan họ với 23 làng quan họ cổ được UNESCO công nhận.",
     "parent_code": null
   },
   "25": {
     "name": "Phú Thọ",
     "slug": "phu-tho",
     "type": "tinh",
+    "description": "Phú Thọ là một tỉnh thuộc vùng Đông Bắc Bộ, Việt Nam.",
     "parent_code": null
   },
   "26": {
     "name": "Vĩnh Phúc",
     "slug": "vinh-phuc",
     "type": "tinh",
+    "description": "Vĩnh Phúc là một tỉnh vùng đồng bằng sông Hồng, Việt Nam, nằm ở chính giữa trung tâm hình học trên bản đồ miền Bắc. Đây là tỉnh nằm trong quy hoạch vùng thủ đô Hà Nội, vùng kinh tế trọng điểm Bắc Bộ.",
     "parent_code": null
   },
   "27": {
     "name": "Bắc Ninh",
     "slug": "bac-ninh",
     "type": "tinh",
+    "description": "Bắc Ninh là một tỉnh ở Việt Nam. Đây là tỉnh có diện tích nhỏ nhất đất nước, với vị trí nằm trong Vùng thủ đô Hà Nội, thuộc vùng Đồng bằng sông Hồng. Tỉnh cũng nằm trong Vùng kinh tế trọng điểm Bắc bộ, Việt Nam.",
     "parent_code": null
   },
   "30": {
     "name": "Hải Dương",
     "slug": "hai-duong",
     "type": "tinh",
+    "description": "Hải Dương là một tỉnh thuộc vùng Đồng bằng sông Hồng, Việt Nam.",
     "parent_code": null
   },
   "33": {
     "name": "Hưng Yên",
     "slug": "hung-yen",
     "type": "tinh",
+    "description": "Hưng Yên là một tỉnh nằm ở trung tâm đồng bằng sông Hồng, Việt Nam.",
     "parent_code": null
   },
   "34": {
     "name": "Thái Bình",
     "slug": "thai-binh",
     "type": "tinh",
+    "description": "Thái Bình là một tỉnh ven biển ở đồng bằng sông Hồng.",
     "parent_code": null
   },
   "35": {
     "name": "Hà Nam",
     "slug": "ha-nam",
     "type": "tinh",
+    "description": "Hà Nam là một tỉnh thuộc vùng Đồng bằng sông Hồng, Việt Nam.",
     "parent_code": null
   },
   "36": {
     "name": "Nam Định",
     "slug": "nam-dinh",
     "type": "tinh",
+    "description": "Nam Định là một tỉnh nằm ở phía Nam đồng bằng Bắc Bộ, Việt Nam, giáp tỉnh Thái Bình về phía đông bắc, tỉnh Ninh Bình về phía tây nam, tỉnh Hà Nam về phía tây bắc và về phía đông nam giáp vịnh Bắc Bộ, thuộc Biển Đông.",
     "parent_code": null
   },
   "37": {
     "name": "Ninh Bình",
     "slug": "ninh-binh",
     "type": "tinh",
+    "description": "Ninh Bình là một tỉnh nằm ở cửa ngõ cực nam miền Bắc, Việt Nam.",
     "parent_code": null
   },
   "38": {
     "name": "Thanh Hóa",
     "slug": "thanh-hoa",
     "type": "tinh",
+    "description": "Thanh Hóa là một tỉnh thuộc vùng Bắc Trung Bộ Việt Nam.",
     "parent_code": null
   },
   "40": {
     "name": "Nghệ An",
     "slug": "nghe-an",
     "type": "tinh",
+    "description": "Nghệ An là tỉnh có diện tích lớn nhất Việt Nam, thuộc vùng Bắc Trung Bộ. Trước đây, Nghệ An cùng với Hà Tĩnh có cùng một tên chung là Hoan Châu, Nghệ An châu, xứ Nghệ, rồi trấn Nghệ An. Năm 1831, vua Minh Mạng chia trấn Nghệ An thành 2 tỉnh: Nghệ An và Hà Tĩnh.",
     "parent_code": null
   },
   "42": {
     "name": "Hà Tĩnh",
     "slug": "ha-tinh",
     "type": "tinh",
+    "description": "Hà Tĩnh là một tỉnh thuộc vùng Bắc Trung Bộ, Việt Nam.",
     "parent_code": null
   },
   "44": {
     "name": "Quảng Bình",
     "slug": "quang-binh",
     "type": "tinh",
+    "description": "Quảng Bình là một tỉnh thuộc duyên hải thuộc vùng Bắc Trung Bộ, Việt Nam.",
     "parent_code": null
   },
   "45": {
     "name": "Quảng Trị",
     "slug": "quang-tri",
     "type": "tinh",
+    "description": "Quảng Trị là một tỉnh ven biển thuộc vùng Bắc Trung Bộ, miền Trung Việt Nam, là địa phương gắn liền với nhiều chiến tích huy hoàng trong hai cuộc kháng chiến chống Pháp và Mỹ.",
     "parent_code": null
   },
   "46": {
     "name": "Thừa Thiên Huế",
     "slug": "thua-thien-hue",
     "type": "tinh",
+    "description": "Thừa Thiên Huế là một tỉnh ven biển nằm ở cực nam của vùng Bắc Trung Bộ, miền Trung, Việt Nam.",
     "parent_code": null
   },
   "49": {
     "name": "Quảng Nam",
     "slug": "quang-nam",
     "type": "tinh",
+    "description": "Quảng Nam là một tỉnh thuộc vùng Duyên hải Nam Trung Bộ, Việt Nam.",
     "parent_code": null
   },
   "51": {
     "name": "Quảng Ngãi",
     "slug": "quang-ngai",
     "type": "tinh",
+    "description": "Quảng Ngãi là một tỉnh ven biển nằm ở vùng Duyên hải Nam Trung Bộ, Việt Nam. Tỉnh lỵ là Thành phố Quảng Ngãi, cách thành phố Hồ Chí Minh 820 km về phía Nam, cách thành phố Đà Nẵng 146 km về phía Bắc và cách Hà Nội 908 km về phía Bắc tính theo đường Quốc Lộ 1A.",
     "parent_code": null
   },
   "52": {
     "name": "Bình Định",
     "slug": "binh-dinh",
     "type": "tinh",
+    "description": "Bình Định là một tỉnh thuộc vùng duyên hải Nam Trung Bộ Việt Nam.",
     "parent_code": null
   },
   "54": {
     "name": "Phú Yên",
     "slug": "phu-yen",
     "type": "tinh",
+    "description": "Phú Yên là một tỉnh ven biển thuộc vùng Duyên hải Nam Trung Bộ, Việt Nam.",
     "parent_code": null
   },
   "56": {
     "name": "Khánh Hòa",
     "slug": "khanh-hoa",
     "type": "tinh",
+    "description": "Khánh Hòa là một tỉnh duyên hải Nam Trung Bộ, miền Trung Việt Nam.",
     "parent_code": null
   },
   "58": {
     "name": "Ninh Thuận",
     "slug": "ninh-thuan",
     "type": "tinh",
+    "description": "Ninh Thuận là một tỉnh ven biển thuộc vùng Duyên hải Nam Trung Bộ của Việt Nam.",
     "parent_code": null
   },
   "60": {
     "name": "Bình Thuận",
     "slug": "binh-thuan",
     "type": "tinh",
+    "description": "Bình Thuận là một tỉnh thuộc vùng Duyên hải Nam Trung Bộ, Việt Nam.",
     "parent_code": null
   },
   "62": {
     "name": "Kon Tum",
     "slug": "kon-tum",
     "type": "tinh",
+    "description": "Kon Tum là một tỉnh nằm ở phía bắc Tây Nguyên, Việt Nam.",
     "parent_code": null
   },
   "64": {
     "name": "Gia Lai",
     "slug": "gia-lai",
     "type": "tinh",
+    "description": "Gia Lai là tỉnh có diện tích lớn thứ hai Việt Nam và là một tỉnh cao nguyên nằm ở khu vực Bắc Tây Nguyên, Việt Nam.",
     "parent_code": null
   },
   "66": {
     "name": "Đắk Lắk",
     "slug": "dak-lak",
     "type": "tinh",
+    "description": "Đắk Lắk là một tỉnh có diện tích lớn thứ 4 nằm ở trung tâm vùng Tây Nguyên, miền Trung Việt Nam.",
     "parent_code": null
   },
   "67": {
     "name": "Đắk Nông",
     "slug": "dak-nong",
     "type": "tinh",
+    "description": "Đắk Nông là một tỉnh thuộc vùng Tây Nguyên, miền Trung, Việt Nam.",
     "parent_code": null
   },
   "68": {
     "name": "Lâm Đồng",
     "slug": "lam-dong",
     "type": "tinh",
+    "description": "Lâm Đồng là một trong năm tỉnh thuộc vùng Tây Nguyên, Việt Nam, đồng thời là tỉnh có diện tích lớn thứ 7 cả nước, tiếp giáp với vùng kinh tế trọng điểm phía nam.",
     "parent_code": null
   },
   "70": {
     "name": "Bình Phước",
     "slug": "binh-phuoc",
     "type": "tinh",
+    "description": "Bình Phước là một tỉnh thành thuộc vùng Đông Nam Bộ, Việt Nam. Đây cũng là tỉnh có diện tích lớn nhất Nam Bộ.",
     "parent_code": null
   },
   "72": {
     "name": "Tây Ninh",
     "slug": "tay-ninh",
     "type": "tinh",
+    "description": "Tây Ninh là một tỉnh thuộc vùng Đông Nam Bộ, Việt Nam. Tây Ninh nằm ở vị trí cầu nối giữa Thành phố Hồ Chí Minh và thủ đô Phnôm Pênh, vương quốc Campuchia và là một trong những tỉnh nằm trong Vùng kinh tế trọng điểm phía Nam.",
     "parent_code": null
   },
   "74": {
     "name": "Bình Dương",
     "slug": "binh-duong",
     "type": "tinh",
+    "description": "Bình Dương là một tỉnh thuộc vùng Đông Nam Bộ, Việt Nam. Tỉnh lỵ của Bình Dương là thành phố Thủ Dầu Một, cách trung tâm của Thành phố Hồ Chí Minh 30 km theo đường Quốc lộ 13.",
     "parent_code": null
   },
   "75": {
     "name": "Đồng Nai",
     "slug": "dong-nai",
     "type": "tinh",
+    "description": "Đồng Nai là một tỉnh thuộc vùng Đông Nam Bộ, Việt Nam. Đây là tỉnh đông dân thứ 5 cả nước.",
     "parent_code": null
   },
   "77": {
     "name": "Bà Rịa - Vũng Tàu",
     "slug": "ba-ria-vung-tau",
     "type": "tinh",
+    "description": "Bà Rịa – Vũng Tàu là một tỉnh ven biển thuộc vùng Đông Nam Bộ, Việt Nam. Nằm trong Vùng kinh tế trọng điểm phía Nam, ở vị trí cửa ngõ ra Biển Đông của các tỉnh trong khu vực miền Đông Nam Bộ, Bà Rịa – Vũng Tàu kết nối với Thành phố Hồ Chí Minh và các địa phương khác bằng đường bộ, đường không và đường thủy.",
     "parent_code": null
   },
   "80": {
     "name": "Long An",
     "slug": "long-an",
     "type": "tinh",
+    "description": "Long An là một tỉnh thuộc vùng Đồng bằng sông Cửu Long, Việt Nam. Là địa phương nằm ở cửa ngõ của vùng Đồng bằng sông Cửu Long liền kề với Thành phố Hồ Chí Minh.",
     "parent_code": null
   },
   "82": {
     "name": "Tiền Giang",
     "slug": "tien-giang",
     "type": "tinh",
+    "description": "Tiền Giang là một tỉnh ven biển thuộc đồng bằng sông Cửu Long, Việt Nam. Phần lớn diện tích của tỉnh thuộc địa bàn tỉnh Mỹ Tho cũ. Tuy nhiên, cũng có thời kỳ toàn bộ diện tích tỉnh Tiền Giang ngày nay đều thuộc tỉnh Mỹ Tho, bao gồm cả vùng Gò Công. Tên gọi cũ của tỉnh trước năm 1976 là Định Tường.",
     "parent_code": null
   },
   "83": {
     "name": "Bến Tre",
     "slug": "ben-tre",
     "type": "tinh",
+    "description": "Bến Tre là một tỉnh thuộc vùng Đồng bằng sông Cửu Long, Việt Nam.",
     "parent_code": null
   },
   "84": {
     "name": "Trà Vinh",
     "slug": "tra-vinh",
     "type": "tinh",
+    "description": "Trà Vinh là một tỉnh ven biển thuộc vùng Đồng bằng sông Cửu Long, Việt Nam.",
     "parent_code": null
   },
   "86": {
     "name": "Vĩnh Long",
     "slug": "vinh-long",
     "type": "tinh",
+    "description": "Vĩnh Long là một tỉnh thuộc vùng Đồng bằng sông Cửu Long, Việt Nam.",
     "parent_code": null
   },
   "87": {
     "name": "Đồng Tháp",
     "slug": "dong-thap",
     "type": "tinh",
+    "description": "Đồng Tháp là một tỉnh thuộc vùng Đồng bằng sông Cửu Long, Việt Nam. Vùng đất Đồng Tháp đã được Chúa Nguyễn khai phá vào khoảng thế kỷ XVII, XVIII. Tỉnh Đồng Tháp được thành lập trên cơ sở hợp nhất tỉnh Kiến Phong và tỉnh Sa Đéc vào năm 1976.",
     "parent_code": null
   },
   "89": {
     "name": "An Giang",
     "slug": "an-giang",
     "type": "tinh",
+    "description": "An Giang là một tỉnh của Việt Nam. Nó nằm ở đồng bằng sông Cửu Long, ở phía tây nam của đất nước.",
     "parent_code": null
   },
   "91": {
     "name": "Kiên Giang",
     "slug": "kien-giang",
     "type": "tinh",
+    "description": "Kiên Giang là một tỉnh ven biển thuộc vùng Đồng bằng sông Cửu Long, Nam Bộ. Phần lớn diện tích Kiên Giang ngày nay bao gồm tỉnh Rạch Giá và toàn bộ tỉnh Hà Tiên cũ. Đây là tỉnh có diện tích lớn nhất vùng Tây Nam Bộ và lớn thứ hai ở Nam Bộ.",
     "parent_code": null
   },
   "93": {
     "name": "Hậu Giang",
     "slug": "hau-giang",
     "type": "tinh",
+    "description": "Hậu Giang là một tỉnh thuộc vùng Đồng bằng sông Cửu Long, Việt Nam.",
     "parent_code": null
   },
   "94": {
     "name": "Sóc Trăng",
     "slug": "soc-trang",
     "type": "tinh",
+    "description": "Sóc Trăng là một tỉnh ven biển thuộc đồng bằng sông Cửu Long, Việt Nam.",
     "parent_code": null
   },
   "95": {
     "name": "Bạc Liêu",
     "slug": "bac-lieu",
     "type": "tinh",
+    "description": "Bạc Liêu là một tỉnh thuộc duyên hải vùng bằng sông Cửu Long, nằm trên bán đảo Cà Mau, miền đất cực nam của Việt Nam. Tỉnh Bạc Liêu được thành lập ngày 20 tháng 12 năm 1899 và chính thức là đơn vị hành chính từ ngày 1 tháng 1 năm 1900.",
     "parent_code": null
   },
   "96": {
     "name": "Cà Mau",
     "slug": "ca-mau",
     "type": "tinh",
+    "description": "Cà Mau là một tỉnh ven biển ở cực nam của Việt Nam, nằm trong khu vực Đồng bằng sông Cửu Long. Toàn hộ địa phận Cà Mau năm trên Bán đảo Cà Mau.",
     "parent_code": null
   },
   "08": {
     "name": "Tuyên Quang",
     "slug": "tuyen-quang",
     "type": "tinh",
+    "description": "Tuyên Quang là một tỉnh thuộc vùng Đông Bắc Bộ Việt Nam.",
     "parent_code": null
   },
   "04": {
     "name": "Cao Bằng",
     "slug": "cao-bang",
     "type": "tinh",
+    "description": "Cao Bằng là một tỉnh thuộc vùng Đông Bắc Bộ, Việt Nam.",
     "parent_code": null
   },
   "02": {
     "name": "Hà Giang",
     "slug": "ha-giang",
     "type": "tinh",
+    "description": "Hà Giang là một tỉnh thuộc vùng Đông Bắc Bộ, Việt Nam.",
     "parent_code": null
   },
   "06": {
     "name": "Bắc Kạn",
     "slug": "bac-kan",
     "type": "tinh",
+    "description": "Bắc Kạn là một tỉnh thuộc vùng Đông Bắc Bộ, Việt Nam.",
     "parent_code": null
   }
 }

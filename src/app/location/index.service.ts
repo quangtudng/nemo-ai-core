@@ -1,41 +1,43 @@
+import { CategoryRepository } from "@app/category/index.repository";
 import { Injectable } from "@nestjs/common";
-import { DeleteResult, Like } from "typeorm";
-import { CreateLocationDto } from "./dto/create-one";
-import { FilterLocationDTO } from "./dto/filter-tree-many";
+import { DeleteResult } from "typeorm";
 import { UpdateLocationDTO } from "./dto/update-one";
 import { Location } from "./index.entity";
 import { LocationRepository } from "./index.repository";
 
 @Injectable()
 export class LocationService {
-  constructor(private repo: LocationRepository) {}
-  async createNode(dto: CreateLocationDto): Promise<Location> {
-    const location = new Location();
-    location.name = dto.name;
-    location.type = dto.type;
-    if (dto.parentId) {
-      const parentLocation = await this.repo.findOne({ id: dto.parentId });
-      location.parent = parentLocation;
-    }
-    return this.repo.save(location);
+  constructor(
+    private repo: LocationRepository,
+    private categoryRepo: CategoryRepository,
+  ) {}
+  async findNode(id: number) {
+    const location = await this.repo.findOneOrFail(id);
+    const allDescendants = await this.repo.findAllDescendants(location);
+    const allDescendantIds = allDescendants.map((loc) => loc.id);
+    const categoryCount = await this.categoryRepo.findCategoryCountByLocation(
+      allDescendantIds,
+    );
+    return {
+      categoryCount,
+      ...location,
+    };
   }
+  async findAllNodes(): Promise<Location[]> {
+    let tree: Location[] = [];
+    tree = await this.repo.findTrees({
+      relations: ["services"],
+    });
 
-  async findAllNodes(dto: FilterLocationDTO): Promise<Location[]> {
-    if (dto.name) {
-      return this.findTreeNodesByName(dto.name);
-    } else {
-      return this.repo.findTrees();
+    for (let i = 0; i < tree.length; i++) {
+      this.formatLocationServiceCount(tree[0]);
     }
+    return tree;
   }
 
   async updateNode(id: number, dto: UpdateLocationDTO): Promise<Location> {
     const location = await this.repo.findOneOrFail(id);
-    if (dto.name) location.name = dto.name;
-    if (dto.type) location.type = dto.type;
-    if (dto.parentId) {
-      const parentLocation = await this.repo.findOne({ id: dto.parentId });
-      location.parent = parentLocation;
-    }
+    location.description = dto.description;
     return this.repo.save(location);
   }
 
@@ -43,15 +45,17 @@ export class LocationService {
     return this.repo.delete(id);
   }
 
-  private async findTreeNodesByName(name: string): Promise<Location[]> {
-    const locations = await this.repo.find({
-      where: { name: Like(`%${name}%`) },
-    });
-    const tree: Location[] = [];
-    for (let i = 0; i < locations.length; i++) {
-      const treeNodes = await this.repo.findDescendantsTree(locations[i]);
-      tree.push(treeNodes);
+  private formatLocationServiceCount(rootLocation) {
+    rootLocation.serviceCount = rootLocation.services.length;
+    if (rootLocation.children.length === 0) {
+      return rootLocation.serviceCount;
     }
-    return tree;
+    for (let i = 0; i < rootLocation.children.length; i++) {
+      const locationCount = this.formatLocationServiceCount(
+        rootLocation.children[i],
+      );
+      rootLocation.serviceCount += locationCount;
+    }
+    return rootLocation.serviceCount;
   }
 }

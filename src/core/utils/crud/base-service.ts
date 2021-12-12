@@ -20,7 +20,7 @@ export class BaseCrudService<T> {
 
   async findMany(param: BaseFilterDTO) {
     const data = await this.baseRepository.findMany(param);
-    const totalPageCount = data[1] / (param.limit || 5);
+    const totalPageCount = data[1] / (param.limit || 10);
     return {
       data: data[0],
       count: data[0].length,

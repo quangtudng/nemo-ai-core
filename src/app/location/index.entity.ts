@@ -1,4 +1,5 @@
 import { Service } from "@app/service/index.entity";
+import { BaseTimeStampEntity } from "@core/utils/crud/base-entity";
 import slugify from "slugify";
 import {
   BeforeInsert,
@@ -14,7 +15,7 @@ import {
 
 @Entity("locations")
 @Tree("materialized-path")
-export class Location {
+export class Location extends BaseTimeStampEntity {
   @PrimaryGeneratedColumn()
   id: number;
 
@@ -36,6 +37,12 @@ export class Location {
   })
   slug: string;
 
+  @Column({
+    type: "text",
+    nullable: true,
+  })
+  description: string;
+
   @OneToMany(() => Service, (service) => service.location)
   services: Service[];
 
@@ -48,7 +55,7 @@ export class Location {
   @BeforeInsert()
   @BeforeUpdate()
   slugify() {
-    this.slug = slugify(this.name, {
+    this.slug = slugify(`${this.name} ${this.type}`, {
       replacement: "-",
       lower: true,
       trim: true,

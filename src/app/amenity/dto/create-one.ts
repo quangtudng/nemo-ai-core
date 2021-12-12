@@ -1,16 +1,19 @@
 import { ApiProperty } from "@nestjs/swagger";
-import { IsNotEmpty, IsString, Length } from "class-validator";
+import { IsNotEmpty, IsOptional, Length, ValidateIf } from "class-validator";
 
 export class CreateAmenityDto {
-  @ApiProperty({ example: "Example title" })
-  @IsString()
-  @IsNotEmpty()
+  @ApiProperty({ example: "Phòng sang trọng" })
   @Length(1, 100)
+  @IsNotEmpty()
   title: string;
 
-  @ApiProperty({ example: "Example description" })
-  @IsString()
-  @IsNotEmpty()
+  @ApiProperty({
+    example:
+      "Phòng cao cấp nhất trong khách sạn. Phòng thường ở trên tầng cao, được trang bị những thiết bị cao cấp và các dịch vụ đặc biệt kèm theo",
+  })
   @Length(1, 1000)
+  @IsNotEmpty()
+  @ValidateIf((object, value) => value !== "")
+  @IsOptional()
   description: string;
 }

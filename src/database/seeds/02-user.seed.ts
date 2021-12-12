@@ -4,6 +4,7 @@ import * as CoreUsers from "@app/user/data/users.json";
 import { Connection } from "typeorm";
 import { Factory, Seeder } from "typeorm-seeding";
 import { hashString } from "@core/utils/hash/bcrypt";
+import { PhoneNumberUtil } from "@core/utils/phone";
 
 export default class CreateUsers implements Seeder {
   public async run(factory: Factory, connection: Connection): Promise<any> {
@@ -15,7 +16,8 @@ export default class CreateUsers implements Seeder {
       user.email = userData.email;
       user.fullname = userData.fullname;
       user.status = userData.status;
-      user.phoneNumber = userData.phoneNumber;
+      user.phoneNumber = PhoneNumberUtil.format(userData.phoneNumber);
+      user.avatar = null;
       const role = await connection
         .createQueryBuilder<Role>(Role, "roles")
         .where("roles.label = :label", { label: userData.role })

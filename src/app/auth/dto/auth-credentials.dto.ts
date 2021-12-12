@@ -1,24 +1,13 @@
 import { ApiProperty } from "@nestjs/swagger";
-import {
-  IsEmail,
-  IsNotEmpty,
-  IsString,
-  MaxLength,
-  MinLength,
-} from "class-validator";
+import { IsEmail, IsNotEmpty } from "class-validator";
 
 export class AuthCredentialsDto {
-  @ApiProperty({ example: "example@gmail.com", nullable: false })
-  @MinLength(5)
-  @MaxLength(50)
+  @ApiProperty({ example: "quangtudng@gmail.com" })
   @IsEmail()
   @IsNotEmpty()
   email: string;
 
-  @ApiProperty({ example: "123456", nullable: false })
-  @MinLength(5)
-  @MaxLength(255)
-  @IsString()
+  @ApiProperty({ example: "123456" })
   @IsNotEmpty()
   password: string;
 }

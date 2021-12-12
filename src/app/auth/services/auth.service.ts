@@ -22,16 +22,16 @@ export class AuthService extends BaseCrudService<AuthIdentity> {
   constructor(
     private tokenService: TokenService,
     private userService: UserService,
-    private repo: AuthRepository,
+    private authRepository: AuthRepository,
     private userRepository: UserRepository,
   ) {
-    super(repo);
+    super(authRepository);
   }
 
-  async signin(dto: AuthCredentialsDto) {
+  async signin(body: AuthCredentialsDto) {
     const user = await this.userService.findOne({
       where: {
-        email: dto.email,
+        email: body.email,
       },
       relations: ["role"],
       select: [
@@ -42,6 +42,7 @@ export class AuthService extends BaseCrudService<AuthIdentity> {
         "status",
         "bio",
         "phoneNumber",
+        "avatar",
       ],
     });
 
@@ -50,7 +51,10 @@ export class AuthService extends BaseCrudService<AuthIdentity> {
     if (user.status === USER_STATUS.DISABLED)
       throw new BadRequestException(ENTITY_MESSAGE.USER_IS_DISABLED);
 
-    const isSamePassword = await compareHashString(dto.password, user.password);
+    const isSamePassword = await compareHashString(
+      body.password,
+      user.password,
+    );
 
     if (!isSamePassword)
       throw new BadRequestException(VALIDATION_MESSAGE.INCORRECT_CREDENTIAL);
@@ -59,8 +63,7 @@ export class AuthService extends BaseCrudService<AuthIdentity> {
       { id: user.id },
       true,
     );
-    await this.repo.saveRefreshToken(user, refreshToken);
-    delete user["password"];
+    await this.authRepository.saveRefreshToken(user, refreshToken);
     return {
       accessToken,
       refreshToken,
@@ -71,6 +74,7 @@ export class AuthService extends BaseCrudService<AuthIdentity> {
       role: user.role,
       phoneNumber: user.phoneNumber,
       bio: user.bio,
+      avatar: user.avatar,
     };
   }
 
@@ -88,9 +92,9 @@ export class AuthService extends BaseCrudService<AuthIdentity> {
         "status",
         "bio",
         "phoneNumber",
+        "avatar",
       ],
     });
-    delete user["password"];
     return {
       id: user.id,
       email: user.email,
@@ -99,18 +103,19 @@ export class AuthService extends BaseCrudService<AuthIdentity> {
       role: user.role,
       phoneNumber: user.phoneNumber,
       bio: user.bio,
+      avatar: user.avatar,
     };
   }
 
-  async updateMe(id: number, dto: UpdateMeDTO): Promise<User> {
+  async updateMe(user: User, dto: UpdateMeDTO): Promise<User> {
     if (dto.password) {
       dto.password = await hashString(dto.password);
     }
-    return this.userRepository.updateOne(id, dto);
+    return this.userRepository.updateOne(user.id, dto);
   }
 
   async refreshToken(dto: RefreshTokenDTO) {
-    const identity = await this.repo.findOneOrFail({
+    const identity = await this.authRepository.findOneOrFail({
       where: { refreshToken: dto.refreshToken },
       relations: ["user"],
       select: ["id", "refreshToken", "user"],
@@ -123,11 +128,11 @@ export class AuthService extends BaseCrudService<AuthIdentity> {
       { id: identity.user.id },
       true,
     );
-    await this.repo.updateTokenOrFail(dto.refreshToken, refreshToken);
+    await this.authRepository.updateTokenOrFail(dto.refreshToken, refreshToken);
     return { accessToken, refreshToken };
   }
 
   async revokeToken(dto: RefreshTokenDTO) {
-    return this.repo.updateTokenOrFail(dto.refreshToken, null);
+    return this.authRepository.updateTokenOrFail(dto.refreshToken, null);
   }
 }
