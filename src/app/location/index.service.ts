@@ -37,7 +37,7 @@ export class LocationService {
 
   async updateNode(id: number, dto: UpdateLocationDTO): Promise<Location> {
     const location = await this.repo.findOneOrFail(id);
-    if (dto.description) location.description = dto.description;
+    location.description = dto.description;
     return this.repo.save(location);
   }
 

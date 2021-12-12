@@ -11,7 +11,7 @@ import { ApiOperation, ApiTags } from "@nestjs/swagger";
 import { Location } from "./index.entity";
 import { UpdateLocationDTO } from "./dto/update-one";
 import { IsAuth } from "@app/auth/decorators/is-auth.decorator";
-import USER_ROLE from "@core/constants/user-role";
+import USER_ROLE from "@app/role/data/user-role";
 
 @ApiTags("locations")
 @Controller("locations")
@@ -20,14 +20,12 @@ export class LocationController {
 
   @ApiOperation({ summary: "Get many locations" })
   @Get()
-  @IsAuth([USER_ROLE.SUPERADMIN, USER_ROLE.MODERATOR])
   findMany() {
     return this.service.findAllNodes();
   }
 
   @ApiOperation({ summary: "Get a location" })
   @Get(":id")
-  @IsAuth([USER_ROLE.SUPERADMIN, USER_ROLE.MODERATOR])
   findOne(@Param("id", ParseIntPipe) id: number) {
     return this.service.findNode(id);
   }
@@ -37,8 +35,8 @@ export class LocationController {
   @IsAuth([USER_ROLE.SUPERADMIN, USER_ROLE.MODERATOR])
   updateOne(
     @Param("id", ParseIntPipe) id: number,
-    @Body() dto: UpdateLocationDTO,
+    @Body() body: UpdateLocationDTO,
   ): Promise<Location> {
-    return this.service.updateNode(id, dto);
+    return this.service.updateNode(id, body);
   }
 }

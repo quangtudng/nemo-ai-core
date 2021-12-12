@@ -1,3 +1,5 @@
+import { IsAuth } from "@app/auth/decorators/is-auth.decorator";
+import USER_ROLE from "@app/role/data/user-role";
 import { ProjectLogger } from "@core/utils/loggers/log-service";
 import {
   Body,
@@ -19,6 +21,7 @@ export class CloudinaryController {
   @ApiOperation({ summary: "Upload an image" })
   @Post("upload")
   @UseInterceptors(FilesInterceptor("file"))
+  @IsAuth([USER_ROLE.SUPERADMIN, USER_ROLE.MODERATOR])
   async uploadFile(
     @UploadedFiles() files: Array<Express.Multer.File>,
     @Body() dto: UploadCloudinaryDTO,
@@ -33,6 +36,7 @@ export class CloudinaryController {
             dto.folder,
           );
           const urlObj = new URL(uploadedResult.url);
+          // Set public id for ease of access and delete later
           urlObj.searchParams.set("public_id", uploadedResult.public_id);
           imageResults.push({
             publicId: uploadedResult.public_id,

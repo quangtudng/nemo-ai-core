@@ -17,7 +17,7 @@ import { DeleteResult } from "typeorm";
 import { FilterUserDTO } from "./dto/filter-many";
 import { ApiOperation, ApiTags } from "@nestjs/swagger";
 import { IsAuth } from "@app/auth/decorators/is-auth.decorator";
-import USER_ROLE from "@core/constants/user-role";
+import USER_ROLE from "@app/role/data/user-role";
 
 @ApiTags("users")
 @Controller("users")
@@ -27,8 +27,8 @@ export class UserController {
   @ApiOperation({ summary: "Create a user" })
   @Post()
   @IsAuth([USER_ROLE.SUPERADMIN, USER_ROLE.MODERATOR])
-  createOne(@Body() dto: CreateUserDto): Promise<User> {
-    return this.service.createOne(dto);
+  createOne(@Body() body: CreateUserDto): Promise<User> {
+    return this.service.createOne(body);
   }
 
   @ApiOperation({ summary: "Get many users" })
@@ -54,14 +54,14 @@ export class UserController {
   @IsAuth([USER_ROLE.SUPERADMIN, USER_ROLE.MODERATOR])
   updateOne(
     @Param("id", ParseIntPipe) id: number,
-    @Body() dto: UpdateUserDTO,
+    @Body() body: UpdateUserDTO,
   ): Promise<User> {
-    return this.service.updateOne(id, dto);
+    return this.service.updateOne(id, body);
   }
 
   @ApiOperation({ summary: "Delete a user" })
   @Delete(":id")
-  @IsAuth([USER_ROLE.SUPERADMIN])
+  @IsAuth([USER_ROLE.SUPERADMIN, USER_ROLE.MODERATOR])
   deleteOne(@Param("id", ParseIntPipe) id: number): Promise<DeleteResult> {
     return this.service.deleteOne(id);
   }

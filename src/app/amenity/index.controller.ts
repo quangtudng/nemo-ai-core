@@ -16,7 +16,7 @@ import { AmenityService } from "./index.service";
 import { DeleteResult } from "typeorm";
 import { ApiOperation, ApiTags } from "@nestjs/swagger";
 import { IsAuth } from "@app/auth/decorators/is-auth.decorator";
-import USER_ROLE from "@core/constants/user-role";
+import USER_ROLE from "@app/role/data/user-role";
 import { FilterAmenityDTO } from "./dto/filter-many";
 
 @ApiTags("amenities")
@@ -27,8 +27,8 @@ export class AmenityController {
   @ApiOperation({ summary: "Create an amenity" })
   @Post()
   @IsAuth([USER_ROLE.SUPERADMIN])
-  createOne(@Body() dto: CreateAmenityDto): Promise<Amenity> {
-    return this.service.createOne(dto);
+  createOne(@Body() body: CreateAmenityDto): Promise<Amenity> {
+    return this.service.createOne(body);
   }
 
   @ApiOperation({ summary: "Find many amenities" })
@@ -48,9 +48,9 @@ export class AmenityController {
   @IsAuth([USER_ROLE.SUPERADMIN])
   updateOne(
     @Param("id", ParseIntPipe) id: number,
-    @Body() dto: UpdateAmenityDTO,
+    @Body() body: UpdateAmenityDTO,
   ): Promise<Amenity> {
-    return this.service.updateOne(id, dto);
+    return this.service.updateOne(id, body);
   }
 
   @ApiOperation({ summary: "Delete an amenity" })

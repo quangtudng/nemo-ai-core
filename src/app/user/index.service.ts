@@ -18,7 +18,7 @@ export class UserService extends BaseCrudService<User> {
 
   async createOne(dto: CreateUserDto): Promise<User> {
     await this.repo.checkDuplicateEmail(dto.email);
-    const role = await this.roleRepository.findOne(dto.roleId);
+    const role = await this.roleRepository.findOneOrFail(dto.roleId);
     if (dto.password) {
       dto.password = await hashString(dto.password);
     }
@@ -27,7 +27,7 @@ export class UserService extends BaseCrudService<User> {
   }
 
   async updateOne(id: number, dto: UpdateUserDTO): Promise<User> {
-    const role = await this.roleRepository.findOne(dto.roleId);
+    const role = await this.roleRepository.findOneOrFail(dto.roleId);
     if (dto.password) {
       dto.password = await hashString(dto.password);
     }
