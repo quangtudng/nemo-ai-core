@@ -9,12 +9,12 @@ export class BaseFilterDTO {
   @IsNumber()
   @Type(() => Number)
   @IsOptional()
-  limit: number;
+  limit: number = 10;
 
   @ApiProperty({ type: Number, example: 1, required: false })
   @Min(1)
   @IsNumber()
   @Type(() => Number)
   @IsOptional()
-  page: number;
+  page: number = 1;
 }

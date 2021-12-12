@@ -4,7 +4,7 @@ import { RoleService } from "./index.service";
 import { BaseFilterDTO } from "@core/dto/filter-many";
 import { ApiOperation, ApiTags } from "@nestjs/swagger";
 import { IsAuth } from "@app/auth/decorators/is-auth.decorator";
-import USER_ROLE from "@core/constants/user-role";
+import USER_ROLE from "@app/role/data/user-role";
 
 @ApiTags("roles")
 @Controller("roles")

@@ -21,12 +21,15 @@ export class UserRepository extends BaseCrudRepository<User> {
   async findMany(param: FilterUserDTO): Promise<[User[], number]> {
     const limit = param.limit || 5;
     const offset = param.page && param.page > 1 ? (param.page - 1) * limit : 0;
-    let builder = this.createQueryBuilder("user")
-      .leftJoinAndSelect("user.role", "role")
-      .where("(user.email like :email OR user.fullname like :fullname)", {
+    let builder = this.createQueryBuilder("user").leftJoinAndSelect(
+      "user.role",
+      "role",
+    );
+    if (param.email) {
+      builder = builder.where("user.email like :email", {
         email: `%${param.email}%`,
-        fullname: `%${param.fullname}%`,
       });
+    }
     if (param.roleId) {
       builder = builder.andWhere("user.role = :roleId", {
         roleId: param.roleId,

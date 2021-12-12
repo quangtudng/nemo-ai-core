@@ -1,4 +1,5 @@
 import { Service } from "@app/service/index.entity";
+import { BaseTimeStampEntity } from "@core/utils/crud/base-entity";
 import slugify from "slugify";
 import {
   BeforeInsert,
@@ -14,7 +15,7 @@ import {
 
 @Entity("locations")
 @Tree("materialized-path")
-export class Location {
+export class Location extends BaseTimeStampEntity {
   @PrimaryGeneratedColumn()
   id: number;
 

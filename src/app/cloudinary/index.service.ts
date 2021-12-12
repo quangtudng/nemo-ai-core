@@ -4,6 +4,9 @@ import toStream = require("buffer-to-stream");
 
 @Injectable()
 export class CloudinaryService {
+  /**
+   * @Usage Upload images to Cloudinary
+   */
   async uploadImageToCloudinary(
     file: Express.Multer.File,
     folder: string,
@@ -17,6 +20,9 @@ export class CloudinaryService {
     });
   }
 
+  /**
+   * @Usage Delete images from Cloudinary, required urls with public ids in the query params
+   */
   async deleteCloudinaryImages(urls: string[]): Promise<any> {
     try {
       if (urls && urls.length !== 0) {

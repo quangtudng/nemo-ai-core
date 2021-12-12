@@ -16,24 +16,22 @@ import USER_STATUS from "@core/constants/user-status";
 import { UserRepository } from "@app/user/index.repository";
 import { User } from "@app/user/index.entity";
 import { UpdateMeDTO } from "../dto/update-me.dto";
-import { CloudinaryService } from "@app/cloudinary/index.service";
 
 @Injectable()
 export class AuthService extends BaseCrudService<AuthIdentity> {
   constructor(
     private tokenService: TokenService,
     private userService: UserService,
-    private cloudinaryService: CloudinaryService,
     private authRepository: AuthRepository,
     private userRepository: UserRepository,
   ) {
     super(authRepository);
   }
 
-  async signin(dto: AuthCredentialsDto) {
+  async signin(body: AuthCredentialsDto) {
     const user = await this.userService.findOne({
       where: {
-        email: dto.email,
+        email: body.email,
       },
       relations: ["role"],
       select: [
@@ -53,7 +51,10 @@ export class AuthService extends BaseCrudService<AuthIdentity> {
     if (user.status === USER_STATUS.DISABLED)
       throw new BadRequestException(ENTITY_MESSAGE.USER_IS_DISABLED);
 
-    const isSamePassword = await compareHashString(dto.password, user.password);
+    const isSamePassword = await compareHashString(
+      body.password,
+      user.password,
+    );
 
     if (!isSamePassword)
       throw new BadRequestException(VALIDATION_MESSAGE.INCORRECT_CREDENTIAL);
@@ -63,7 +64,6 @@ export class AuthService extends BaseCrudService<AuthIdentity> {
       true,
     );
     await this.authRepository.saveRefreshToken(user, refreshToken);
-    delete user["password"];
     return {
       accessToken,
       refreshToken,
@@ -95,7 +95,6 @@ export class AuthService extends BaseCrudService<AuthIdentity> {
         "avatar",
       ],
     });
-    delete user["password"];
     return {
       id: user.id,
       email: user.email,

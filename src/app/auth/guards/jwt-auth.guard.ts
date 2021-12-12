@@ -16,11 +16,11 @@ import { AuthGuard } from "@nestjs/passport";
 export class JwtAuthGuard extends AuthGuard("jwt") {
   handleRequest(err: any, user: User, info: any): any {
     if (info?.message === "No auth token")
-      throw new UnauthorizedException(HTTP_MESSAGE.AUTHENTICATED_FAILED);
+      throw new UnauthorizedException(HTTP_MESSAGE.UNAUTHORIZED);
     if (info?.message === "jwt expired")
-      throw new UnauthorizedException(HTTP_MESSAGE.AUTHENTICATION_EXPIRED);
+      throw new UnauthorizedException(HTTP_MESSAGE.UNAUTHORIZED);
     if (info?.message)
-      throw new UnauthorizedException(HTTP_MESSAGE.AUTHENTICATED_FAILED);
+      throw new UnauthorizedException(HTTP_MESSAGE.UNAUTHORIZED);
     if (!user) {
       throw new NotFoundException(ENTITY_MESSAGE.USER_NOT_FOUND);
     }
