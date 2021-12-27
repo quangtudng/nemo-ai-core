@@ -12,7 +12,7 @@ import {
   VALIDATION_MESSAGE,
 } from "@core/constants/error-message";
 import { TokenService } from "./jwt.service";
-import USER_STATUS from "@core/constants/user-status";
+import USER_STATUS from "@app/user/data/user-status";
 import { UserRepository } from "@app/user/index.repository";
 import { User } from "@app/user/index.entity";
 import { UpdateMeDTO } from "../dto/update-me.dto";

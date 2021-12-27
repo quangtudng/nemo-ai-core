@@ -1,6 +1,6 @@
 import { AuthIdentity } from "@app/auth/index.entity";
 import { Role } from "@app/role/index.entity";
-import UserStatus from "@core/constants/user-status";
+import UserStatus from "@app/user/data/user-status";
 import { BaseTimeStampEntity } from "@core/utils/crud/base-entity";
 import {
   Column,

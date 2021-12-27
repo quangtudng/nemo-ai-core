@@ -1,6 +1,6 @@
 import { User } from "@app/user/index.entity";
 import { ENTITY_MESSAGE, HTTP_MESSAGE } from "@core/constants/error-message";
-import USER_STATUS from "@core/constants/user-status";
+import USER_STATUS from "@app/user/data/user-status";
 import {
   BadRequestException,
   Injectable,
