@@ -2,8 +2,9 @@ import { AmenityModule } from "@app/amenity/index.module";
 import { AuthModule } from "@app/auth/index.module";
 import { CategoryModule } from "@app/category/index.module";
 import { CloudinaryModule } from "@app/cloudinary/index.module";
-import { CustomerModule } from "@app/customers/index.module";
+import { CustomerModule } from "@app/customer/index.module";
 import { LocationModule } from "@app/location/index.module";
+import { MessageModule } from "@app/message/index.module";
 import { ServiceModule } from "@app/service/index.module";
 import { UserModule } from "@app/user/index.module";
 import typeOrmConfig from "@config/typeorm";
@@ -21,6 +22,7 @@ import { TypeOrmModule } from "@nestjs/typeorm";
     ServiceModule,
     CloudinaryModule,
     CustomerModule,
+    MessageModule,
   ],
   controllers: [],
   providers: [],
