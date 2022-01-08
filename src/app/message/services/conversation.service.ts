@@ -59,6 +59,10 @@ export class ConversationService extends BaseCrudService<Message> {
     const customer = await this.customerService.findOneOrFail({
       longId: dto.customerLongId,
     });
+
+    await this.customerService.updateOne(customer.id, {
+      viewed: 0,
+    });
     const customerMessage = await this.repo.createOne({
       body: dto.body,
       owner: MESSAGE_OWNER.CUSTOMER,
