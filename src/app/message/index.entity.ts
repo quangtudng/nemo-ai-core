@@ -1,6 +1,7 @@
 import { Customer } from "@app/customer/index.entity";
 import { BaseTimeStampEntity } from "@core/utils/crud/base-entity";
 import { Column, Entity, ManyToOne, PrimaryGeneratedColumn } from "typeorm";
+import { QUESTION_TYPE } from "./constants/conversation";
 
 @Entity("messages")
 export class Message extends BaseTimeStampEntity {
@@ -14,6 +15,7 @@ export class Message extends BaseTimeStampEntity {
 
   @Column({
     type: "tinyint",
+    default: QUESTION_TYPE.FREE_TEXT,
   })
   type: number;
 

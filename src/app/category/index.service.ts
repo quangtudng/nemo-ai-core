@@ -8,4 +8,8 @@ export class CategoryService extends BaseCrudService<Category> {
   constructor(private repo: CategoryRepository) {
     super(repo);
   }
+
+  async findCategoriesByName(name: string) {
+    return this.repo.findManyByName(name);
+  }
 }

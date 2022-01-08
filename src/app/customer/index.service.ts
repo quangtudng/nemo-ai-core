@@ -4,31 +4,31 @@ import { BaseCrudService } from "@core/utils/crud/base-service";
 import { Customer } from "./index.entity";
 import { CustomerRepository } from "./index.repository";
 import { generate } from "randomstring";
-import { DeepPartial } from "typeorm";
+import { CONVERSATION_STAGE } from "@app/message/constants/conversation";
 
 @Injectable()
 export class CustomerService extends BaseCrudService<Customer> {
   constructor(private repo: CustomerRepository) {
     super(repo);
   }
-
-  async createNewCustomer(dto: DeepPartial<Customer>) {
+  async createNewCustomer() {
     const longId = generate({
       length: 100,
       charset: "alphanumeric",
     });
+    // TODO: Ip and location saving
     return this.createOne({
       longId,
       email: null,
-      ip: dto.ip || null,
+      ip: null,
       location: "Default location",
       viewed: 0,
-      currentStage: "STARTED_CONVERSATION",
-      passStages: "['STARTED_CONVERSATION']",
+      currentStage: CONVERSATION_STAGE.INTRODUCTION,
     });
   }
 
   async getAllCustomerAndMessage() {
+    // This is the common greatest n per groups problems
     const sql = `SELECT c.id,
                         c.email,
                         c.location,

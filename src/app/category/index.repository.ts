@@ -17,6 +17,14 @@ export class CategoryRepository extends BaseCrudRepository<Category> {
     return builder.take(limit).skip(offset).getManyAndCount();
   }
 
+  async findManyByName(name: string): Promise<Category[]> {
+    return this.createQueryBuilder("category")
+      .where("category.title like :title", {
+        title: `%${name}%`,
+      })
+      .getMany();
+  }
+
   async findCategoryCountByLocation(locationIds: number[]) {
     return this.createQueryBuilder("category")
       .leftJoinAndSelect("category.services", "services")

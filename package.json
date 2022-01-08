@@ -42,6 +42,7 @@
     "@nestjs/typeorm": "^8.0.1",
     "@sendgrid/mail": "^7.6.0",
     "awesome-phonenumber": "^2.64.0",
+    "axios": "^0.24.0",
     "bcrypt": "^5.0.1",
     "buffer-to-stream": "^1.0.0",
     "class-transformer": "^0.4.0",

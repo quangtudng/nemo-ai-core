@@ -28,6 +28,7 @@ export const CLOUDINARY_API_SECRET = env.CLOUDINARY_API_SECRET;
 
 export const SENDGRID_API_KEY = env.SENDGRID_API_KEY;
 export const SENDGRID_SENDER = env.SENDGRID_SENDER;
+export const RASA_SERVER = env.RASA_SERVER;
 function getLogLevel() {
   try {
     return JSON.parse(env.SYSTEM_LOG_INFO);

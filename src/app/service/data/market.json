@@ -12,7 +12,7 @@
   },
   "1": {
     "title": "Chợ Dương Đông",
-    "locations": ["Kiên Giang", "Phú Quốc"],
+    "locations": ["Kiên Giang", "Đảo Phú Quốc"],
     "images": [
       "https://media-cdn.tripadvisor.com/media/photo-w/15/ef/31/bf/il-mercato-locale.jpg",
       "https://media-cdn.tripadvisor.com/media/photo-m/1280/1c/23/5d/c9/duong-dong-market.jpg",
@@ -69,7 +69,7 @@
   },
   "6": {
     "title": "Chợ Đêm Phú Quốc",
-    "locations": ["Kiên Giang", "Phú Quốc"],
+    "locations": ["Kiên Giang", "Đảo Phú Quốc"],
     "images": [
       "https://media-cdn.tripadvisor.com/media/photo-w/17/57/aa/fb/night-market.jpg",
       "https://media-cdn.tripadvisor.com/media/photo-w/16/2a/12/6d/phu-qu-c-tony-s-tour.jpg",
@@ -91,7 +91,7 @@
   },
   "8": {
     "title": "Day Market",
-    "locations": ["Kiên Giang", "Phú Quốc"],
+    "locations": ["Kiên Giang", "Đảo Phú Quốc"],
     "images": [
       "https://media-cdn.tripadvisor.com/media/photo-w/19/75/ed/f2/day-market.jpg",
       "https://media-cdn.tripadvisor.com/media/photo-m/1280/19/75/ef/42/day-market.jpg",
@@ -744,7 +744,7 @@
     "thumbnail": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/10/3e/89/78/photo0jpg.jpg?w=500&h=-1&s=1"
   },
   "66": {
-    "title": "C34 Night - Saigon Night Market",
+    "title": "C34 Night Saigon Night Market",
     "locations": ["Hồ Chí Minh"],
     "images": [
       "https://media-cdn.tripadvisor.com/media/photo-w/18/15/58/0a/mochi.jpg",
