@@ -38,4 +38,10 @@ export class ServiceRepository extends BaseCrudRepository<Service> {
       return [[], 0];
     }
   }
+
+  async findManyByCategoryId(ids: number[]) {
+    return this.createQueryBuilder("service")
+      .where("service.category_id IN (:...ids)", { ids })
+      .getMany();
+  }
 }

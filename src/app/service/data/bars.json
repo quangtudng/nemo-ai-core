@@ -1,6 +1,6 @@
 {
   "0": {
-    "title": "Social Club Restaurant & Bar",
+    "title": "Social Club Restaurant Bar",
     "locations": ["Hồ Chí Minh"],
     "images": [
       "https://media-cdn.tripadvisor.com/media/photo-s/12/4e/7f/ba/social-club-rooftop-bar.jpg",
@@ -48,7 +48,7 @@
     "thumbnail": "https://media-cdn.tripadvisor.com/media/photo-s/15/31/53/9c/the-d-with-view.jpg"
   },
   "3": {
-    "title": "Layla - Eatery & Bar",
+    "title": "Layla Eatery Bar",
     "locations": ["Hồ Chí Minh"],
     "images": [
       "https://media-cdn.tripadvisor.com/media/photo-p/11/b9/92/65/salted-caramel-espresso.jpg",
@@ -64,7 +64,7 @@
     "thumbnail": "https://media-cdn.tripadvisor.com/media/photo-s/11/b9/92/65/salted-caramel-espresso.jpg"
   },
   "4": {
-    "title": "Indika Saigon - House Of Curiosity",
+    "title": "Indika Saigon House Of Curiosity",
     "locations": ["Hồ Chí Minh"],
     "images": [
       "https://media-cdn.tripadvisor.com/media/photo-s/18/dd/b6/fb/burger-tuesdays-130k.jpg",
@@ -112,7 +112,7 @@
     "thumbnail": "https://media-cdn.tripadvisor.com/media/photo-s/0a/a7/73/0b/getlstd-property-photo.jpg"
   },
   "7": {
-    "title": "Tê Tê & Phê Quán",
+    "title": "Tê Tê Phê Quán",
     "locations": ["Hồ Chí Minh"],
     "images": [
       "https://media-cdn.tripadvisor.com/media/photo-s/1a/8a/66/76/we-have-quite-a-selection.jpg",
@@ -128,7 +128,7 @@
     "thumbnail": "https://media-cdn.tripadvisor.com/media/photo-s/1a/8a/66/76/we-have-quite-a-selection.jpg"
   },
   "8": {
-    "title": "The Oasis Saigon Pool & Restaurant",
+    "title": "The Oasis Saigon Pool Restaurant",
     "locations": ["Hồ Chí Minh"],
     "images": [
       "https://media-cdn.tripadvisor.com/media/photo-s/14/fa/10/43/ta-img-20181008-202621.jpg",
@@ -144,7 +144,7 @@
     "thumbnail": "https://media-cdn.tripadvisor.com/media/photo-s/14/fa/10/43/ta-img-20181008-202621.jpg"
   },
   "9": {
-    "title": "52/3 Kitchen & Bar",
+    "title": "52/3 Kitchen Bar",
     "locations": ["Hồ Chí Minh"],
     "images": [
       "https://media-cdn.tripadvisor.com/media/photo-s/15/77/b2/a4/open-kitchen.jpg",
@@ -191,7 +191,7 @@
     "thumbnail": "https://media-cdn.tripadvisor.com/media/photo-s/1c/23/40/28/photo0jpg.jpg"
   },
   "12": {
-    "title": "The Tipsy Cow Saigon - Cocktails & Kitchen",
+    "title": "The Tipsy Cow Saigon Cocktails Kitchen",
     "locations": ["Hồ Chí Minh"],
     "images": [
       "https://media-cdn.tripadvisor.com/media/photo-s/19/76/07/a7/the-tipsy-cow-saigon.jpg",
@@ -270,7 +270,7 @@
     "thumbnail": "https://media-cdn.tripadvisor.com/media/photo-f/1d/1b/d5/b2/lu-u-bar-saigon-108-pham.jpg"
   },
   "17": {
-    "title": "Rehab Station - Social Craft Beer Hub",
+    "title": "Rehab Station Social Craft Beer Hub",
     "locations": ["Hồ Chí Minh"],
     "images": [
       "https://media-cdn.tripadvisor.com/media/photo-s/11/a0/96/44/interior-1st-floor.jpg",
@@ -379,7 +379,7 @@
     "thumbnail": "https://media-cdn.tripadvisor.com/media/photo-s/13/1c/92/70/long-wooden-classic-bar.jpg"
   },
   "24": {
-    "title": "The Vault Bar & Lounge",
+    "title": "The Vault Bar Lounge",
     "locations": ["Hồ Chí Minh"],
     "images": [
       "https://media-cdn.tripadvisor.com/media/photo-s/18/12/56/28/the-vault.jpg",
@@ -395,7 +395,7 @@
     "thumbnail": "https://media-cdn.tripadvisor.com/media/photo-f/18/12/56/28/the-vault.jpg"
   },
   "25": {
-    "title": "Drinking&Healing",
+    "title": "DrinkingHealing",
     "locations": ["Hồ Chí Minh"],
     "images": [
       "https://media-cdn.tripadvisor.com/media/photo-p/15/83/49/50/logo-drinking-healing.jpg",
@@ -427,7 +427,7 @@
     "thumbnail": "https://media-cdn.tripadvisor.com/media/photo-f/14/2b/47/5a/utakata-bar.jpg"
   },
   "27": {
-    "title": "Roadway Cafe & Beer",
+    "title": "Roadway Cafe Beer",
     "locations": ["Hồ Chí Minh"],
     "images": [
       "https://media-cdn.tripadvisor.com/media/photo-p/12/53/7c/36/photo1jpg.jpg",
@@ -442,7 +442,7 @@
     "thumbnail": "https://media-cdn.tripadvisor.com/media/photo-s/12/53/7c/36/photo1jpg.jpg"
   },
   "28": {
-    "title": "TeemayXO - Dining & Lounge",
+    "title": "TeemayXO Dining Lounge",
     "locations": ["Hồ Chí Minh"],
     "images": [
       "https://media-cdn.tripadvisor.com/media/photo-p/1c/93/2f/6c/teemay-xo-dining-lounge.jpg",
@@ -490,7 +490,7 @@
     "thumbnail": "https://media-cdn.tripadvisor.com/media/photo-s/1b/2d/52/4d/closure-notice.jpg"
   },
   "31": {
-    "title": "Lighthouse Sky Bar & Restaurant",
+    "title": "Lighthouse Sky Bar Restaurant",
     "locations": ["Hà Nội"],
     "images": [
       "https://media-cdn.tripadvisor.com/media/photo-s/19/eb/57/49/lighthouse-sky-bar-in.jpg",
@@ -538,7 +538,7 @@
     "thumbnail": "https://media-cdn.tripadvisor.com/media/photo-f/13/2e/d4/10/getlstd-property-photo.jpg"
   },
   "34": {
-    "title": "MK Rooftop Bar & Restaurant",
+    "title": "MK Rooftop Bar Restaurant",
     "locations": ["Hà Nội"],
     "images": [
       "https://media-cdn.tripadvisor.com/media/photo-s/10/d1/d2/b0/sunset.jpg",
@@ -568,7 +568,7 @@
     "thumbnail": "https://media-cdn.tripadvisor.com/media/photo-f/0d/df/4b/c3/20161214-193825-largejpg.jpg"
   },
   "36": {
-    "title": "Mojito Bar & Lounge",
+    "title": "Mojito Bar Lounge",
     "locations": ["Hà Nội"],
     "images": [
       "https://media-cdn.tripadvisor.com/media/photo-s/19/0e/de/ae/guest-bartenders.jpg",
@@ -599,7 +599,7 @@
     "thumbnail": "https://media-cdn.tripadvisor.com/media/photo-f/19/61/9d/45/hoan-kiem-taproom.jpg"
   },
   "38": {
-    "title": "Nê Cocktail & Wine Bar",
+    "title": "Nê Cocktail Wine Bar",
     "locations": ["Hà Nội"],
     "images": [
       "https://media-cdn.tripadvisor.com/media/photo-s/0f/80/e1/e7/getlstd-property-photo.jpg",
@@ -691,7 +691,7 @@
     "thumbnail": "https://media-cdn.tripadvisor.com/media/photo-f/06/d6/ed/09/upstairs.jpg"
   },
   "44": {
-    "title": "Mad Botanist- The Gin Specialist",
+    "title": "Mad Botanist The Gin Specialist",
     "locations": ["Hà Nội"],
     "images": [
       "https://media-cdn.tripadvisor.com/media/photo-s/12/85/39/3b/located-on-3f-45-ly-quoc.jpg",
@@ -707,7 +707,7 @@
     "thumbnail": "https://media-cdn.tripadvisor.com/media/photo-s/12/85/39/3b/located-on-3f-45-ly-quoc.jpg"
   },
   "45": {
-    "title": "Valentino Restaurant & Bar",
+    "title": "Valentino Restaurant Bar",
     "locations": ["Hà Nội"],
     "images": [
       "https://media-cdn.tripadvisor.com/media/photo-s/1a/d0/ec/3f/if-you-don-t-drink-how.jpg",
@@ -738,7 +738,7 @@
     "thumbnail": "https://media-cdn.tripadvisor.com/media/photo-s/1c/6b/02/9b/bar-deja-vu.jpg"
   },
   "47": {
-    "title": "Diva's Lounge - Capella Hanoi",
+    "title": "Divas Lounge Capella Hanoi",
     "locations": ["Hà Nội"],
     "images": [
       "https://media-cdn.tripadvisor.com/media/photo-s/1c/b5/7a/6a/diva-s-lounge.jpg",
@@ -770,7 +770,7 @@
     "thumbnail": "https://media-cdn.tripadvisor.com/media/photo-s/1a/15/2a/6f/bazobar.jpg"
   },
   "49": {
-    "title": "The Atlas - Beer Collector",
+    "title": "The Atlas Beer Collector",
     "locations": ["Hà Nội"],
     "images": [
       "https://media-cdn.tripadvisor.com/media/photo-s/18/bb/91/d0/photo2jpg.jpg",
@@ -928,7 +928,7 @@
     "thumbnail": "https://media-cdn.tripadvisor.com/media/photo-s/0d/2d/43/f7/pork-ribs-were-great.jpg"
   },
   "59": {
-    "title": "Buffalo Joe's Coffee and Draught Beer",
+    "title": "Buffalo Joes Coffee and Draught Beer",
     "locations": ["Hà Nội"],
     "images": [
       "https://media-cdn.tripadvisor.com/media/photo-s/11/1f/84/f1/photo0jpg.jpg",
@@ -943,7 +943,7 @@
     "thumbnail": "https://media-cdn.tripadvisor.com/media/photo-s/11/1f/84/f1/photo0jpg.jpg"
   },
   "60": {
-    "title": "Hoi An - Izer",
+    "title": "Hoi An Izer",
     "locations": ["Quảng Nam", "Hội An"],
     "images": [
       "https://media-cdn.tripadvisor.com/media/photo-s/18/e4/f7/31/hoi-an-izer.jpg",
@@ -989,7 +989,7 @@
     "thumbnail": "https://media-cdn.tripadvisor.com/media/photo-s/19/61/a6/81/hoi-an.jpg"
   },
   "63": {
-    "title": "Uncle Dai's River Boat Bar",
+    "title": "Uncle Dais River Boat Bar",
     "locations": ["Quảng Nam", "Hội An"],
     "images": [
       "https://media-cdn.tripadvisor.com/media/photo-s/19/55/0a/53/we-located-on-these-traditiona.jpg",
@@ -1036,7 +1036,7 @@
     "thumbnail": "https://media-cdn.tripadvisor.com/media/photo-f/13/e4/c5/2a/come-on-in-and-join-us.jpg"
   },
   "66": {
-    "title": "The Quiet American Cafe & Bar",
+    "title": "The Quiet American Cafe Bar",
     "locations": ["Quảng Nam", "Hội An"],
     "images": [
       "https://media-cdn.tripadvisor.com/media/daodao/photo-s/16/6d/32/2a/photo8jpg.jpg",
@@ -1051,7 +1051,7 @@
     "thumbnail": "https://media-cdn.tripadvisor.com/media/daodao/photo-s/16/6d/32/2a/photo8jpg.jpg"
   },
   "67": {
-    "title": "Puku Cafe & Sports Bar Hoi An",
+    "title": "Puku Cafe Sports Bar Hoi An",
     "locations": ["Quảng Nam", "Hội An"],
     "images": [
       "https://media-cdn.tripadvisor.com/media/photo-p/13/35/b9/16/photo0jpg.jpg",
@@ -1083,7 +1083,7 @@
     "thumbnail": "https://media-cdn.tripadvisor.com/media/photo-s/1a/50/ae/db/manhattan.jpg"
   },
   "69": {
-    "title": "Suburb Emotion Restaurant & Bar",
+    "title": "Suburb Emotion Restaurant Bar",
     "locations": ["Quảng Nam", "Hội An"],
     "images": [
       "https://media-cdn.tripadvisor.com/media/photo-s/16/78/c0/0d/great-spring-rolls.jpg",
@@ -1129,7 +1129,7 @@
     "thumbnail": "https://media-cdn.tripadvisor.com/media/photo-f/19/62/40/44/photo1jpg.jpg"
   },
   "72": {
-    "title": "Quạt Mo Pub & Hostel",
+    "title": "Quạt Mo Pub Hostel",
     "locations": ["Quảng Nam", "Hội An"],
     "images": [
       "https://media-cdn.tripadvisor.com/media/photo-s/18/2d/cc/57/nh-ng-th-xua-cu.jpg",
@@ -1173,7 +1173,7 @@
     "thumbnail": "https://media-cdn.tripadvisor.com/media/photo-f/1c/b9/c4/a1/tea-springrolls-and-dumplings.jpg"
   },
   "75": {
-    "title": "Shangri La Detox & Cold-pressed juice Bar in Hoi An",
+    "title": "Shangri La Detox Coldpressed juice Bar in Hoi An",
     "locations": ["Quảng Nam", "Hội An"],
     "images": [
       "https://media-cdn.tripadvisor.com/media/photo-l/1a/f6/e8/91/default-avatar-2020-62.jpg"
@@ -1325,7 +1325,7 @@
     "thumbnail": "https://media-cdn.tripadvisor.com/media/photo-s/19/7c/17/a2/ultimate-banana-and-crispy.jpg"
   },
   "86": {
-    "title": "Mikey's Cafe & Bar",
+    "title": "Mikeys Cafe Bar",
     "locations": ["Khánh Hòa", "Nha Trang"],
     "images": [
       "https://media-cdn.tripadvisor.com/media/photo-s/16/8a/d9/2b/fb-img-1545301843364.jpg",
@@ -1340,7 +1340,7 @@
     "thumbnail": "https://media-cdn.tripadvisor.com/media/photo-s/16/8a/d9/2b/fb-img-1545301843364.jpg"
   },
   "87": {
-    "title": "Above Sky Bar - Liberty Central Nha Trang",
+    "title": "Above Sky Bar Liberty Central Nha Trang",
     "locations": ["Khánh Hòa", "Nha Trang"],
     "images": [
       "https://media-cdn.tripadvisor.com/media/photo-s/16/88/9d/a4/img-20190220-200329-largejpg.jpg",
@@ -1388,7 +1388,7 @@
     "thumbnail": "https://media-cdn.tripadvisor.com/media/photo-s/1b/da/aa/6a/m-t-ti-n-quan.jpg"
   },
   "90": {
-    "title": "Golden Sky Bar & Lounge",
+    "title": "Golden Sky Bar Lounge",
     "locations": ["Khánh Hòa", "Nha Trang"],
     "images": [],
     "fullAddress": "73/16 Trần Quang Khải Tầng 5 và tầng thượng, Nha Trang 650000 Việt Nam",
@@ -1504,7 +1504,7 @@
     "thumbnail": "https://media-cdn.tripadvisor.com/media/photo-s/19/7c/17/a2/ultimate-banana-and-crispy.jpg"
   },
   "98": {
-    "title": "Mikey's Cafe & Bar",
+    "title": "Mikeys Cafe Bar",
     "locations": ["Khánh Hòa", "Nha Trang"],
     "images": [
       "https://media-cdn.tripadvisor.com/media/photo-s/16/8a/d9/2b/fb-img-1545301843364.jpg",
@@ -1519,7 +1519,7 @@
     "thumbnail": "https://media-cdn.tripadvisor.com/media/photo-s/16/8a/d9/2b/fb-img-1545301843364.jpg"
   },
   "99": {
-    "title": "Above Sky Bar - Liberty Central Nha Trang",
+    "title": "Above Sky Bar Liberty Central Nha Trang",
     "locations": ["Khánh Hòa", "Nha Trang"],
     "images": [
       "https://media-cdn.tripadvisor.com/media/photo-s/16/88/9d/a4/img-20190220-200329-largejpg.jpg",
@@ -1567,7 +1567,7 @@
     "thumbnail": "https://media-cdn.tripadvisor.com/media/photo-s/1b/da/aa/6a/m-t-ti-n-quan.jpg"
   },
   "102": {
-    "title": "Golden Sky Bar & Lounge",
+    "title": "Golden Sky Bar Lounge",
     "locations": ["Khánh Hòa", "Nha Trang"],
     "images": [],
     "fullAddress": "73/16 Trần Quang Khải Tầng 5 và tầng thượng, Nha Trang 650000 Việt Nam",

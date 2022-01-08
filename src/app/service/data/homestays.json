@@ -506,7 +506,7 @@
     "thumbnail": "https://media-cdn.tripadvisor.com/media/photo-s/19/7b/01/66/20191003-095401-largejpg.jpg"
   },
   "10": {
-    "title": "Life's a Beach",
+    "title": "Lifes a Beach",
     "locations": ["Bình Định", "Quy Nhơn"],
     "images": [
       "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/15/24/45/af/balcony-view-from-the.jpg?w=900&h=-1&s=1",
@@ -727,7 +727,7 @@
     "thumbnail": "https://media-cdn.tripadvisor.com/media/photo-s/1b/24/a3/c8/photo0jpg.jpg"
   },
   "15": {
-    "title": "Sy's Homestay",
+    "title": "Sys Homestay",
     "locations": ["Quảng Bình", "Vườn quốc gia Phong Nha-Kẻ Bàng"],
     "images": [
       "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/15/d6/71/7e/photo0jpg.jpg?w=900&h=-1&s=1",
@@ -1118,7 +1118,7 @@
     "thumbnail": "https://media-cdn.tripadvisor.com/media/photo-s/0f/53/1b/4d/dorm-room-single-beds.jpg"
   },
   "22": {
-    "title": "Herbal Hotel & Spa",
+    "title": "Herbal Hotel Spa",
     "locations": ["Bình Thuận", "Phan Thiết"],
     "images": [
       "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/15/ae/ca/27/herbal-hotel-spa.jpg?w=900&h=-1&s=1",
@@ -1314,7 +1314,7 @@
   },
   "27": {
     "title": "Miana Resort Phu Quoc",
-    "locations": ["Kiên Giang", "Phú Quốc"],
+    "locations": ["Kiên Giang", "Đảo Phú Quốc"],
     "images": [
       "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0e/ff/52/fb/miana-resort-phu-quoc.jpg?w=900&h=-1&s=1",
       "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0f/05/86/82/miana-resort-phu-quoc.jpg?w=400&h=-1&s=1",
@@ -1322,7 +1322,7 @@
       "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/16/6a/10/ba/miana-resort-phu-quoc.jpg?w=400&h=-1&s=1",
       "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/16/6a/10/a8/miana-resort-phu-quoc.jpg?w=400&h=-1&s=1"
     ],
-    "fullAddress": "73/4 Trần Hưng Đạo, Dương Đông, Phú Quốc 920000 Việt Nam",
+    "fullAddress": "73/4 Trần Hưng Đạo, Dương Đông, Đảo Phú Quốc 920000 Việt Nam",
     "amenities": [
       "Bãi đỗ xe miễn phí",
       "Internet tốc độ miễn phí (WiFi)",
@@ -1436,7 +1436,7 @@
   },
   "30": {
     "title": "Ngọc Việt Bungalow",
-    "locations": ["Kiên Giang", "Phú Quốc"],
+    "locations": ["Kiên Giang", "Đảo Phú Quốc"],
     "images": [
       "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/09/a8/1e/7f/ng-c-vi-t-bungalow.jpg?w=900&h=-1&s=1",
       "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/09/a8/1c/6f/ng-c-vi-t-bungalow.jpg?w=400&h=-1&s=1",
@@ -1444,7 +1444,7 @@
       "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/09/a8/20/e7/ng-c-vi-t-bungalow.jpg?w=400&h=-1&s=1",
       "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/09/a8/20/b0/ng-c-vi-t-bungalow.jpg?w=400&h=-1&s=1"
     ],
-    "fullAddress": "Hẻm 113 Trần Hưng Đạo 113/7 Tran Hung Dao, Dương Đông, Phú Quốc 95000 Việt Nam",
+    "fullAddress": "Hẻm 113 Trần Hưng Đạo 113/7 Tran Hung Dao, Dương Đông, Đảo Phú Quốc 95000 Việt Nam",
     "amenities": [
       "Bãi đỗ xe miễn phí",
       "Internet tốc độ miễn phí (WiFi)",
@@ -1486,7 +1486,7 @@
   },
   "31": {
     "title": "Little Garden Bungalow",
-    "locations": ["Kiên Giang", "Phú Quốc"],
+    "locations": ["Kiên Giang", "Đảo Phú Quốc"],
     "images": [
       "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/18/f3/d4/5c/photo4jpg.jpg?w=900&h=-1&s=1",
       "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/09/e3/d5/d0/little-garden-resort.jpg?w=400&h=-1&s=1",
@@ -1494,7 +1494,7 @@
       "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/09/e3/d6/ae/little-garden-resort.jpg?w=400&h=-1&s=1",
       "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/09/e3/d6/93/little-garden-resort.jpg?w=400&h=-1&s=1"
     ],
-    "fullAddress": "113/5 Trần Hưng Đạo, Dương Đông, Phú Quốc 920000 Việt Nam",
+    "fullAddress": "113/5 Trần Hưng Đạo, Dương Đông, Đảo Phú Quốc 920000 Việt Nam",
     "amenities": [
       "Bãi đỗ xe miễn phí",
       "Internet tốc độ miễn phí (WiFi)",
@@ -1978,7 +1978,7 @@
     "thumbnail": "https://media-cdn.tripadvisor.com/media/photo-s/0c/84/d7/78/phong-nha-river-house.jpg"
   },
   "42": {
-    "title": "The Noble Swan Hotel & Spa",
+    "title": "The Noble Swan Hotel Spa",
     "locations": ["Hà Nội"],
     "images": [
       "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1a/46/82/e1/photo1jpg.jpg?w=900&h=-1&s=1",
@@ -2044,7 +2044,7 @@
   },
   "44": {
     "title": "Sunlight Bungalow",
-    "locations": ["Kiên Giang", "Phú Quốc"],
+    "locations": ["Kiên Giang", "Đảo Phú Quốc"],
     "images": [
       "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1c/b0/59/6e/quang-c-nh.jpg?w=900&h=-1&s=1",
       "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1c/b4/44/81/san-hien.jpg?w=400&h=-1&s=1",
@@ -2052,7 +2052,7 @@
       "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1c/b0/5d/50/phong.jpg?w=400&h=-1&s=1",
       "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1c/b0/5d/f6/phong.jpg?w=400&h=-1&s=1"
     ],
-    "fullAddress": "100C-1 Trần Hưng Đạo, Dương Đông, Phú Quốc 920000 Việt Nam",
+    "fullAddress": "100C-1 Trần Hưng Đạo, Dương Đông, Đảo Phú Quốc 920000 Việt Nam",
     "amenities": [
       "Bãi đỗ xe miễn phí",
       "Internet tốc độ miễn phí (WiFi)",
@@ -2210,7 +2210,7 @@
   },
   "47": {
     "title": "Cosy Bungalow",
-    "locations": ["Kiên Giang", "Phú Quốc"],
+    "locations": ["Kiên Giang", "Đảo Phú Quốc"],
     "images": [
       "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0b/c4/a6/c8/cosy-bungalow.jpg?w=900&h=-1&s=1",
       "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0a/21/4d/ce/cosy-bungalow.jpg?w=400&h=-1&s=1",
@@ -2218,7 +2218,7 @@
       "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1b/8b/45/20/cosy-bungalow.jpg?w=400&h=-1&s=1",
       "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1b/8b/45/1d/cosy-bungalow.jpg?w=400&h=-1&s=1"
     ],
-    "fullAddress": "81B Tran Hung Dao Street, Dương Đông, Phú Quốc Việt Nam",
+    "fullAddress": "81B Tran Hung Dao Street, Dương Đông, Đảo Phú Quốc Việt Nam",
     "amenities": [
       "Bãi đỗ xe",
       "Internet tốc độ miễn phí (WiFi)",
@@ -2304,7 +2304,7 @@
     "thumbnail": "https://media-cdn.tripadvisor.com/media/photo-s/0d/0a/8a/d1/di-ch-vu-luu-tru-bamboo.jpg"
   },
   "49": {
-    "title": "An's Eco Garden",
+    "title": "Ans Eco Garden",
     "locations": ["Ninh Bình", "Ninh Bình"],
     "images": [
       "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1a/20/c7/34/an-s-eco-garden.jpg?w=900&h=-1&s=1",
@@ -2399,7 +2399,7 @@
     "thumbnail": "https://media-cdn.tripadvisor.com/media/photo-s/1a/20/c7/34/an-s-eco-garden.jpg"
   },
   "50": {
-    "title": "Linh's Homestay",
+    "title": "Linhs Homestay",
     "locations": ["Quảng Bình", "Vườn quốc gia Phong Nha-Kẻ Bàng"],
     "images": [
       "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0c/d0/f1/91/photo0jpg.jpg?w=900&h=-1&s=1",
@@ -2496,7 +2496,7 @@
     "thumbnail": "https://media-cdn.tripadvisor.com/media/photo-s/0d/d9/88/5c/mi-house.jpg"
   },
   "53": {
-    "title": "Ninh Binh Mountain Side Homestay & Cafe",
+    "title": "Ninh Binh Mountain Side Homestay Cafe",
     "locations": ["Ninh Bình", "Ninh Bình"],
     "images": [
       "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/15/a6/e1/d2/ninh-binh-mountain-side.jpg?w=900&h=-1&s=1",
@@ -3248,7 +3248,7 @@
   },
   "71": {
     "title": "Gecko Guesthouse",
-    "locations": ["Kiên Giang", "Phú Quốc"],
+    "locations": ["Kiên Giang", "Đảo Phú Quốc"],
     "images": [
       "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0e/dd/5f/a7/patio-exterior.jpg?w=900&h=-1&s=1",
       "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/15/89/d6/8c/getlstd-property-photo.jpg?w=400&h=-1&s=1",
@@ -3256,7 +3256,7 @@
       "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0b/88/a8/8b/gecko-guesthouse.jpg?w=400&h=-1&s=1",
       "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0b/88/a8/87/gecko-guesthouse.jpg?w=400&h=-1&s=1"
     ],
-    "fullAddress": "To 5, ap Ong Lang, xa Cua Duong, Dương Đông, Phú Quốc Việt Nam",
+    "fullAddress": "To 5, ap Ong Lang, xa Cua Duong, Dương Đông, Đảo Phú Quốc Việt Nam",
     "amenities": [
       "Bãi đỗ xe miễn phí",
       "Internet tốc độ miễn phí (WiFi)",
@@ -3297,7 +3297,7 @@
     "thumbnail": "https://media-cdn.tripadvisor.com/media/photo-s/0e/dd/5f/a7/patio-exterior.jpg"
   },
   "72": {
-    "title": "Sunny Saigon Apartments & Hotel",
+    "title": "Sunny Saigon Apartments Hotel",
     "locations": ["Hồ Chí Minh"],
     "images": [
       "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1b/a6/26/ee/sunny-saigon-apartments.jpg?w=900&h=-1&s=1",
@@ -3354,7 +3354,7 @@
   },
   "73": {
     "title": "Phu Quoc Sen Lodge Bungalow Village",
-    "locations": ["Kiên Giang", "Phú Quốc"],
+    "locations": ["Kiên Giang", "Đảo Phú Quốc"],
     "images": [
       "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/15/e2/d4/6a/photo2jpg.jpg?w=900&h=-1&s=1",
       "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0f/3e/01/7d/phu-quoc-sen-lodge-homestay.jpg?w=400&h=-1&s=1",
@@ -3362,7 +3362,7 @@
       "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0f/33/17/5f/getlstd-property-photo.jpg?w=400&h=-1&s=1",
       "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0f/3e/05/c0/phu-quoc-sen-lodge-homestay.jpg?w=400&h=-1&s=1"
     ],
-    "fullAddress": "Ấp Cửa Lấp, Dương Tơ, Phú Quốc 91000 Việt Nam",
+    "fullAddress": "Ấp Cửa Lấp, Dương Tơ, Đảo Phú Quốc 91000 Việt Nam",
     "amenities": [
       "Bãi đỗ xe miễn phí",
       "Internet tốc độ miễn phí (WiFi)",
@@ -3386,7 +3386,7 @@
   },
   "74": {
     "title": "Orchard Fruit Farm Bungalow",
-    "locations": ["Kiên Giang", "Phú Quốc"],
+    "locations": ["Kiên Giang", "Đảo Phú Quốc"],
     "images": [
       "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/10/bd/bb/1a/orchard-fruit-farm-bungalow.jpg?w=900&h=-1&s=1",
       "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0e/1a/88/74/lovely-two-bungalow-homestay.jpg?w=400&h=-1&s=1",
@@ -3394,7 +3394,7 @@
       "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/10/bd/bb/37/orchard-fruit-farm-bungalow.jpg?w=400&h=-1&s=1",
       "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1a/c9/d3/44/lam-cho-cu-c-s-ng-t-t.jpg?w=400&h=-1&s=1"
     ],
-    "fullAddress": "Group 2, Ong Lang Hamlet, Cua Duong Commune, Phú Quốc Việt Nam",
+    "fullAddress": "Group 2, Ong Lang Hamlet, Cua Duong Commune, Đảo Phú Quốc Việt Nam",
     "amenities": [
       "Bãi đỗ xe miễn phí",
       "Internet tốc độ miễn phí (WiFi)",
@@ -4077,7 +4077,7 @@
   },
   "89": {
     "title": "Khu nghỉ dưỡng làng Ông Lãng",
-    "locations": ["Kiên Giang", "Phú Quốc"],
+    "locations": ["Kiên Giang", "Đảo Phú Quốc"],
     "images": [
       "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0d/97/8a/d6/ong-lang-village-resort.jpg?w=900&h=-1&s=1",
       "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0d/a4/be/f1/ong-lang-village-resort.jpg?w=400&h=-1&s=1",
@@ -4085,7 +4085,7 @@
       "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0d/a4/be/ec/beach-in-the-morning.jpg?w=400&h=-1&s=1",
       "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0d/a4/be/eb/ong-lang-village-resort.jpg?w=400&h=-1&s=1"
     ],
-    "fullAddress": "Xã Cửa Dương, Bãi Biển Ông Lãng To 3, Ap Ong Lang, Phú Quốc 920000 Việt Nam",
+    "fullAddress": "Xã Cửa Dương, Bãi Biển Ông Lãng To 3, Ap Ong Lang, Đảo Phú Quốc 920000 Việt Nam",
     "amenities": [
       "Bãi đỗ xe miễn phí",
       "Internet tốc độ miễn phí (WiFi)",
@@ -4481,7 +4481,7 @@
     "thumbnail": "https://media-cdn.tripadvisor.com/media/photo-s/15/6c/80/0f/tam-villa.jpg"
   },
   "98": {
-    "title": "Sapa Friendly Inn & Travel",
+    "title": "Sapa Friendly Inn Travel",
     "locations": ["Lào Cai", "Sapa"],
     "images": [
       "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/18/e8/4e/4d/img-20190808-183307-largejpg.jpg?w=900&h=-1&s=1",
@@ -4806,7 +4806,7 @@
   },
   "106": {
     "title": "Phu Quoc Valley Resort",
-    "locations": ["Kiên Giang", "Phú Quốc"],
+    "locations": ["Kiên Giang", "Đảo Phú Quốc"],
     "images": [
       "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1b/31/00/e2/photo2jpg.jpg?w=900&h=-1&s=1",
       "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0b/ac/c6/a2/the-valley-village.jpg?w=400&h=-1&s=1",
@@ -4814,7 +4814,7 @@
       "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0b/ac/cc/67/inside-room.jpg?w=400&h=-1&s=1",
       "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0b/ac/cb/66/the-valley-village.jpg?w=400&h=-1&s=1"
     ],
-    "fullAddress": "Group 3 Cua Lap, Duong To, Dương Đông, Phú Quốc Việt Nam",
+    "fullAddress": "Group 3 Cua Lap, Duong To, Dương Đông, Đảo Phú Quốc Việt Nam",
     "amenities": [
       "Bãi đỗ xe miễn phí",
       "Internet tốc độ miễn phí (WiFi)",
@@ -5292,7 +5292,7 @@
     "thumbnail": "https://media-cdn.tripadvisor.com/media/photo-s/0e/af/6c/90/dining-room.jpg"
   },
   "119": {
-    "title": "Muine Ocean Resort & Spa",
+    "title": "Muine Ocean Resort Spa",
     "locations": ["Bình Thuận", "Phan Thiết"],
     "images": [
       "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/15/15/7d/88/img-20180908-wa0036-largejpg.jpg?w=900&h=-1&s=1",
@@ -5390,7 +5390,7 @@
   },
   "121": {
     "title": "Khách sạn Alanis Lodge Phú Quốc",
-    "locations": ["Kiên Giang", "Phú Quốc"],
+    "locations": ["Kiên Giang", "Đảo Phú Quốc"],
     "images": [
       "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/17/18/e4/79/kha-ch-sa-n-alanis-lodge.jpg?w=900&h=-1&s=1",
       "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0a/c5/e0/9d/our-room.jpg?w=400&h=-1&s=1",
@@ -5398,7 +5398,7 @@
       "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0a/c5/e2/9d/sun-lounge-at-night.jpg?w=400&h=-1&s=1",
       "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0a/c5/e2/9c/sun-lounge-at-nite.jpg?w=400&h=-1&s=1"
     ],
-    "fullAddress": "96 Nguyễn Trung Trực, Khu phố 7, Dương Đông, Phú Quốc 920000 Việt Nam",
+    "fullAddress": "96 Nguyễn Trung Trực, Khu phố 7, Dương Đông, Đảo Phú Quốc 920000 Việt Nam",
     "amenities": [
       "Bãi đỗ xe miễn phí",
       "Internet tốc độ miễn phí (WiFi)",
@@ -5630,7 +5630,7 @@
   },
   "127": {
     "title": "Khu nghỉ dưỡng Wildland",
-    "locations": ["Kiên Giang", "Phú Quốc"],
+    "locations": ["Kiên Giang", "Đảo Phú Quốc"],
     "images": [
       "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0f/39/7b/5c/wildland-resort.jpg?w=900&h=-1&s=1",
       "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0a/38/b1/34/wildland-resort.jpg?w=400&h=-1&s=1",
@@ -5638,7 +5638,7 @@
       "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/11/da/34/cc/ti-c-butfe-va-bar.jpg?w=400&h=-1&s=1",
       "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/11/da/34/cb/ti-c-butfe-va-bar.jpg?w=400&h=-1&s=1"
     ],
-    "fullAddress": "Tổ5, Ấp Phú Quốc,Cây Sao, Hàm Ninh, Phú Quốc 920000 Việt Nam",
+    "fullAddress": "Tổ5, Ấp Phú Quốc,Cây Sao, Hàm Ninh, Đảo Phú Quốc 920000 Việt Nam",
     "amenities": [
       "Bãi đỗ xe miễn phí",
       "Internet tốc độ miễn phí (WiFi)",
@@ -5690,7 +5690,7 @@
     "thumbnail": "https://media-cdn.tripadvisor.com/media/photo-s/0f/39/7b/5c/wildland-resort.jpg"
   },
   "128": {
-    "title": "Khách sạn Cát Bà Central II - Hostel",
+    "title": "Khách sạn Cát Bà Central II Hostel",
     "locations": ["Hải Phòng"],
     "images": [
       "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/15/b4/e7/01/beautiful-room.jpg?w=900&h=-1&s=1",
@@ -5748,7 +5748,7 @@
   },
   "130": {
     "title": "Khu Nghỉ Dưỡng Montana Phú Quốc",
-    "locations": ["Kiên Giang", "Phú Quốc"],
+    "locations": ["Kiên Giang", "Đảo Phú Quốc"],
     "images": [
       "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0a/77/da/6f/montana-resort.jpg?w=900&h=-1&s=1",
       "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/09/81/2e/51/pool-view-at-night.jpg?w=400&h=-1&s=1",
@@ -5756,7 +5756,7 @@
       "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/09/80/6f/a5/montana-resort.jpg?w=400&h=-1&s=1",
       "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1a/8a/bb/dc/rent-private-canoe-and.jpg?w=400&h=-1&s=1"
     ],
-    "fullAddress": "Tổ 7, ấp Suối Lớn, Dương Tơ, Phú Quốc Việt Nam",
+    "fullAddress": "Tổ 7, ấp Suối Lớn, Dương Tơ, Đảo Phú Quốc Việt Nam",
     "amenities": [
       "Bãi đỗ xe miễn phí",
       "Internet tốc độ miễn phí (WiFi)",
@@ -6200,7 +6200,7 @@
     "thumbnail": "https://media-cdn.tripadvisor.com/media/photo-s/12/69/25/58/photo7jpg.jpg"
   },
   "141": {
-    "title": "Nguyen Shack - Phong Nha",
+    "title": "Nguyen Shack Phong Nha",
     "locations": ["Quảng Bình", "Vườn quốc gia Phong Nha-Kẻ Bàng"],
     "images": [
       "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0d/82/94/34/nguyen-shack-phong-nha.jpg?w=900&h=-1&s=1",
@@ -6538,7 +6538,7 @@
   },
   "148": {
     "title": "Rocks Beach Boutique Bungalows",
-    "locations": ["Kiên Giang", "Phú Quốc"],
+    "locations": ["Kiên Giang", "Đảo Phú Quốc"],
     "images": [
       "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0d/3e/2d/55/photo2jpg.jpg?w=900&h=-1&s=1",
       "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/09/f7/84/85/enjoy-holidays.jpg?w=400&h=-1&s=1",
@@ -6546,7 +6546,7 @@
       "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/16/32/86/ff/dinner-on-the-beach.jpg?w=400&h=-1&s=1",
       "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/09/f7/84/89/early-morning-fisherman.jpg?w=400&h=-1&s=1"
     ],
-    "fullAddress": "Group 5, Cay Sao Village, Ham Ninh Tổ 5, ấp Cây Sao, Hàm Ninh, Hàm Ninh, Phú Quốc Việt Nam",
+    "fullAddress": "Group 5, Cay Sao Village, Ham Ninh Tổ 5, ấp Cây Sao, Hàm Ninh, Hàm Ninh, Đảo Phú Quốc Việt Nam",
     "amenities": [
       "Wifi",
       "Wifi trả phí",

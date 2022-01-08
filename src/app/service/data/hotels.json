@@ -1,7 +1,7 @@
 {
   "0": {
     "title": "Mövenpick Resort Waverly Phu Quoc",
-    "locations": ["Kiên Giang", "Phú Quốc"],
+    "locations": ["Kiên Giang", "Đảo Phú Quốc"],
     "images": [
       "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1b/6a/9e/65/movenpick-resort-waverly.jpg?w=900&h=-1&s=1",
       "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1b/6a/9e/8d/movenpick-resort-waverly.jpg?w=400&h=-1&s=1",
@@ -9,7 +9,7 @@
       "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1d/1e/82/be/movenpick-resort-waverly.jpg?w=400&h=-1&s=1",
       "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1a/a2/0c/23/bedroom-3-bedroom-villa.jpg?w=400&h=-1&s=1"
     ],
-    "fullAddress": "Ong Lang, Phú Quốc 920000 Việt Nam",
+    "fullAddress": "Ong Lang, Đảo Phú Quốc 920000 Việt Nam",
     "amenities": [
       "Bãi đỗ xe miễn phí",
       "Internet tốc độ miễn phí (WiFi)",
@@ -463,7 +463,7 @@
     "thumbnail": "https://media-cdn.tripadvisor.com/media/photo-s/1c/d4/42/e6/exterior-view.jpg"
   },
   "4": {
-    "title": "Hanoian Central Hotel & Spa",
+    "title": "Hanoian Central Hotel Spa",
     "locations": ["Hà Nội"],
     "images": [
       "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/18/f7/51/7b/hanoian-central-hotel.jpg?w=900&h=-1&s=1",
@@ -650,7 +650,7 @@
     "thumbnail": "https://media-cdn.tripadvisor.com/media/photo-s/1d/55/6e/db/pool-bar.jpg"
   },
   "6": {
-    "title": "Hanoi La Siesta Hotel & Spa",
+    "title": "Hanoi La Siesta Hotel Spa",
     "locations": ["Hà Nội"],
     "images": [
       "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1c/59/4c/d3/hanoi-la-siesta-hotel.jpg?w=900&h=-1&s=1",
@@ -774,7 +774,7 @@
     "thumbnail": "https://media-cdn.tripadvisor.com/media/photo-s/13/35/ba/b5/landscape.jpg"
   },
   "8": {
-    "title": "Alagon Plus Hotel & Spa",
+    "title": "Alagon Plus Hotel Spa",
     "locations": ["Hồ Chí Minh"],
     "images": [
       "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1a/65/23/cb/alagon-plus-hotel-spa.jpg?w=900&h=-1&s=1",
@@ -991,7 +991,7 @@
     "thumbnail": "https://media-cdn.tripadvisor.com/media/photo-s/1b/a4/15/77/deluxe-king.jpg"
   },
   "11": {
-    "title": "La Sinfonía del Rey Hotel & Spa",
+    "title": "La Sinfonía del Rey Hotel Spa",
     "locations": ["Hà Nội"],
     "images": [
       "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1b/09/5f/0b/hotel-lobby.jpg?w=900&h=-1&s=1",
@@ -1305,7 +1305,7 @@
     "thumbnail": "https://media-cdn.tripadvisor.com/media/photo-s/1c/d3/bc/70/exterior-view.jpg"
   },
   "14": {
-    "title": "Acoustic Hotel & Spa",
+    "title": "Acoustic Hotel Spa",
     "locations": ["Hà Nội"],
     "images": [
       "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/19/ce/99/ca/aoustic-suite-with-bathtub.jpg?w=900&h=-1&s=1",
@@ -1453,7 +1453,7 @@
     "thumbnail": "https://media-cdn.tripadvisor.com/media/photo-s/1a/41/be/9b/soleil-boutique-hotel.jpg"
   },
   "16": {
-    "title": "Legacy Yen Tu - MGallery",
+    "title": "Legacy Yen Tu MGallery",
     "locations": ["Quảng Ninh", "Uong Bi"],
     "images": [
       "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/20/45/63/70/exterior.jpg?w=900&h=-1&s=1",
@@ -1911,7 +1911,7 @@
   },
   "21": {
     "title": "InterContinental Phu Quoc Long Beach Resort",
-    "locations": ["Kiên Giang", "Phú Quốc"],
+    "locations": ["Kiên Giang", "Đảo Phú Quốc"],
     "images": [
       "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1c/b3/a1/5a/hotel-exterior.jpg?w=900&h=-1&s=1",
       "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/13/5e/4e/a6/resort-ocean-view.jpg?w=400&h=-1&s=1",
@@ -1919,7 +1919,7 @@
       "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/13/08/c5/96/pool-bar-ombra-with-ocean.jpg?w=400&h=-1&s=1",
       "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/13/08/c4/f4/private-dining-by-the.jpg?w=400&h=-1&s=1"
     ],
-    "fullAddress": "Bãi Trường, Dương Tơ, Phú Quốc 920000 Việt Nam",
+    "fullAddress": "Bãi Trường, Dương Tơ, Đảo Phú Quốc 920000 Việt Nam",
     "amenities": [
       "Bãi đỗ xe miễn phí",
       "Internet tốc độ miễn phí (WiFi)",
@@ -2556,7 +2556,7 @@
   },
   "30": {
     "title": "Mövenpick Resort Waverly Phu Quoc",
-    "locations": ["Kiên Giang", "Phú Quốc"],
+    "locations": ["Kiên Giang", "Đảo Phú Quốc"],
     "images": [
       "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1b/6a/9e/65/movenpick-resort-waverly.jpg?w=900&h=-1&s=1",
       "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1b/6a/9e/8d/movenpick-resort-waverly.jpg?w=400&h=-1&s=1",
@@ -2564,7 +2564,7 @@
       "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1d/1e/82/be/movenpick-resort-waverly.jpg?w=400&h=-1&s=1",
       "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1a/a2/0c/23/bedroom-3-bedroom-villa.jpg?w=400&h=-1&s=1"
     ],
-    "fullAddress": "Ong Lang, Phú Quốc 920000 Việt Nam",
+    "fullAddress": "Ong Lang, Đảo Phú Quốc 920000 Việt Nam",
     "amenities": [
       "Bãi đỗ xe miễn phí",
       "Internet tốc độ miễn phí (WiFi)",
@@ -3018,7 +3018,7 @@
     "thumbnail": "https://media-cdn.tripadvisor.com/media/photo-s/1c/d4/42/e6/exterior-view.jpg"
   },
   "34": {
-    "title": "Hanoian Central Hotel & Spa",
+    "title": "Hanoian Central Hotel Spa",
     "locations": ["Hà Nội"],
     "images": [
       "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/18/f7/51/7b/hanoian-central-hotel.jpg?w=900&h=-1&s=1",
@@ -3205,7 +3205,7 @@
     "thumbnail": "https://media-cdn.tripadvisor.com/media/photo-s/1d/55/6e/db/pool-bar.jpg"
   },
   "36": {
-    "title": "Hanoi La Siesta Hotel & Spa",
+    "title": "Hanoi La Siesta Hotel Spa",
     "locations": ["Hà Nội"],
     "images": [
       "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1c/59/4c/d3/hanoi-la-siesta-hotel.jpg?w=900&h=-1&s=1",
@@ -3329,7 +3329,7 @@
     "thumbnail": "https://media-cdn.tripadvisor.com/media/photo-s/13/35/ba/b5/landscape.jpg"
   },
   "38": {
-    "title": "Alagon Plus Hotel & Spa",
+    "title": "Alagon Plus Hotel Spa",
     "locations": ["Hồ Chí Minh"],
     "images": [
       "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1a/65/23/cb/alagon-plus-hotel-spa.jpg?w=900&h=-1&s=1",
@@ -3546,7 +3546,7 @@
     "thumbnail": "https://media-cdn.tripadvisor.com/media/photo-s/1b/a4/15/77/deluxe-king.jpg"
   },
   "41": {
-    "title": "La Sinfonía del Rey Hotel & Spa",
+    "title": "La Sinfonía del Rey Hotel Spa",
     "locations": ["Hà Nội"],
     "images": [
       "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1b/09/5f/0b/hotel-lobby.jpg?w=900&h=-1&s=1",
@@ -3860,7 +3860,7 @@
     "thumbnail": "https://media-cdn.tripadvisor.com/media/photo-s/1c/d3/bc/70/exterior-view.jpg"
   },
   "44": {
-    "title": "Acoustic Hotel & Spa",
+    "title": "Acoustic Hotel Spa",
     "locations": ["Hà Nội"],
     "images": [
       "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/19/ce/99/ca/aoustic-suite-with-bathtub.jpg?w=900&h=-1&s=1",
@@ -4008,7 +4008,7 @@
     "thumbnail": "https://media-cdn.tripadvisor.com/media/photo-s/1a/41/be/9b/soleil-boutique-hotel.jpg"
   },
   "46": {
-    "title": "Legacy Yen Tu - MGallery",
+    "title": "Legacy Yen Tu MGallery",
     "locations": ["Quảng Ninh", "Uong Bi"],
     "images": [
       "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/20/45/63/70/exterior.jpg?w=900&h=-1&s=1",
@@ -4466,7 +4466,7 @@
   },
   "51": {
     "title": "InterContinental Phu Quoc Long Beach Resort",
-    "locations": ["Kiên Giang", "Phú Quốc"],
+    "locations": ["Kiên Giang", "Đảo Phú Quốc"],
     "images": [
       "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1c/b3/a1/5a/hotel-exterior.jpg?w=900&h=-1&s=1",
       "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/13/5e/4e/a6/resort-ocean-view.jpg?w=400&h=-1&s=1",
@@ -4474,7 +4474,7 @@
       "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/13/08/c5/96/pool-bar-ombra-with-ocean.jpg?w=400&h=-1&s=1",
       "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/13/08/c4/f4/private-dining-by-the.jpg?w=400&h=-1&s=1"
     ],
-    "fullAddress": "Bãi Trường, Dương Tơ, Phú Quốc 920000 Việt Nam",
+    "fullAddress": "Bãi Trường, Dương Tơ, Đảo Phú Quốc 920000 Việt Nam",
     "amenities": [
       "Bãi đỗ xe miễn phí",
       "Internet tốc độ miễn phí (WiFi)",
@@ -5469,7 +5469,7 @@
     "thumbnail": null
   },
   "64": {
-    "title": "La Sinfonía del Rey Hotel & Spa",
+    "title": "La Sinfonía del Rey Hotel Spa",
     "locations": ["Hà Nội"],
     "images": [
       "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1b/09/5f/0b/hotel-lobby.jpg?w=900&h=-1&s=1",
@@ -5587,7 +5587,7 @@
     "thumbnail": "https://media-cdn.tripadvisor.com/media/photo-s/1b/09/5f/0b/hotel-lobby.jpg"
   },
   "65": {
-    "title": "Boton Blue Hotel & Spa",
+    "title": "Boton Blue Hotel Spa",
     "locations": ["Khánh Hòa", "Nha Trang"],
     "images": [
       "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1a/14/b8/ed/photo1jpg.jpg?w=900&h=-1&s=1",
@@ -5726,7 +5726,7 @@
     "thumbnail": null
   },
   "66": {
-    "title": "Acoustic Hotel & Spa",
+    "title": "Acoustic Hotel Spa",
     "locations": ["Hà Nội"],
     "images": [
       "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/19/ce/99/ca/aoustic-suite-with-bathtub.jpg?w=900&h=-1&s=1",
@@ -6501,7 +6501,7 @@
   },
   "74": {
     "title": "InterContinental Phu Quoc Long Beach Resort",
-    "locations": ["Kiên Giang", "Phú Quốc"],
+    "locations": ["Kiên Giang", "Đảo Phú Quốc"],
     "images": [
       "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1c/b3/a1/5a/hotel-exterior.jpg?w=900&h=-1&s=1",
       "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/13/5e/4e/a6/resort-ocean-view.jpg?w=400&h=-1&s=1",
@@ -6509,7 +6509,7 @@
       "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/13/08/c5/96/pool-bar-ombra-with-ocean.jpg?w=400&h=-1&s=1",
       "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/13/08/c4/f4/private-dining-by-the.jpg?w=400&h=-1&s=1"
     ],
-    "fullAddress": "Bãi Trường, Dương Tơ, Phú Quốc 920000 Việt Nam",
+    "fullAddress": "Bãi Trường, Dương Tơ, Đảo Phú Quốc 920000 Việt Nam",
     "amenities": [
       "Bãi đỗ xe miễn phí",
       "Internet tốc độ miễn phí (WiFi)",
@@ -6725,8 +6725,8 @@
     "thumbnail": "https://media-cdn.tripadvisor.com/media/photo-s/1c/3f/cf/e2/hotel-exterior-day.jpg"
   },
   "76": {
-    "title": "Green Bay Phu Quoc Resort & Spa",
-    "locations": ["Kiên Giang", "Phú Quốc"],
+    "title": "Green Bay Phu Quoc Resort Spa",
+    "locations": ["Kiên Giang", "Đảo Phú Quốc"],
     "images": [
       "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/17/0b/24/c1/green-bay-phu-quoc-resort.jpg?w=900&h=-1&s=1",
       "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/18/a4/db/3f/green-bay-phu-quoc-resort.jpg?w=400&h=-1&s=1",
@@ -6734,7 +6734,7 @@
       "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/18/a4/dc/ec/green-bay-phu-quoc-resort.jpg?w=400&h=-1&s=1",
       "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/18/a4/dc/e8/green-bay-phu-quoc-resort.jpg?w=400&h=-1&s=1"
     ],
-    "fullAddress": "Cua Can Hamlet, Ong Lang, Phú Quốc Việt Nam",
+    "fullAddress": "Cua Can Hamlet, Ong Lang, Đảo Phú Quốc Việt Nam",
     "amenities": [
       "Bãi đỗ xe miễn phí",
       "Internet tốc độ miễn phí (WiFi)",
@@ -7026,7 +7026,7 @@
     "thumbnail": "https://media-cdn.tripadvisor.com/media/photo-s/14/b2/93/71/pool.jpg"
   },
   "81": {
-    "title": "Dalat Edensee Resort & Spa",
+    "title": "Dalat Edensee Resort Spa",
     "locations": ["Lâm Đồng", "Đà Lạt"],
     "images": [
       "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1c/80/45/12/dalat-edensee-resort.jpg?w=900&h=-1&s=1",
@@ -7221,7 +7221,7 @@
     "thumbnail": "https://media-cdn.tripadvisor.com/media/photo-s/0e/90/f5/ca/street--v15908814.jpg"
   },
   "83": {
-    "title": "Aira Boutique Hanoi Hotel & Spa",
+    "title": "Aira Boutique Hanoi Hotel Spa",
     "locations": ["Hà Nội"],
     "images": [
       "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1c/85/a8/6c/aira-boutique-hanoi-hotel.jpg?w=900&h=-1&s=1",
@@ -7695,7 +7695,7 @@
     "thumbnail": null
   },
   "87": {
-    "title": "JM Marvel Hotel & Spa",
+    "title": "JM Marvel Hotel Spa",
     "locations": ["Hà Nội"],
     "images": [
       "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1b/4e/9e/fb/stay-safe-hotel-and-healthy.jpg?w=900&h=-1&s=1",
@@ -7887,7 +7887,7 @@
     "thumbnail": null
   },
   "89": {
-    "title": "Little Riverside Hoi An - A Luxury Hotel & Spa",
+    "title": "Little Riverside Hoi An A Luxury Hotel Spa",
     "locations": ["Quảng Nam", "Hội An"],
     "images": [
       "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/14/3e/61/a6/little-riverside-hoi.jpg?w=900&h=-1&s=1",
@@ -7947,7 +7947,7 @@
   },
   "90": {
     "title": "Vinpearl Discovery Coastalland Phú Quốc",
-    "locations": ["Kiên Giang", "Phú Quốc"],
+    "locations": ["Kiên Giang", "Đảo Phú Quốc"],
     "images": [
       "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1d/28/eb/dd/pearl-club-vinpearl-membership.jpg?w=900&h=-1&s=1",
       "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1b/b6/00/f8/vinpearl-discovery-2.jpg?w=400&h=-1&s=1",
@@ -7955,7 +7955,7 @@
       "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1b/b6/00/f3/vinpearl-discovery-2.jpg?w=400&h=-1&s=1",
       "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1b/43/12/52/vinpearl-discovery-2.jpg?w=400&h=-1&s=1"
     ],
-    "fullAddress": "Bãi Dài, Ganh Dau, Phú Quốc 922200 Việt Nam",
+    "fullAddress": "Bãi Dài, Ganh Dau, Đảo Phú Quốc 922200 Việt Nam",
     "amenities": [
       "Bãi đỗ xe miễn phí",
       "Internet tốc độ miễn phí (WiFi)",
@@ -8215,7 +8215,7 @@
     "thumbnail": null
   },
   "93": {
-    "title": "HAIAN Beach Hotel & Spa",
+    "title": "HAIAN Beach Hotel Spa",
     "locations": ["Đà Nẵng"],
     "images": [
       "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1c/53/22/82/h-b-i-vo-c-c-view-bi.jpg?w=900&h=-1&s=1",
@@ -8577,7 +8577,7 @@
   },
   "97": {
     "title": "VinOasis Phu Quoc",
-    "locations": ["Kiên Giang", "Phú Quốc"],
+    "locations": ["Kiên Giang", "Đảo Phú Quốc"],
     "images": [
       "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1d/28/e8/dc/pearl-club-vinpearl-membership.jpg?w=900&h=-1&s=1",
       "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1b/42/fc/fd/vinoasis-phu-quoc.jpg?w=400&h=-1&s=1",
@@ -8585,7 +8585,7 @@
       "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1b/42/fa/0f/vinoasis-phu-quoc.jpg?w=400&h=-1&s=1",
       "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1b/42/fb/f6/vinoasis-phu-quoc.jpg?w=400&h=-1&s=1"
     ],
-    "fullAddress": "Bãi Dài, Xã Gành Dầu, Ganh Dau, Phú Quốc 920000 Việt Nam",
+    "fullAddress": "Bãi Dài, Xã Gành Dầu, Ganh Dau, Đảo Phú Quốc 920000 Việt Nam",
     "amenities": [
       "Bãi đỗ xe miễn phí",
       "Internet tốc độ miễn phí (WiFi)",
@@ -9508,7 +9508,7 @@
     "thumbnail": null
   },
   "110": {
-    "title": "Au Coeur d'Hanoi Boutique Hotel",
+    "title": "Au Coeur dHanoi Boutique Hotel",
     "locations": ["Hà Nội"],
     "images": [
       "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/12/d5/09/83/prestige-suite-with-balcony.jpg?w=900&h=-1&s=1",
@@ -9714,7 +9714,7 @@
     "thumbnail": null
   },
   "113": {
-    "title": "Queen's Finger Hotel",
+    "title": "Queens Finger Hotel",
     "locations": ["Đà Nẵng"],
     "images": [
       "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/17/63/9e/43/infinity-pool.jpg?w=900&h=-1&s=1",
@@ -9783,8 +9783,8 @@
     "thumbnail": null
   },
   "114": {
-    "title": "Camia Resort & Spa",
-    "locations": ["Kiên Giang", "Phú Quốc"],
+    "title": "Camia Resort Spa",
+    "locations": ["Kiên Giang", "Đảo Phú Quốc"],
     "images": [
       "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/16/38/9b/32/camia-resort-spa.jpg?w=900&h=-1&s=1",
       "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/12/a0/16/8a/pool-and-ocean-view.jpg?w=400&h=-1&s=1",
@@ -9792,7 +9792,7 @@
       "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/12/b4/45/13/camia-resort-spa.jpg?w=400&h=-1&s=1",
       "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/15/26/80/a3/camia-resort-spa.jpg?w=400&h=-1&s=1"
     ],
-    "fullAddress": "Lô 3, Ấp Ông Lang, Phường Cửa Dương, Ong Lang, Phú Quốc 920000 Việt Nam",
+    "fullAddress": "Lô 3, Ấp Ông Lang, Phường Cửa Dương, Ong Lang, Đảo Phú Quốc 920000 Việt Nam",
     "phoneNumber": "096 119 42 99",
     "amenities": [
       "Bãi đỗ xe miễn phí",
@@ -9840,7 +9840,7 @@
     "thumbnail": null
   },
   "115": {
-    "title": "L'Alya Ninh Vân Bay",
+    "title": "LAlya Ninh Vân Bay",
     "locations": ["Khánh Hòa", "Ninh Hoa"],
     "images": [
       "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1b/20/30/f3/infinity-pool.jpg?w=900&h=-1&s=1",
@@ -10169,7 +10169,7 @@
     "thumbnail": null
   },
   "119": {
-    "title": "Palmier Hotel & Apartment",
+    "title": "Palmier Hotel Apartment",
     "locations": ["Đà Nẵng"],
     "images": [
       "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0a/f5/d7/e2/art-hotel.jpg?w=900&h=-1&s=1",
@@ -10311,7 +10311,7 @@
     "thumbnail": "https://media-cdn.tripadvisor.com/media/photo-s/21/0b/cc/3c/exterior.jpg"
   },
   "121": {
-    "title": "Khu nghỉ dưỡng & Spa Anantara Mũi Né",
+    "title": "Khu nghỉ dưỡng Spa Anantara Mũi Né",
     "locations": ["Bình Thuận", "Phan Thiết"],
     "images": [
       "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1c/d3/03/8e/aerial-view-of-the-resort.jpg?w=900&h=-1&s=1",
@@ -10511,7 +10511,7 @@
   },
   "124": {
     "title": "Khu Nghỉ Dưỡng JW Marriott Phu Quoc Emerald Bay",
-    "locations": ["Kiên Giang", "Phú Quốc"],
+    "locations": ["Kiên Giang", "Đảo Phú Quốc"],
     "images": [
       "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1c/df/25/98/shell-pool.jpg?w=900&h=-1&s=1",
       "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/11/dc/07/69/jw-marriott-phu-quoc.jpg?w=400&h=-1&s=1",
@@ -10519,7 +10519,7 @@
       "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/18/5a/e6/d8/jw-marriott-phu-quoc.jpg?w=400&h=-1&s=1",
       "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/18/0e/f9/d8/jw-marriott-phu-quoc.jpg?w=400&h=-1&s=1"
     ],
-    "fullAddress": "Bãi Khem, Thị trấn An Thới, An Thoi, Phú Quốc Việt Nam",
+    "fullAddress": "Bãi Khem, Thị trấn An Thới, An Thoi, Đảo Phú Quốc Việt Nam",
     "phoneNumber": "00 1 844-631-0595",
     "amenities": [
       "Bãi đỗ xe miễn phí",
@@ -11217,7 +11217,7 @@
   },
   "134": {
     "title": "Radisson Blu Resort Phu Quoc",
-    "locations": ["Kiên Giang", "Phú Quốc"],
+    "locations": ["Kiên Giang", "Đảo Phú Quốc"],
     "images": [
       "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1b/04/d8/c0/radisson-blu-resort-phu.jpg?w=900&h=-1&s=1",
       "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/15/4d/d9/68/avenue-all-day-dining.jpg?w=400&h=-1&s=1",
@@ -11225,7 +11225,7 @@
       "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1c/86/4e/7a/three-bedroom-villa.jpg?w=400&h=-1&s=1",
       "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1c/86/4e/76/three-bedroom-villa.jpg?w=400&h=-1&s=1"
     ],
-    "fullAddress": "Ganh Dau Beach, Phú Quốc 920000 Việt Nam",
+    "fullAddress": "Ganh Dau Beach, Đảo Phú Quốc 920000 Việt Nam",
     "phoneNumber": "0297 3660 000",
     "amenities": [
       "Bãi đỗ xe miễn phí",
@@ -11964,7 +11964,7 @@
     "thumbnail": "https://media-cdn.tripadvisor.com/media/photo-s/1c/ff/49/49/maichau-hideaway.jpg"
   },
   "142": {
-    "title": "Ana Mandara Villas Dalat Resort & Spa",
+    "title": "Ana Mandara Villas Dalat Resort Spa",
     "locations": ["Lâm Đồng", "Đà Lạt"],
     "images": [
       "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/06/a7/bb/cb/villa-suite.jpg?w=900&h=-1&s=1",

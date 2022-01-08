@@ -4,6 +4,7 @@ import { MessageService } from "./services/message.service";
 import { ApiOperation, ApiTags } from "@nestjs/swagger";
 import { RealIp } from "nestjs-real-ip";
 import { ConversationService } from "./services/conversation.service";
+import { SPECIAL_COMMAND } from "./constants/message";
 
 @ApiTags("messages")
 @Controller("messages")
@@ -16,8 +17,10 @@ export class MessageController {
   @ApiOperation({ summary: "Webhook for customer chat" })
   @Post("webhook")
   webhook(@Body() dto: WebhookDto, @RealIp() ipAddress: string) {
-    if (dto.body === "new") {
-      return this.conversationService.startNewConversation(dto, ipAddress);
+    // TODO: Create a task to review this core feature :)
+    console.log("ip address:" + ipAddress);
+    if (dto.body === SPECIAL_COMMAND.NEW) {
+      return this.conversationService.startNewConversation();
     }
     return this.conversationService.continueConversation(dto);
   }
