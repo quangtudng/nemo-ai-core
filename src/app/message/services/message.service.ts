@@ -36,6 +36,9 @@ export class MessageService extends BaseCrudService<Message> {
     const customer = await this.customerService.findOneOrFail({
       longId: customerLongId,
     });
+    await this.customerService.updateOne(customer.id, {
+      viewed: 1,
+    });
     return this.repo.find({
       where: {
         customer,
