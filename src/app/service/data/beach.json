@@ -12,7 +12,7 @@
   },
   "1": {
     "title": "Bãi Dài",
-    "locations": ["Kiên Giang", "Phú Quốc"],
+    "locations": ["Kiên Giang", "Đảo Phú Quốc"],
     "images": [
       "https://media-cdn.tripadvisor.com/media/photo-w/0a/3d/ab/cf/long-beach.jpg",
       "https://media-cdn.tripadvisor.com/media/photo-o/17/77/45/11/20190404-175610-largejpg.jpg",
@@ -60,7 +60,7 @@
   },
   "5": {
     "title": "Bãi Ông Lang",
-    "locations": ["Kiên Giang", "Phú Quốc"],
+    "locations": ["Kiên Giang", "Đảo Phú Quốc"],
     "images": [
       "https://media-cdn.tripadvisor.com/media/photo-w/13/8b/b9/d9/img-20180701-114344-largejpg.jpg",
       "https://media-cdn.tripadvisor.com/media/photo-w/1a/a2/08/87/caption.jpg",
@@ -104,7 +104,7 @@
   },
   "9": {
     "title": "Bãi Dinh Cậu",
-    "locations": ["Kiên Giang", "Phú Quốc"],
+    "locations": ["Kiên Giang", "Đảo Phú Quốc"],
     "images": [
       "https://media-cdn.tripadvisor.com/media/photo-w/16/b2/2e/c4/rock-formation-at-end.jpg",
       "https://media-cdn.tripadvisor.com/media/photo-s/1a/c0/09/14/photo0jpg.jpg",
@@ -196,7 +196,7 @@
   },
   "17": {
     "title": "Bãi Tắm Sao",
-    "locations": ["Kiên Giang", "Phú Quốc"],
+    "locations": ["Kiên Giang", "Đảo Phú Quốc"],
     "images": [
       "https://media-cdn.tripadvisor.com/media/photo-w/14/70/21/27/20180817-133254-01-largejpg.jpg",
       "https://media-cdn.tripadvisor.com/media/photo-w/11/8d/49/79/photo0jpg.jpg",
@@ -218,7 +218,7 @@
   },
   "19": {
     "title": "Hòn Móng Tay",
-    "locations": ["Kiên Giang", "Phú Quốc"],
+    "locations": ["Kiên Giang", "Đảo Phú Quốc"],
     "images": [
       "https://media-cdn.tripadvisor.com/media/photo-w/15/b9/5a/c9/mong-tay-island-is-also.jpg",
       "https://media-cdn.tripadvisor.com/media/photo-w/1c/38/54/2e/check-in.jpg",
@@ -240,7 +240,7 @@
   },
   "21": {
     "title": "Vung Bau Beach",
-    "locations": ["Kiên Giang", "Phú Quốc"],
+    "locations": ["Kiên Giang", "Đảo Phú Quốc"],
     "images": [
       "https://media-cdn.tripadvisor.com/media/photo-w/16/1d/08/90/photo4jpg.jpg",
       "https://media-cdn.tripadvisor.com/media/photo-o/18/f8/5e/0b/astray-of-bamboo-cottages.jpg",
@@ -361,7 +361,7 @@
   },
   "32": {
     "title": "Bãi Tắm Sao Biển",
-    "locations": ["Kiên Giang", "Phú Quốc"],
+    "locations": ["Kiên Giang", "Đảo Phú Quốc"],
     "images": [
       "https://media-cdn.tripadvisor.com/media/photo-o/1c/e0/6d/ff/1-star-beach-2-suoi-tranh.jpg",
       "https://media-cdn.tripadvisor.com/media/photo-w/1c/96/e7/81/wandering-north-of-phu.jpg",
@@ -383,7 +383,7 @@
   },
   "34": {
     "title": "Bãi Biển Mũi Gành Dầu",
-    "locations": ["Kiên Giang", "Phú Quốc"],
+    "locations": ["Kiên Giang", "Đảo Phú Quốc"],
     "images": [
       "https://media-cdn.tripadvisor.com/media/photo-w/0f/31/26/9e/ganh-dau-village.jpg",
       "https://media-cdn.tripadvisor.com/media/photo-w/11/69/30/79/caption.jpg",
@@ -394,7 +394,7 @@
   },
   "35": {
     "title": "Bãi Thơm",
-    "locations": ["Kiên Giang", "Phú Quốc"],
+    "locations": ["Kiên Giang", "Đảo Phú Quốc"],
     "images": [
       "https://media-cdn.tripadvisor.com/media/photo-w/0e/7b/87/bf/thom-beach-bar.jpg",
       "https://media-cdn.tripadvisor.com/media/photo-w/11/fc/56/a9/img-20180207-wa0026-largejpg.jpg",
@@ -407,7 +407,7 @@
   },
   "36": {
     "title": "Bãi Khem",
-    "locations": ["Kiên Giang", "Phú Quốc"],
+    "locations": ["Kiên Giang", "Đảo Phú Quốc"],
     "images": [
       "https://media-cdn.tripadvisor.com/media/photo-w/0e/3b/c0/fd/khem-beach-at-11am.jpg",
       "https://media-cdn.tripadvisor.com/media/photo-w/0e/3b/c0/fd/khem-beach-at-11am.jpg",
@@ -601,7 +601,7 @@
     "thumbnail": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0a/de/89/20/quiet.jpg?w=500&h=400&s=1"
   },
   "54": {
-    "title": "Công viên Văn hóa - Du lịch Mũi Cà Mau",
+    "title": "Công viên Văn hóa Du lịch Mũi Cà Mau",
     "locations": ["Đồng bằng Mekong", "Cà Mau"],
     "images": [
       "https://media-cdn.tripadvisor.com/media/photo-w/10/a7/46/b7/h-i-lien-hi-p-ph-n-t.jpg",
@@ -796,8 +796,8 @@
     "thumbnail": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/09/32/bb/9a/quan-lan-beach.jpg?w=500&h=400&s=1"
   },
   "71": {
-    "title": "Galina Phu Quoc Mudbath & Spa",
-    "locations": ["Kiên Giang", "Phú Quốc"],
+    "title": "Galina Phu Quoc Mudbath Spa",
+    "locations": ["Kiên Giang", "Đảo Phú Quốc"],
     "images": [
       "https://media-cdn.tripadvisor.com/media/photo-o/0b/88/77/38/getlstd-property-photo.jpg",
       "https://media-cdn.tripadvisor.com/media/photo-w/0e/7b/fb/81/front-desk.jpg",
@@ -888,7 +888,7 @@
   },
   "82": {
     "title": "Starfish Beach",
-    "locations": ["Kiên Giang", "Phú Quốc"],
+    "locations": ["Kiên Giang", "Đảo Phú Quốc"],
     "images": [],
     "url": "https://www.tripadvisor.com.vn/Attraction_Review-g12666019-d23061562-Reviews-Starfish_Beach-Ganh_Dau_Phu_Quoc_Island_Kien_Giang_Province.html"
   }

@@ -6,6 +6,7 @@ import { BaseTimeStampEntity } from "@core/utils/crud/base-entity";
 import {
   Column,
   Entity,
+  Index,
   JoinTable,
   ManyToMany,
   ManyToOne,
@@ -18,6 +19,7 @@ export class Service extends BaseTimeStampEntity {
   @PrimaryGeneratedColumn()
   id: number;
 
+  @Index({ fulltext: true })
   @Column({
     length: 100,
     type: "varchar",

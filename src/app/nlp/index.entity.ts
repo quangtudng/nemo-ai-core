@@ -1,20 +1,18 @@
 import { BaseTimeStampEntity } from "@core/utils/crud/base-entity";
 import { Column, Entity, PrimaryGeneratedColumn } from "typeorm";
 
-@Entity("customers")
-export class Customers extends BaseTimeStampEntity {
+@Entity("nlp_results")
+export class Nlp extends BaseTimeStampEntity {
   @PrimaryGeneratedColumn()
   id: number;
 
   @Column({
-    length: 100,
-    type: "varchar",
+    type: "text",
   })
-  email: string;
+  body: string;
 
   @Column({
-    length: 50,
-    type: "varchar",
+    type: "text",
   })
-  fullname: string;
+  result: string;
 }

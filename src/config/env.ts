@@ -21,11 +21,14 @@ export const REFRESH_TOKEN_SECRET = env.REFRESH_TOKEN_SECRET;
 export const REFRESH_TOKEN_EXPIRES = parseInt(env.REFRESH_TOKEN_EXPIRES, 10);
 
 export const BCRYPT_SALT_ROUND = parseInt(env.BCRYPT_SALT_ROUND, 10);
-
+export const AES_SECRET = env.AES_SECRET;
 export const CLOUDINARY_CLOUD_NAME = env.CLOUDINARY_CLOUD_NAME;
 export const CLOUDINARY_API_KEY = env.CLOUDINARY_API_KEY;
 export const CLOUDINARY_API_SECRET = env.CLOUDINARY_API_SECRET;
 
+export const SENDGRID_API_KEY = env.SENDGRID_API_KEY;
+export const SENDGRID_SENDER = env.SENDGRID_SENDER;
+export const RASA_SERVER = env.RASA_SERVER;
 function getLogLevel() {
   try {
     return JSON.parse(env.SYSTEM_LOG_INFO);

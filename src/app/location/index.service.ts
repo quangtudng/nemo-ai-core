@@ -45,6 +45,10 @@ export class LocationService {
     return this.repo.delete(id);
   }
 
+  async findNodeByName(name: string): Promise<Location[]> {
+    return this.repo.findNodeByName(name);
+  }
+
   private formatLocationServiceCount(rootLocation) {
     rootLocation.serviceCount = rootLocation.services.length;
     if (rootLocation.children.length === 0) {

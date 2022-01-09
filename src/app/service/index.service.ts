@@ -24,6 +24,9 @@ export class ServiceService extends BaseCrudService<Service> {
   ) {
     super(serviceRepo);
   }
+  async findServiceByCategoryIds(ids: number[]): Promise<Service[]> {
+    return this.serviceRepo.findManyByCategoryId(ids);
+  }
 
   async createOne(dto: CreateServiceDto): Promise<Service> {
     const slug = slugify(`${dto.title} ${Date.now()}`, {

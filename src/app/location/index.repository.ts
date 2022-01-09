@@ -18,6 +18,15 @@ export class LocationRepository extends TreeRepository<Location> {
       return [];
     }
   }
+
+  async findNodeByName(name: string): Promise<Location[]> {
+    return this.createQueryBuilder("location")
+      .where("location.name like :name", {
+        name: `%${name}%`,
+      })
+      .getMany();
+  }
+
   private searchTreeByLocation(
     location: Location,
     targetLocation: Location,
