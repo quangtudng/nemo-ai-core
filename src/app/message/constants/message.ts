@@ -36,11 +36,11 @@ const NEMO_ASK = Object.freeze({
     "Cảm ơn bạn đã sử dụng dịch vụ của chúng tôi, Nemo mong bạn cảm thấy hài lòng với dịch vụ này",
   ],
   HELP: [
-    "Bạn có thể hỏi Nemo các câu hỏi về: \n1. Tình hình Covid của một tỉnh thành\n2. Thông tin về một địa danh\n3. Tìm kiếm địa điểm du lịch\n4. Gõ từ khóa 'new' để bắt đầu lại cuộc trò chuyện",
-    "Nemo sẵn sàng giúp đỡ bạn các chủ đề sau: \n1. Tình hình Covid của một tỉnh thành\n2. Thông tin về một địa danh\n3. Tìm kiếm địa điểm du lịch",
-    "Tại thời điểm hiện tại, Nemo có thể giúp bạn tìm hiểu về: \n1. Tình hình Covid của một tỉnh thành\n2. Thông tin về một địa danh\n3. Tìm kiếm địa điểm du lịch\n4. Gõ từ khóa 'new' để bắt đầu lại cuộc trò chuyện",
-    "Bạn có thể hỏi Nemo các câu hỏi như: \n1. Tình hình Covid của một tỉnh thành\n2. Thông tin về một địa danh\n3. Tìm kiếm địa điểm du lịch\n4. Gõ từ khóa 'new' để bắt đầu lại cuộc trò chuyện",
-    "Nemo hiện tại có thể hỗ trợ bạn các câu hỏi về: \n1. Tình hình Covid của một tỉnh thành\n2. Thông tin về một địa danh\n3. Tìm kiếm địa điểm du lịch\n4. Gõ từ khóa 'new' để bắt đầu lại cuộc trò chuyện",
+    "Bạn có thể hỏi Nemo các câu hỏi về: \n- Tình hình Covid của một tỉnh thành\n- Thông tin về một địa danh\n- Tìm kiếm địa điểm du lịch\n- Gõ từ khóa 'new' để bắt đầu lại cuộc trò chuyện",
+    "Nemo sẵn sàng giúp đỡ bạn các chủ đề sau: \n- Tình hình Covid của một tỉnh thành\n- Thông tin về một địa danh\n- Tìm kiếm địa điểm du lịch\n- Gõ từ khóa 'new' để bắt đầu lại cuộc trò chuyện",
+    "Tại thời điểm hiện tại, Nemo có thể giúp bạn tìm hiểu về: \n- Tình hình Covid của một tỉnh thành\n- Thông tin về một địa danh\n- Tìm kiếm địa điểm du lịch\n- Gõ từ khóa 'new' để bắt đầu lại cuộc trò chuyện",
+    "Bạn có thể hỏi Nemo các câu hỏi như: \n- Tình hình Covid của một tỉnh thành\n- Thông tin về một địa danh\n- Tìm kiếm địa điểm du lịch\n- Gõ từ khóa 'new' để bắt đầu lại cuộc trò chuyện",
+    "Nemo hiện tại có thể hỗ trợ bạn các câu hỏi về: \n- Tình hình Covid của một tỉnh thành\n- Thông tin về một địa danh\n- Tìm kiếm địa điểm du lịch\n- Gõ từ khóa 'new' để bắt đầu lại cuộc trò chuyện",
   ],
 });
 const NEMO_PROMPT = Object.freeze({
