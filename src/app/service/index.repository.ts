@@ -10,6 +10,9 @@ export class ServiceRepository extends BaseCrudRepository<Service> {
     param: FilterServiceDTO,
     locationIds: number[],
   ): Promise<[Service[], number]> {
+    /**
+     * Find services using DTO
+     */
     try {
       const limit = param.limit || 5;
       const offset =
@@ -39,9 +42,37 @@ export class ServiceRepository extends BaseCrudRepository<Service> {
     }
   }
 
-  async findManyByCategoryId(ids: number[]) {
+  async findManyByCategoryAndLocation(
+    categoryIds: number[],
+    locationIds: number[],
+  ) {
+    /**
+     * Find services using many categories and locations
+     */
+    const builder = this.createQueryBuilder("service").where(
+      "service.category_id IN (:...categoryIds)",
+      { categoryIds },
+    );
+    if (locationIds?.length) {
+      builder.andWhere("service.location_id IN (:...locationIds)", {
+        locationIds,
+      });
+    }
+    return builder.getMany();
+  }
+
+  async findManyByIds(ids: number[]) {
+    /**
+     * Find services using many categories and locations
+     */
     return this.createQueryBuilder("service")
-      .where("service.category_id IN (:...ids)", { ids })
+      .leftJoinAndSelect("service.location", "location")
+      .leftJoinAndSelect("service.category", "category")
+      .leftJoinAndSelect("service.serviceImages", "images")
+      .leftJoinAndSelect("service.amenities", "amenities")
+      .where("service.id IN (:...ids)", {
+        ids,
+      })
       .getMany();
   }
 }

@@ -24,8 +24,15 @@ export class ServiceService extends BaseCrudService<Service> {
   ) {
     super(serviceRepo);
   }
-  async findServiceByCategoryIds(ids: number[]): Promise<Service[]> {
-    return this.serviceRepo.findManyByCategoryId(ids);
+
+  async findByCategoryAndLocation(
+    categoryIds: number[],
+    locationIds: number[],
+  ): Promise<Service[]> {
+    return this.serviceRepo.findManyByCategoryAndLocation(
+      categoryIds,
+      locationIds,
+    );
   }
 
   async createOne(dto: CreateServiceDto): Promise<Service> {
@@ -174,5 +181,9 @@ export class ServiceService extends BaseCrudService<Service> {
       formattedData.push(data);
     }
     return this.serviceRepo.save(formattedData);
+  }
+
+  async findServicesByIds(ids: number[]): Promise<Service[]> {
+    return this.serviceRepo.findManyByIds(ids);
   }
 }

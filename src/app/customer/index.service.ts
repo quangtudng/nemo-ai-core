@@ -34,25 +34,28 @@ export class CustomerService extends BaseCrudService<Customer> {
                         c.location,
                         c.viewed,
                         c.long_id,
-                        p1.id AS message_id,
-                        p1.owner AS message_owner,
-                        p1.body AS message_body,
-                        p1.created_at AS message_created_at
+                        c.created_at AS first_contacted,
+                        m1.id AS message_id,
+                        m1.owner AS message_owner,
+                        m1.body AS message_body,
+                        m1.created_at AS message_created_at
                     FROM customers c
-                    JOIN messages p1 ON (c.id = p1.customer_id)
-                    LEFT OUTER JOIN messages p2 ON (c.id = p2.customer_id
-                                                AND (p1.created_at < p2.created_at
-                                                      OR (p1.created_at = p2.created_at
-                                                          AND p1.id < p2.id)))
-                    WHERE p2.id IS NULL
+                    JOIN messages m1 ON (c.id = m1.customer_id)
+                    LEFT OUTER JOIN messages m2 ON (c.id = m2.customer_id
+                                                AND (m1.created_at < m2.created_at
+                                                      OR (m1.created_at = m2.created_at
+                                                          AND m1.id < m2.id)))
+                    WHERE m2.id IS NULL
                     ORDER BY message_created_at DESC;`;
     const customers = await this.repo.query(sql);
-    return customers.map((customer) => ({
+    return customers.map((customer: any) => ({
       id: customer.id,
       long_id: customer.long_id,
       email: customer.email,
       location: customer.location,
       viewed: customer.viewed,
+      first_contacted: customer.first_contacted,
+      last_contacted: customer.message_created_at,
       last_message: {
         id: customer.message_id,
         owner: customer.message_owner,

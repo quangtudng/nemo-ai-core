@@ -35,4 +35,10 @@ export class MessageController {
       data: messages,
     };
   }
+
+  @ApiOperation({ summary: "Get a customer's message services by message id" })
+  @Get("/customer_services/:messageId")
+  async getCustomerServiceByMessageId(@Param("messageId") messageId: number) {
+    return this.messageService.getCustomerServiceByMessageId(messageId);
+  }
 }
