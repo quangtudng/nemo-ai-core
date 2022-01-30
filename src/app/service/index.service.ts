@@ -182,4 +182,8 @@ export class ServiceService extends BaseCrudService<Service> {
     }
     return this.serviceRepo.save(formattedData);
   }
+
+  async findServicesByIds(ids: number[]): Promise<Service[]> {
+    return this.serviceRepo.findManyByIds(ids);
+  }
 }

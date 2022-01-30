@@ -5,11 +5,14 @@ import { MessageRepository } from "../index.repository";
 import { CustomerService } from "@app/customer/index.service";
 import { SENDGRID_API_KEY, SENDGRID_SENDER } from "@config/env";
 import * as SendGrid from "@sendgrid/mail";
+import { ServiceService } from "@app/service/index.service";
+import { ProjectLogger } from "@core/utils/loggers/log-service";
 @Injectable()
 export class MessageService extends BaseCrudService<Message> {
   constructor(
     private repo: MessageRepository,
     private customerService: CustomerService,
+    private serviceService: ServiceService,
   ) {
     super(repo);
   }
@@ -45,5 +48,17 @@ export class MessageService extends BaseCrudService<Message> {
       },
       select: ["id", "body", "type", "owner", "createdAt"],
     });
+  }
+
+  async getCustomerServiceByMessageId(messageId: number) {
+    try {
+      const message = await this.repo.findOneOrFail({
+        id: messageId,
+      });
+      const serviceIds = JSON.parse(message.interestResults);
+      return this.serviceService.findServicesByIds(serviceIds);
+    } catch (error) {
+      ProjectLogger.exception(error.stack);
+    }
   }
 }

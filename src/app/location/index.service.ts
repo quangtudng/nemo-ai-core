@@ -121,18 +121,20 @@ export class LocationService {
         const loc = locations[i];
         const covidData = await CovidUtil.getCovidStatisticByName(loc.name);
         if (covidData) {
+          const haveZeroValueData =
+            covidData.death === 0 &&
+            covidData.treating === 0 &&
+            covidData.cases === 0 &&
+            covidData.recovered === 0 &&
+            covidData.casesToday === 0;
           const haveNoCovidData =
             !covidData.death &&
             !covidData.treating &&
             !covidData.cases &&
             !covidData.recovered &&
             !covidData.casesToday;
-          if (haveNoCovidData) {
-            responses.push(
-              `Bạn đã tìm kiếm thông tin Covid ở ${LocationUtil.getTypeName(
-                loc.type,
-              )} ${loc.name}:` + getRandomMessage(NEMO_PROMPT.COVID_FAILED),
-            );
+          if (haveNoCovidData && !haveZeroValueData) {
+            responses.push(getRandomMessage(NEMO_PROMPT.COVID_FAILED));
           } else {
             const covidText =
               `Hiện tại, số liệu covid-19 tại địa điểm du lịch ${LocationUtil.getTypeName(

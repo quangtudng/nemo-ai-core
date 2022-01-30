@@ -60,4 +60,19 @@ export class ServiceRepository extends BaseCrudRepository<Service> {
     }
     return builder.getMany();
   }
+
+  async findManyByIds(ids: number[]) {
+    /**
+     * Find services using many categories and locations
+     */
+    return this.createQueryBuilder("service")
+      .leftJoinAndSelect("service.location", "location")
+      .leftJoinAndSelect("service.category", "category")
+      .leftJoinAndSelect("service.serviceImages", "images")
+      .leftJoinAndSelect("service.amenities", "amenities")
+      .where("service.id IN (:...ids)", {
+        ids,
+      })
+      .getMany();
+  }
 }
