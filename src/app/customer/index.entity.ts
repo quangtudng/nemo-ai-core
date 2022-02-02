@@ -46,6 +46,12 @@ export class Customer extends BaseTimeStampEntity {
   })
   currentStage: number;
 
+  @Column({
+    type: "text",
+    nullable: true,
+  })
+  selectedInterests: string;
+
   @OneToMany(() => Message, (message) => message.customer)
   messages: Message[];
 }

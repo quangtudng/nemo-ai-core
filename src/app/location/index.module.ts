@@ -1,6 +1,6 @@
 import { CategoryModule } from "@app/category/index.module";
 import { ServiceModule } from "@app/service/index.module";
-import { Module } from "@nestjs/common";
+import { forwardRef, Module } from "@nestjs/common";
 import { TypeOrmModule } from "@nestjs/typeorm";
 import { LocationController } from "./index.controller";
 import { LocationRepository } from "./index.repository";
@@ -8,7 +8,7 @@ import { LocationService } from "./index.service";
 @Module({
   imports: [
     TypeOrmModule.forFeature([LocationRepository]),
-    ServiceModule,
+    forwardRef(() => ServiceModule),
     CategoryModule,
   ],
   controllers: [LocationController],
