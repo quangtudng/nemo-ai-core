@@ -5,10 +5,15 @@ import { Customer } from "./index.entity";
 import { CustomerRepository } from "./index.repository";
 import { generate } from "randomstring";
 import { CONVERSATION_STAGE } from "@app/message/constants/conversation";
+import { ProjectLogger } from "@core/utils/loggers/log-service";
+import { ServiceService } from "@app/service/index.service";
 
 @Injectable()
 export class CustomerService extends BaseCrudService<Customer> {
-  constructor(private repo: CustomerRepository) {
+  constructor(
+    private repo: CustomerRepository,
+    private serviceService: ServiceService,
+  ) {
     super(repo);
   }
   async createNewCustomer() {
@@ -35,6 +40,7 @@ export class CustomerService extends BaseCrudService<Customer> {
                         c.viewed,
                         c.long_id,
                         c.created_at AS first_contacted,
+                        c.selected_interests,
                         m1.id AS message_id,
                         m1.owner AS message_owner,
                         m1.body AS message_body,
@@ -48,6 +54,16 @@ export class CustomerService extends BaseCrudService<Customer> {
                     WHERE m2.id IS NULL
                     ORDER BY message_created_at DESC;`;
     const customers = await this.repo.query(sql);
+    for (let i = 0; i < customers.length; i++) {
+      const customer = customers[i];
+      const selectedInterests = JSON.parse(customer.selected_interests);
+      if (selectedInterests) {
+        customer.selectedInterests =
+          await this.serviceService.findServicesByIds(selectedInterests);
+      } else {
+        customer.selectedInterests = [];
+      }
+    }
     return customers.map((customer: any) => ({
       id: customer.id,
       long_id: customer.long_id,
@@ -56,6 +72,7 @@ export class CustomerService extends BaseCrudService<Customer> {
       viewed: customer.viewed,
       first_contacted: customer.first_contacted,
       last_contacted: customer.message_created_at,
+      selectedInterests: customer.selectedInterests,
       last_message: {
         id: customer.message_id,
         owner: customer.message_owner,
@@ -63,5 +80,25 @@ export class CustomerService extends BaseCrudService<Customer> {
         created_at: customer.message_created_at,
       },
     }));
+  }
+
+  async saveCustomerInterests(customerLongId: string, interestId: number) {
+    try {
+      const customer = await this.repo.findOneOrFail({
+        longId: customerLongId,
+      });
+      if (customer.selectedInterests) {
+        let interests = JSON.parse(customer.selectedInterests);
+        interests.push(interestId);
+        interests = [...new Set(interests)];
+        customer.selectedInterests = JSON.stringify(interests);
+      } else {
+        customer.selectedInterests = JSON.stringify([interestId]);
+      }
+      return this.repo.save(customer);
+    } catch (error) {
+      ProjectLogger.exception(error);
+      return null;
+    }
   }
 }
