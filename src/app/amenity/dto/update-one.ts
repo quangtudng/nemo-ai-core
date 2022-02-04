@@ -17,4 +17,10 @@ export class UpdateAmenityDTO {
   @ValidateIf((object, value) => value !== "")
   @IsOptional()
   description: string;
+
+  @ApiProperty({ example: "home" })
+  @Length(1, 100)
+  @IsNotEmpty()
+  @IsOptional()
+  icon: string;
 }
