@@ -20,6 +20,13 @@ export class Amenity extends BaseTimeStampEntity {
   title: string;
 
   @Column({
+    length: 100,
+    type: "varchar",
+    nullable: true,
+  })
+  icon: string;
+
+  @Column({
     type: "text",
     nullable: true,
   })

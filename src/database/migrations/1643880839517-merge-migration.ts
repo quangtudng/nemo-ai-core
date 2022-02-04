@@ -1,10 +1,10 @@
 import {MigrationInterface, QueryRunner} from "typeorm";
 
-export class mergeMigration1643721712737 implements MigrationInterface {
-    name = 'mergeMigration1643721712737'
+export class mergeMigration1643880839517 implements MigrationInterface {
+    name = 'mergeMigration1643880839517'
 
     public async up(queryRunner: QueryRunner): Promise<void> {
-        await queryRunner.query(`CREATE TABLE \`nemo_dev\`.\`amenity\` (\`created_at\` timestamp(6) NOT NULL DEFAULT CURRENT_TIMESTAMP(6), \`updated_at\` timestamp(6) NOT NULL DEFAULT CURRENT_TIMESTAMP(6) ON UPDATE CURRENT_TIMESTAMP(6), \`id\` int NOT NULL AUTO_INCREMENT, \`title\` varchar(100) NOT NULL, \`description\` text NULL, \`slug\` varchar(200) NOT NULL, PRIMARY KEY (\`id\`)) ENGINE=InnoDB`);
+        await queryRunner.query(`CREATE TABLE \`nemo_dev\`.\`amenity\` (\`created_at\` timestamp(6) NOT NULL DEFAULT CURRENT_TIMESTAMP(6), \`updated_at\` timestamp(6) NOT NULL DEFAULT CURRENT_TIMESTAMP(6) ON UPDATE CURRENT_TIMESTAMP(6), \`id\` int NOT NULL AUTO_INCREMENT, \`title\` varchar(100) NOT NULL, \`icon\` varchar(100) NULL, \`description\` text NULL, \`slug\` varchar(200) NOT NULL, PRIMARY KEY (\`id\`)) ENGINE=InnoDB`);
         await queryRunner.query(`CREATE TABLE \`nemo_dev\`.\`roles\` (\`created_at\` timestamp(6) NOT NULL DEFAULT CURRENT_TIMESTAMP(6), \`updated_at\` timestamp(6) NOT NULL DEFAULT CURRENT_TIMESTAMP(6) ON UPDATE CURRENT_TIMESTAMP(6), \`id\` int NOT NULL AUTO_INCREMENT, \`num\` smallint NOT NULL, \`label\` varchar(255) NOT NULL, \`description\` text NULL, PRIMARY KEY (\`id\`)) ENGINE=InnoDB`);
         await queryRunner.query(`CREATE TABLE \`nemo_dev\`.\`users\` (\`created_at\` timestamp(6) NOT NULL DEFAULT CURRENT_TIMESTAMP(6), \`updated_at\` timestamp(6) NOT NULL DEFAULT CURRENT_TIMESTAMP(6) ON UPDATE CURRENT_TIMESTAMP(6), \`id\` int NOT NULL AUTO_INCREMENT, \`email\` varchar(100) NOT NULL, \`password\` varchar(100) NOT NULL, \`fullname\` varchar(50) NOT NULL, \`phone_number\` varchar(50) NULL, \`avatar\` varchar(500) NULL, \`status\` tinyint NOT NULL DEFAULT '0', \`bio\` text NULL, \`role_id\` int NULL, UNIQUE INDEX \`IDX_97672ac88f789774dd47f7c8be\` (\`email\`), PRIMARY KEY (\`id\`)) ENGINE=InnoDB`);
         await queryRunner.query(`CREATE TABLE \`nemo_dev\`.\`auth_identities\` (\`id\` int NOT NULL AUTO_INCREMENT, \`refresh_token\` varchar(500) NULL, \`email_verification_token\` varchar(500) NULL, \`email_verification_valid_until\` datetime NULL, \`password_reset_token\` varchar(500) NULL, \`password_reset_valid_until\` datetime NULL, \`user_id\` int NULL, UNIQUE INDEX \`REL_c06a980d83c42611d27a294e55\` (\`user_id\`), PRIMARY KEY (\`id\`)) ENGINE=InnoDB`);

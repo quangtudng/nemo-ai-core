@@ -9,8 +9,9 @@ export default class CreateAmenities implements Seeder {
     const amenities = amenity_result.results;
     Object.values(amenities).forEach((data) => {
       const amenity = new Amenity();
-      amenity.title = data;
-      amenity.description = data;
+      amenity.title = data.label;
+      amenity.description = data.label;
+      amenity.icon = data.icon;
       amenitiesToAdd.push(amenity);
     });
     await connection
