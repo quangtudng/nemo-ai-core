@@ -4,594 +4,764 @@
     "slug": "hai-phong",
     "type": "thanh-pho",
     "description": "Hải Phòng là thành phố cảng quan trọng, trung tâm công nghiệp, cảng biển, đồng thời cũng là trung tâm kinh tế, văn hóa, y tế, giáo dục, khoa học, thương mại và công nghệ của Vùng duyên hải Bắc Bộ của Việt Nam.",
-    "parent_code": null
+    "parent_code": null,
+    "latitude": 20.847175011186124,
+    "longitude": 106.67828876256007
   },
   "48": {
     "name": "Đà Nẵng",
     "slug": "da-nang",
     "type": "thanh-pho",
     "description": "Đà Nẵng là một thành phố trực thuộc trung ương, nằm trong vùng Duyên hải Nam Trung Bộ Việt Nam, là thành phố trung tâm và lớn nhất khu vực miền Trung - Tây Nguyên.",
-    "parent_code": null
+    "parent_code": null,
+    "latitude": 16.113691721505806,
+    "longitude": 108.19731320508002
   },
   "79": {
     "name": "Hồ Chí Minh",
     "slug": "ho-chi-minh",
     "type": "thanh-pho",
     "description": "Thành phố Hồ Chí Minh là một thành phố ở miền nam Việt Nam nổi tiếng với vai trò nòng cốt trong chiến tranh Việt Nam. Sài Gòn cũng được biết đến với địa danh như nhà thờ Đức Bà được xây dựng hoàn toàn bằng nguyên liệu nhập khẩu từ Pháp và Bưu điện trung tâm được xây dựng vào thế kỷ 19.",
-    "parent_code": null
+    "parent_code": null,
+    "latitude": 10.822103170844533,
+    "longitude": 106.62905645851946
   },
   "92": {
     "name": "Cần Thơ",
     "slug": "can-tho",
     "type": "thanh-pho",
     "description": "Cần Thơ là một thành phố thuộc tỉnh Cần Thơ cũ và là tỉnh lỵ của tỉnh Cần Thơ trước khi thành lập thành phố Cần Thơ trực thuộc trung ương.",
-    "parent_code": null
+    "parent_code": null,
+    "latitude": 10.03829442242688,
+    "longitude": 105.7619386747424
   },
   "105": {
     "name": "Lai Châu",
     "type": "thanh-pho",
     "slug": "lai-chau",
     "description": "Lai Châu là thành phố tỉnh lỵ của tỉnh Lai Châu, Việt Nam. Thành phố Lai Châu nằm ở phía đông tỉnh Lai Châu, là thành phố có dân số ít nhất Việt Nam.",
-    "parent_code": "12"
+    "parent_code": "12",
+    "latitude": 22.386604405281876,
+    "longitude": 103.46984210909997
   },
   "116": {
     "name": "Sơn La",
     "type": "thanh-pho",
     "slug": "son-la",
     "description": "Sơn La là thành phố tỉnh lỵ của tỉnh Sơn La, vùng Tây Bắc, Việt Nam.",
-    "parent_code": "14"
+    "parent_code": "14",
+    "latitude": 21.328088384412695,
+    "longitude": 103.91413885815838
   },
   "132": {
     "name": "Yên Bái",
     "type": "thanh-pho",
     "slug": "yen-bai",
     "description": "Yên Bái là thành phố tỉnh lỵ của tỉnh Yên Bái, Việt Nam. Thành phố Yên Bái nằm bên sông Hồng, cách Hà Nội 183 km về phía tây bắc.",
-    "parent_code": "15"
+    "parent_code": "15",
+    "latitude": 21.707121042780585,
+    "longitude": 104.87938162783495
   },
   "148": {
     "name": "Hòa Bình",
     "type": "thanh-pho",
     "slug": "hoa-binh",
     "description": "Hòa Bình là thành phố tỉnh lỵ của tỉnh Hòa Bình, Việt Nam. Thành phố Hòa Bình nằm ở phía bắc tỉnh Hòa Bình, dọc theo hai bên bờ sông Đà, cách trung tâm thủ đô Hà Nội 73 km về phía bắc",
-    "parent_code": "17"
+    "parent_code": "17",
+    "latitude": 20.82467821293603,
+    "longitude": 105.33699995058505
   },
   "164": {
     "name": "Thái Nguyên",
     "type": "thanh-pho",
     "slug": "thai-nguyen",
     "description": "Thái Nguyên là thành phố tỉnh lỵ của tỉnh Thái Nguyên, nằm bên bờ sông Cầu, là một trong những thành phố lớn ở miền Bắc Việt Nam. Thành phố Thái Nguyên là trung tâm của vùng trung du và miền núi phía Bắc. Thành phố Thái Nguyên được thành lập vào năm 1962 và là một thành phố công nghiệp.",
-    "parent_code": "19"
+    "parent_code": "19",
+    "latitude": 21.58531463534417,
+    "longitude": 105.83586673063579
   },
   "165": {
     "name": "Sông Công",
     "type": "thanh-pho",
     "slug": "song-cong",
     "description": "Sông Công là một thành phố trực thuộc tỉnh Thái Nguyên, Việt Nam. Sông Công là thành phố công nghiệp, trung tâm kinh tế, hành chính, văn hóa - xã hội phía Nam của tỉnh Thái Nguyên; là đầu mối giao thông, giao lưu phát triển kinh tế - xã hội quan trọng của vùng Đông Bắc Bắc Bộ.",
-    "parent_code": "19"
+    "parent_code": "19",
+    "latitude": 21.474030884847508,
+    "longitude": 105.835363096404
   },
   "178": {
     "name": "Lạng Sơn",
     "type": "thanh-pho",
     "slug": "lang-son",
     "description": "Lạng Sơn là một thành phố trực thuộc tỉnh Lạng Sơn, Việt Nam. Thành phố Lạng Sơn nằm ở trung tâm tỉnh Lạng Sơn, cách trung tâm thủ đô Hà Nội 154 km về phía đông bắc, cách Cửa khẩu Hữu Nghị 15 km về phía đông nam",
-    "parent_code": "20"
+    "parent_code": "20",
+    "latitude": 21.84710593463596,
+    "longitude": 106.7600338407688
   },
   "193": {
     "name": "Hạ Long",
     "type": "thanh-pho",
     "slug": "ha-long",
     "description": "Hạ Long là thành phố tỉnh lỵ của tỉnh Quảng Ninh, Việt Nam. Thành phố được đặt theo tên của vịnh Hạ Long, vịnh biển nằm ở phía nam thành phố và là một di sản thiên nhiên nổi tiếng của Việt Nam. Tên 'Hạ Long' nghĩa là 'con rồng bay xuống'.",
-    "parent_code": "22"
+    "parent_code": "22",
+    "latitude": 20.974514977229347,
+    "longitude": 107.03776249068589
   },
   "194": {
     "name": "Móng Cái",
     "type": "thanh-pho",
     "slug": "mong-cai",
     "description": "Móng Cái là một thành phố thuộc tỉnh Quảng Ninh, Việt Nam, thuộc vùng duyên hải Bắc Bộ. Thành phố nằm bên bờ sông Ka Long, cách thành phố Hạ Long 178 km. Móng Cái giáp với Trung Quốc, có đường biên giới trên biển và đất liền dài hơn 70 km.",
-    "parent_code": "22"
+    "parent_code": "22",
+    "latitude": 21.537612971841682,
+    "longitude": 107.96557061839424
   },
   "195": {
     "name": "Cẩm Phả",
     "type": "thanh-pho",
     "slug": "cam-pha",
     "description": "Cẩm Phả là một thành phố trực thuộc tỉnh Quảng Ninh, vùng Đông Bắc Bộ, Việt Nam. Hiện nay, Cẩm Phả được xếp hạng là đô thị loại II và là đô thị lớn thứ hai của tỉnh Quảng Ninh.",
-    "parent_code": "22"
+    "parent_code": "22",
+    "latitude": 21.010587876063646,
+    "longitude": 107.2785279208105
   },
   "196": {
     "name": "Uông Bí",
     "type": "thanh-pho",
     "slug": "uong-bi",
     "description": "Uông Bí là một thành phố trực thuộc tỉnh Quảng Ninh, Việt Nam. Thành phố Uông Bí hiện là đô thị loại II, là trung tâm kinh tế, văn hóa, giáo dục, chính trị phía tây của tỉnh Quảng Ninh.",
-    "parent_code": "22"
+    "parent_code": "22",
+    "latitude": 21.040272403972804,
+    "longitude": 106.76220194889352
   },
   "213": {
     "name": "Bắc Giang",
     "type": "thanh-pho",
     "slug": "bac-giang",
     "description": "Bắc Giang là thành phố tỉnh lỵ của tỉnh Bắc Giang, Việt Nam. Thành phố Bắc Giang nằm ở phía tây tỉnh Bắc Giang, cách trung tâm thủ đô Hà Nội khoảng 50 km về phía đông bắc.",
-    "parent_code": "24"
+    "parent_code": "24",
+    "latitude": 21.28463388682719,
+    "longitude": 106.19700106381327
   },
   "227": {
     "name": "Việt Trì",
     "type": "thanh-pho",
     "slug": "viet-tri",
     "description": "Việt Trì là thành phố tỉnh lỵ tỉnh Phú Thọ, Việt Nam. Thành phố Việt Trì là đô thị trung tâm của các tỉnh Trung du và miền núi Bắc Bộ và là một trong 22 đô thị loại I của Việt Nam.",
-    "parent_code": "25"
+    "parent_code": "25",
+    "latitude": 21.340596499493873,
+    "longitude": 105.36535828856441
   },
   "243": {
     "name": "Vĩnh Yên",
     "type": "thanh-pho",
     "slug": "vinh-yen",
     "description": "Vĩnh Yên là thành phố tỉnh lỵ của tỉnh Vĩnh Phúc, Việt Nam. Vĩnh Yên là trung tâm kinh tế trọng điểm, là đầu mối giao thông quan trọng của vùng kinh tế trọng điểm Bắc Bộ. Đây là nơi từng diễn ra trận đối đầu đầu tiên của tướng Võ Nguyên Giáp và tướng Jean de Lattre de Tassigny",
-    "parent_code": "26"
+    "parent_code": "26",
+    "latitude": 21.308724935093945,
+    "longitude": 105.59577267978761
   },
   "244": {
     "name": "Phúc Yên",
     "type": "thanh-pho",
     "slug": "phuc-yen",
     "description": "Phúc Yên là một thành phố trực thuộc tỉnh Vĩnh Phúc, Việt Nam. Thành phố Phúc Yên là đô thị cửa ngõ của tỉnh Vĩnh Phúc, là một trong những đô thị vệ tinh của Vùng thủ đô Hà Nội; là trung tâm du lịch, nghỉ dưỡng, thể dục thể thao và đào tạo, là trung tâm kinh tế công nghiệp - dịch vụ, trung tâm khoa học kỹ thuật và công nghệ.",
-    "parent_code": "26"
+    "parent_code": "26",
+    "latitude": 21.28705509635079,
+    "longitude": 105.71979212448952
   },
   "256": {
     "name": "Bắc Ninh",
     "type": "thanh-pho",
     "slug": "bac-ninh",
     "description": "Bắc Ninh là thành phố tỉnh lỵ của tỉnh Bắc Ninh, Việt Nam.",
-    "parent_code": "27"
+    "parent_code": "27",
+    "latitude": 21.177525055418382,
+    "longitude": 106.0693942863673
   },
   "288": {
     "name": "Hải Dương",
     "type": "thanh-pho",
     "slug": "hai-duong",
     "description": "Hải Dương là thành phố tỉnh lỵ của tỉnh Hải Dương, Việt Nam. Thành phố Hải Dương là trung tâm kinh tế, kỹ thuật, giáo dục, khoa học, y tế, dịch vụ của tỉnh Hải Dương, nằm trong vùng thủ đô Hà Nội và tam giác kinh tế Hà Nội - Hải Phòng - Quảng Ninh.",
-    "parent_code": "30"
+    "parent_code": "30",
+    "latitude": 20.93344274347203,
+    "longitude": 106.31653000589797
   },
   "290": {
     "name": "Chí Linh",
     "type": "thanh-pho",
     "slug": "chi-linh",
     "description": "Chí Linh là một thành phố nằm ở phía bắc tỉnh Hải Dương, thuộc vùng tam giác kinh tế Hà Nội - Hải Phòng - Quảng Ninh.",
-    "parent_code": "30"
+    "parent_code": "30",
+    "latitude": 21.114766802596794,
+    "longitude": 106.39414563992597
   },
   "323": {
     "name": "Hưng Yên",
     "type": "thanh-pho",
     "slug": "hung-yen",
     "description": "Hưng Yên là thành phố tỉnh lỵ của tỉnh Hưng Yên, Việt Nam. Thành phố Hưng Yên nằm ở phía nam tỉnh Hưng Yên, bên bờ trái (bờ Bắc) sông Hồng, cách trung tâm thủ đô Hà Nội 54 km.",
-    "parent_code": "33"
+    "parent_code": "33",
+    "latitude": 20.659471089504848,
+    "longitude": 106.05507812528883
   },
   "336": {
     "name": "Thái Bình",
     "type": "thanh-pho",
     "slug": "thai-binh",
     "description": "Thái Bình là thành phố tỉnh lỵ của tỉnh Thái Bình, Việt Nam. Thành phố Thái Bình là trung tâm kinh tế, văn hoá, xã hội, khoa học, quốc phòng... của tỉnh.",
-    "parent_code": "34"
+    "parent_code": "34",
+    "latitude": 20.448143258672296,
+    "longitude": 106.33559479380207
   },
   "347": {
     "name": "Phủ Lý",
     "type": "thanh-pho",
     "slug": "phu-ly",
     "description": "Phủ Lý là thành phố tỉnh lỵ của tỉnh Hà Nam, Việt Nam. Thành phố Phủ Lý nằm trên quốc lộ 1A, bên 2 bờ sông Đáy. Phủ Lý cách Thủ đô Hà Nội 60 km về phía Nam, cách thành phố Nam Định 30 km về phía Tây Bắc và cách thành phố Ninh Bình 33 km về phía Bắc.",
-    "parent_code": "35"
+    "parent_code": "35",
+    "latitude": 20.53544533687566,
+    "longitude": 105.91743849062219
   },
   "356": {
     "name": "Nam Định",
     "type": "thanh-pho",
     "slug": "nam-dinh",
     "description": "Nam Định là thành phố tỉnh lỵ thuộc tỉnh Nam Định, Việt Nam. Đây là một trong những thành phố được Pháp lập ra đầu tiên ở Liên bang Đông Dương.",
-    "parent_code": "36"
+    "parent_code": "36",
+    "latitude": 20.43163344609307,
+    "longitude": 106.16612500651262
   },
   "369": {
     "name": "Ninh Bình",
     "type": "thanh-pho",
     "slug": "ninh-binh",
     "description": "Ninh Bình là thành phố tỉnh lỵ của tỉnh Ninh Bình, Việt Nam.",
-    "parent_code": "37"
+    "parent_code": "37",
+    "latitude": 20.247360255051014,
+    "longitude": 105.97270298761457
   },
   "370": {
     "name": "Tam Điệp",
     "type": "thanh-pho",
     "slug": "tam-diep",
     "description": "Tam Điệp là một thành phố thuộc tỉnh Ninh Bình, Việt Nam. Thành phố Tam Điệp là một địa danh cổ, nằm bên dãy núi Tam Điệp hùng vĩ, nơi có nhiều di chỉ khảo cổ học từ thời tiền sử và cũng là vùng đất có vị trí quan trọng về quân sự qua các thời kỳ lịch sử.",
-    "parent_code": "37"
+    "parent_code": "37",
+    "latitude": 20.155852398062706,
+    "longitude": 105.91121497937097
   },
   "380": {
     "name": "Thanh Hóa",
     "type": "thanh-pho",
     "slug": "thanh-hoa",
     "description": "Thanh Hóa là thành phố tỉnh lỵ của tỉnh Thanh Hóa, Bắc Trung Bộ, Việt Nam. Đây là trung tâm hành chính, chính trị, kinh tế, văn hóa, khoa học kỹ thuật của tỉnh Thanh Hóa.",
-    "parent_code": "38"
+    "parent_code": "38",
+    "latitude": 19.810303876716123,
+    "longitude": 105.77655023262412
   },
   "382": {
     "name": "Sầm Sơn",
     "type": "thanh-pho",
     "slug": "sam-son",
     "description": "Sầm Sơn là một thành phố ven biển thuộc tỉnh Thanh Hóa, Việt Nam.",
-    "parent_code": "38"
+    "parent_code": "38",
+    "latitude": 19.754886445463438,
+    "longitude": 105.8981623138493
   },
   "412": {
     "name": "Vinh",
     "type": "thanh-pho",
     "slug": "vinh",
     "description": "Vinh là thành phố trực thuộc tỉnh Nghệ An, Việt Nam, là trung tâm kinh tế và văn hóa lớn nhất khu vực Bắc Trung Bộ của Việt Nam và là đầu mối quan trọng trong cửa ngõ kinh tế giữa Myanmar, Thái Lan, Lào và Việt Nam.",
-    "parent_code": "40"
+    "parent_code": "40",
+    "latitude": 18.69817943395364,
+    "longitude": 105.6801597356169
   },
   "436": {
     "name": "Hà Tĩnh",
     "type": "thanh-pho",
     "slug": "ha-tinh",
     "description": "Hà Tĩnh (tiếng địa phương gọi là Hà Tịnh) là thành phố tỉnh lỵ của tỉnh Hà Tĩnh, Việt Nam.",
-    "parent_code": "42"
+    "parent_code": "42",
+    "latitude": 18.342183999930157,
+    "longitude": 105.90354641340119
   },
   "450": {
     "name": "Đồng Hới",
     "type": "thanh-pho",
     "slug": "dong-hoi",
     "description": "Đồng Hới là thành phố tỉnh lỵ trực thuộc tỉnh Quảng Bình, Việt Nam. Thành phố Đồng Hới nằm giữa Quốc lộ 1A và đường Hồ Chí Minh và bên tuyến đường sắt Bắc-Nam với ga Đồng Hới là một trong những ga chính, cách thủ đô Hà Nội 500 km về phía Bắc, cách thành phố Đà Nẵng 267 km về phía Nam, cách Thành phố Hồ Chí Minh 1.220 km về phía Nam, có sông Nhật Lệ chảy qua.",
-    "parent_code": "44"
+    "parent_code": "44",
+    "latitude": 17.46080379306083,
+    "longitude": 106.59975423481279
   },
   "461": {
     "name": "Đông Hà",
     "type": "thanh-pho",
     "slug": "dong-ha",
     "description": "Đông Hà là thành phố tỉnh lỵ của tỉnh Quảng Trị, Việt Nam. Thành phố nằm ở ngã ba Quốc lộ 1A và Quốc lộ 9. Đông Hà là trung tâm chính trị, văn hóa, xã hội, kinh tế và thương mại của tỉnh Quảng Trị.",
-    "parent_code": "45"
+    "parent_code": "45",
+    "latitude": 16.80690305739866,
+    "longitude": 107.10120469169969
   },
   "474": {
     "name": "Huế",
     "type": "thanh-pho",
     "slug": "hue",
-    "description": "Huế là thành phố tỉnh lỵ của tỉnh Thừa Thiên Huế, Việt Nam. Huế từng là kinh đô của Việt Nam thời phong kiến dưới triều Tây Sơn và triều Nguyễn. Hiện nay, thành phố là một trong những trung tâm về văn hóa – du lịch, y tế chuyên sâu, giáo dục đào tạo, khoa học công nghệ của Miền Trung - Tây Nguyên và cả nước.",
-    "parent_code": "46"
+    "description": "Huế là thành phố tỉnh lỵ của tỉnh Thừa Thiên Huế, Việt Nam. Huế từng là kinh đô của Việt Nam thời phong kiến dưới triều Tây Sơn và triều Nguyễn. Hiện nay, thành phố là một trong những trung tâm về văn hóa - du lịch, y tế chuyên sâu, giáo dục đào tạo, khoa học công nghệ của Miền Trung - Tây Nguyên và cả nước.",
+    "parent_code": "46",
+    "latitude": 16.468524310467274,
+    "longitude": 107.57848446474745
   },
   "502": {
     "name": "Tam Kỳ",
     "type": "thanh-pho",
     "slug": "tam-ky",
     "description": "Tam Kỳ là thành phố tỉnh lỵ của tỉnh Quảng Nam, Việt Nam. Thành phố Tam Kỳ nằm ở phía đông tỉnh Quảng Nam, cách thủ đô Hà Nội 820 km về phía Bắc, cách thành phố Đà Nẵng 60 km về phía Bắc và cách Thành phố Hồ Chí Minh 900 km về phía Nam.",
-    "parent_code": "49"
+    "parent_code": "49",
+    "latitude": 15.570049315738208,
+    "longitude": 108.484631432202
   },
   "503": {
     "name": "Hội An",
     "type": "thanh-pho",
     "slug": "hoi-an",
     "description": "Hội An là một thành phố trực thuộc tỉnh Quảng Nam, Việt Nam. Phố cổ Hội An từng là một thương cảng quốc tế sầm uất, gồm những di sản kiến trúc đã có từ hàng trăm năm trước, được UNESCO công nhận là di sản văn hóa thế giới từ năm 1999.",
-    "parent_code": "49"
+    "parent_code": "49",
+    "latitude": 15.882295148277352,
+    "longitude": 108.33521549956664
   },
   "522": {
     "name": "Quảng Ngãi",
     "type": "thanh-pho",
     "slug": "quang-ngai",
     "description": "Quảng Ngãi là thành phố tỉnh lỵ của tỉnh Quảng Ngãi, thuộc vùng Duyên hải Nam Trung Bộ, Việt Nam.",
-    "parent_code": "51"
+    "parent_code": "51",
+    "latitude": 15.121617294208912,
+    "longitude": 108.8038925134201
   },
   "540": {
     "name": "Quy Nhơn",
     "type": "thanh-pho",
     "slug": "quy-nhon",
     "description": "Quy Nhơn là một thành phố lớn ven biển vùng duyên hải Nam Trung Bộ Việt Nam và là trung tâm kinh tế, chính trị, văn hóa, khoa học kỹ thuật và du lịch của tỉnh Bình Định, Việt Nam. Trước khi thuộc về Việt Nam, Quy Nhơn từng là đất của người Champa nên xung quanh thành phố hiện vẫn tồn tại nhiều di tích Chăm.",
-    "parent_code": "52"
+    "parent_code": "52",
+    "latitude": 13.774944634668607,
+    "longitude": 109.21742495942362
   },
   "555": {
     "name": "Tuy Hoà",
     "type": "thanh-pho",
     "slug": "tuy-hoa",
     "description": "Tuy Hòa là thành phố tỉnh lỵ của tỉnh Phú Yên, Việt Nam. Là đô thị trù phú nằm ở hạ nguồn Sông Ba, dòng sông lớn nhất miền Trung. Đây là trung tâm chính trị, kinh tế, du lịch, văn hóa và khoa học kỹ thuật của tỉnh.",
-    "parent_code": "54"
+    "parent_code": "54",
+    "latitude": 13.106319694234859,
+    "longitude": 109.29894767281566
   },
   "568": {
     "name": "Nha Trang",
     "type": "thanh-pho",
     "slug": "nha-trang",
     "description": "Nha Trang là một thành phố ven biển và là trung tâm chính trị, kinh tế, văn hóa, khoa học kỹ thuật và du lịch của tỉnh Khánh Hòa, Việt Nam. Trước đây, vùng đất Nha Trang vốn thuộc về Chiêm Thành, do đó các di tích của người Chăm vẫn còn tồn tại nhiều nơi ở Nha Trang.",
-    "parent_code": "56"
+    "parent_code": "56",
+    "latitude": 12.25308006089989,
+    "longitude": 109.19301487726749
   },
   "569": {
     "name": "Cam Ranh",
     "type": "thanh-pho",
     "slug": "cam-ranh",
     "description": "Cam Ranh là một thành phố ven biển trực thuộc tỉnh Khánh Hòa, Việt Nam.",
-    "parent_code": "56"
+    "parent_code": "56",
+    "latitude": 11.911497833997478,
+    "longitude": 109.15052453229343
   },
   "582": {
-    "name": "Phan Rang-Tháp Chàm",
+    "name": "Phan Rang Tháp Chàm",
     "type": "thanh-pho",
     "slug": "phan-rang-thap-cham",
-    "description": "Phan Rang – Tháp Chàm là thành phố tỉnh lỵ của tỉnh Ninh Thuận, Việt Nam. Tên Phan Rang được phiên âm Việt hóa của Panduranga. Tên Tháp Chàm được đặt theo cụm tháp Poklong Garai phía Tây thành phố.",
-    "parent_code": "58"
+    "description": "Phan Rang - Tháp Chàm là thành phố tỉnh lỵ của tỉnh Ninh Thuận, Việt Nam. Tên Phan Rang được phiên âm Việt hóa của Panduranga. Tên Tháp Chàm được đặt theo cụm tháp Poklong Garai phía Tây thành phố.",
+    "parent_code": "58",
+    "latitude": 11.565434558697525,
+    "longitude": 108.99087524381694
   },
   "593": {
     "name": "Phan Thiết",
     "type": "thanh-pho",
     "slug": "phan-thiet",
     "description": "Phan Thiết là một thành phố ven biển và là tỉnh lỵ, trung tâm chính trị, kinh tế, văn hóa và khoa học kỹ thuật của tỉnh Bình Thuận, Việt Nam.",
-    "parent_code": "60"
+    "parent_code": "60",
+    "latitude": 10.940939109276027,
+    "longitude": 108.11185850000324
   },
   "608": {
     "name": "Kon Tum",
     "type": "thanh-pho",
     "slug": "kon-tum",
     "description": "Kon Tum là thành phố tỉnh lỵ của tỉnh Kon Tum, Việt Nam. Nơi đây từ xưa đã là địa bàn cư trú của người Ba Na bản địa, dẫn đến tên gọi Kon Tum, nghĩa là 'Làng Hồ' theo tiếng Ba Na.",
-    "parent_code": "62"
+    "parent_code": "62",
+    "latitude": 14.357514629214922,
+    "longitude": 108.00480540159278
   },
   "622": {
     "name": "Pleiku",
     "type": "thanh-pho",
     "slug": "pleiku",
     "description": "Pleiku là thành phố tỉnh lỵ của tỉnh Gia Lai, thuộc vùng Tây Nguyên, Việt Nam. Pleiku là thành phố lớn thứ 2 tại Tây Nguyên về diện tích đô thị và quy mô dân số, đây cũng là đô thị quan trọng nhất của vùng Bắc Tây Nguyên.",
-    "parent_code": "64"
+    "parent_code": "64",
+    "latitude": 13.976149442163292,
+    "longitude": 108.0074629387879
   },
   "643": {
     "name": "Buôn Ma Thuột",
     "type": "thanh-pho",
     "slug": "buon-ma-thuot",
     "description": "Buôn Ma Thuột là thành phố tỉnh lỵ của tỉnh Đắk Lắk, Việt Nam. Đây là thành phố lớn nhất ở vùng Tây Nguyên và là đô thị miền núi có dân số đông nhất Việt Nam.",
-    "parent_code": "66"
+    "parent_code": "66",
+    "latitude": 12.682736288943373,
+    "longitude": 108.04143075384962
   },
   "660": {
     "name": "Gia Nghĩa",
     "type": "thanh-pho",
     "slug": "gia-nghia",
     "description": "Gia Nghĩa là thành phố tỉnh lỵ của tỉnh Đắk Nông, Việt Nam. ",
-    "parent_code": "67"
+    "parent_code": "67",
+    "latitude": 12.003328252769045,
+    "longitude": 107.69045694002668
   },
   "672": {
     "name": "Đà Lạt",
     "type": "thanh-pho",
     "slug": "da-lat",
     "description": "Đà Lạt là thành phố tỉnh lỵ của tỉnh Lâm Đồng, nằm trên cao nguyên Lâm Viên, thuộc vùng Tây Nguyên, Việt Nam. Từ xa xưa, vùng đất này vốn là địa bàn cư trú của những cư dân người Lạch, người Chil và người Srê thuộc dân tộc Cơ Ho.",
-    "parent_code": "68"
+    "parent_code": "68",
+    "latitude": 11.944883294818172,
+    "longitude": 108.44640282871258
   },
   "673": {
     "name": "Bảo Lộc",
     "type": "thanh-pho",
     "slug": "bao-loc",
     "description": "Bảo Lộc là một thành phố trực thuộc tỉnh Lâm Đồng, vùng Tây Nguyên, Việt Nam. Hiện nay, thành phố Bảo Lộc không phải là tỉnh lỵ của tỉnh Lâm Đồng, mà tỉnh lỵ là thành phố Đà Lạt. Thành phố Bảo Lộc có độ cao trung bình là 900 m so với mực nước biển và nằm trọn trên cao nguyên Di Linh.",
-    "parent_code": "68"
+    "parent_code": "68",
+    "latitude": 11.549004180823248,
+    "longitude": 107.80860135896197
   },
   "689": {
     "name": "Đồng Xoài",
     "type": "thanh-pho",
     "slug": "dong-xoai",
     "description": "Đồng Xoài là thành phố tỉnh lỵ của tỉnh Bình Phước, thuộc vùng Đông Nam Bộ Việt Nam. Thành phố Đồng Xoài cách Thành phố Hồ Chí Minh khoảng 100 km về phía bắc.",
-    "parent_code": "70"
+    "parent_code": "70",
+    "latitude": 11.535241278785344,
+    "longitude": 106.89919872566331
   },
   "703": {
     "name": "Tây Ninh",
     "type": "thanh-pho",
     "slug": "tay-ninh",
     "description": "Tây Ninh là thành phố tỉnh lỵ của tỉnh Tây Ninh, Việt Nam.",
-    "parent_code": "72"
+    "parent_code": "72",
+    "latitude": 11.289945221370214,
+    "longitude": 106.12912175294149
   },
   "718": {
     "name": "Thủ Dầu Một",
     "type": "thanh-pho",
     "slug": "thu-dau-mot",
     "description": "Thủ Dầu Một là thành phố tỉnh lỵ tỉnh Bình Dương, Việt Nam. Thành phố Thủ Dầu Một hiện là đô thị loại I, là trung tâm kinh tế, văn hóa, giáo dục, chính trị của tỉnh Bình Dương và một trong những trung tâm kinh tế của vùng Đông Nam Bộ, nằm trong vùng kinh tế trọng điểm phía Nam.",
-    "parent_code": "74"
+    "parent_code": "74",
+    "latitude": 10.980276083868633,
+    "longitude": 106.66167833430087
   },
   "724": {
     "name": "Dĩ An",
     "type": "thanh-pho",
     "slug": "di-an",
     "description": "Dĩ An là một thành phố trực thuộc tỉnh Bình Dương, Việt Nam.",
-    "parent_code": "74"
+    "parent_code": "74",
+    "latitude": 10.891836958445818,
+    "longitude": 106.75359696693023
   },
   "725": {
     "name": "Thuận An",
     "type": "thanh-pho",
     "slug": "thuan-an",
     "description": "Thuận An là một thành phố trực thuộc tỉnh Bình Dương, Việt Nam.",
-    "parent_code": "74"
+    "parent_code": "74",
+    "latitude": 10.922715778355574,
+    "longitude": 106.71297735947566
   },
   "731": {
     "name": "Biên Hòa",
     "type": "thanh-pho",
     "slug": "bien-hoa",
     "description": "Biên Hòa là một thành phố công nghiệp và là tỉnh lỵ của tỉnh Đồng Nai, thuộc vùng Đông Nam Bộ, Việt Nam.",
-    "parent_code": "75"
+    "parent_code": "75",
+    "latitude": 10.959229541577253,
+    "longitude": 106.8519993793409
   },
   "732": {
     "name": "Long Khánh",
     "type": "thanh-pho",
     "slug": "long-khanh",
     "description": "Long Khánh là một thành phố trực thuộc tỉnh Đồng Nai, Việt Nam.",
-    "parent_code": "75"
+    "parent_code": "75",
+    "latitude": 10.934318469023683,
+    "longitude": 107.25083146418501
   },
   "747": {
     "name": "Vũng Tàu",
     "type": "thanh-pho",
     "slug": "vung-tau",
-    "description": "Vũng Tàu là một thành phố thuộc tỉnh Bà Rịa – Vũng Tàu, vùng Đông Nam Bộ, Việt Nam. Đây là trung tâm kinh tế, tài chính, văn hóa, du lịch, giao thông - vận tải và giáo dục và là một trong những trung tâm kinh tế của vùng Đông Nam Bộ.",
-    "parent_code": "77"
+    "description": "Vũng Tàu là một thành phố thuộc tỉnh Bà Rịa - Vũng Tàu, vùng Đông Nam Bộ, Việt Nam. Đây là trung tâm kinh tế, tài chính, văn hóa, du lịch, giao thông - vận tải và giáo dục và là một trong những trung tâm kinh tế của vùng Đông Nam Bộ.",
+    "parent_code": "77",
+    "latitude": 10.407277274854705,
+    "longitude": 107.1387565440853
   },
   "748": {
     "name": "Bà Rịa",
     "type": "thanh-pho",
     "slug": "ba-ria",
-    "description": "Bà Rịa là thành phố tỉnh lỵ của tỉnh Bà Rịa – Vũng Tàu, Việt Nam.",
-    "parent_code": "77"
+    "description": "Bà Rịa là thành phố tỉnh lỵ của tỉnh Bà Rịa - Vũng Tàu, Việt Nam.",
+    "parent_code": "77",
+    "latitude": 10.498814629668342,
+    "longitude": 107.18060469226407
   },
   "769": {
     "name": "Thủ Đức",
     "type": "thanh-pho",
     "slug": "thu-duc",
     "description": "Thủ Đức là một thành phố thuộc Thành phố Hồ Chí Minh, Việt Nam.",
-    "parent_code": "79"
+    "parent_code": "79",
+    "latitude": 10.849998936114638,
+    "longitude": 106.75488723348086
   },
   "794": {
     "name": "Tân An",
     "type": "thanh-pho",
     "slug": "tan-an",
     "description": "Tân An là thành phố tỉnh lỵ của tỉnh Long An, Việt Nam. Thành phố Tân An nằm trong vùng kinh tế trọng điểm phía Nam. Là đô thị cửa ngõ của vùng Đồng bằng sông Cửu Long. Tân An cũng từng là tỉnh lỵ của tỉnh Tân An cũ trước năm 1956.",
-    "parent_code": "80"
+    "parent_code": "80",
+    "latitude": 10.535958423183184,
+    "longitude": 106.40917140733245
   },
   "815": {
     "name": "Mỹ Tho",
     "type": "thanh-pho",
     "slug": "my-tho",
     "description": "Mỹ Tho là thành phố tỉnh lỵ của tỉnh Tiền Giang, Việt Nam. Thành phố Mỹ Tho hiện là đô thị loại I, thuộc Vùng kinh tế trọng điểm phía nam. Đây là thành phố trực thuộc tỉnh loại I đầu tiên của vùng Đồng bằng sông Cửu Long. Mỹ Tho cũng là một trong những đô thị trọng điểm của vùng.",
-    "parent_code": "82"
+    "parent_code": "82",
+    "latitude": 10.366147426945139,
+    "longitude": 106.3476414558024
   },
   "829": {
     "name": "Bến Tre",
     "type": "thanh-pho",
     "slug": "ben-tre",
     "description": "Bến Tre là thành phố tỉnh lỵ của tỉnh Bến Tre, Việt Nam.",
-    "parent_code": "83"
+    "parent_code": "83",
+    "latitude": 10.240765477972761,
+    "longitude": 106.373489382334
   },
   "842": {
     "name": "Trà Vinh",
     "type": "thanh-pho",
     "slug": "tra-vinh",
     "description": "Trà Vinh là thành phố tỉnh lỵ của tỉnh Trà Vinh, Việt Nam.",
-    "parent_code": "84"
+    "parent_code": "84",
+    "latitude": 9.935887771139223,
+    "longitude": 106.3390174302781
   },
   "855": {
     "name": "Vĩnh Long",
     "type": "thanh-pho",
     "slug": "vinh-long",
     "description": "Vĩnh Long là thành phố tỉnh lỵ của tỉnh Vĩnh Long, Việt Nam.",
-    "parent_code": "86"
+    "parent_code": "86",
+    "latitude": 10.252950851718241,
+    "longitude": 105.94728174976609
   },
   "866": {
     "name": "Cao Lãnh",
     "type": "thanh-pho",
     "slug": "cao-lanh",
     "description": "Cao Lãnh là thành phố tỉnh lỵ của tỉnh Đồng Tháp, Việt Nam. Thành phố Cao Lãnh hiện đang là đô thị loại II và là đô thị tỉnh lỵ trung tâm quan trọng của tỉnh Đồng Tháp.",
-    "parent_code": "87"
+    "parent_code": "87",
+    "latitude": 10.46345601650353,
+    "longitude": 105.6321880566697
   },
   "867": {
     "name": "Sa Đéc",
     "type": "thanh-pho",
     "slug": "sa-dec",
     "description": "Sa Đéc là một thành phố thuộc tỉnh Đồng Tháp, Việt Nam. Vùng đất Sa Đéc xưa có tên Khmer là Phsar Dek, có hai cách hiểu thứ nhất người ta cho rằng Phsar Dek là tên của một vị nữ thần, thứ hai có thể hiểu từ Phsar Dek có nghĩa là Chợ Sắt.",
-    "parent_code": "87"
+    "parent_code": "87",
+    "latitude": 10.298538657265164,
+    "longitude": 105.76049992489936
   },
   "868": {
     "name": "Hồng Ngự",
     "type": "thanh-pho",
     "slug": "hong-ngu",
     "description": "Hồng Ngự là một thành phố biên giới thuộc tỉnh Đồng Tháp, Việt Nam. Thành phố Hồng Ngự hiện là đô thị loại III, trung tâm kinh tế - xã hội phía bắc của tỉnh Đồng Tháp. Cùng với thành phố Cao Lãnh và thành phố Sa Đéc tạo thành ba trung tâm kinh tế của tỉnh.",
-    "parent_code": "87"
+    "parent_code": "87",
+    "latitude": 10.809479245881779,
+    "longitude": 105.3449646291909
   },
   "883": {
     "name": "Long Xuyên",
     "type": "thanh-pho",
     "slug": "long-xuyen",
     "description": "Long Xuyên là thành phố tỉnh lỵ của tỉnh An Giang, Việt Nam.",
-    "parent_code": "89"
+    "parent_code": "89",
+    "latitude": 10.379560309605681,
+    "longitude": 105.43619662912648
   },
   "884": {
     "name": "Châu Đốc",
     "type": "thanh-pho",
     "slug": "chau-doc",
     "description": "Châu Đốc là một thành phố trực thuộc tỉnh An Giang, Việt Nam.",
-    "parent_code": "89"
+    "parent_code": "89",
+    "latitude": 10.705941479879165,
+    "longitude": 105.11912735474614
   },
   "899": {
     "name": "Rạch Giá",
     "type": "thanh-pho",
     "slug": "rach-gia",
     "description": "Rạch Giá là thành phố tỉnh lỵ của tỉnh Kiên Giang, Việt Nam.",
-    "parent_code": "91"
+    "parent_code": "91",
+    "latitude": 9.990095738977907,
+    "longitude": 105.09079372860515
   },
   "900": {
     "name": "Hà Tiên",
     "type": "thanh-pho",
     "slug": "ha-tien",
     "description": "Hà Tiên là một thành phố nằm ở phía tây bắc tỉnh Kiên Giang, Việt Nam. Thành phố Hà Tiên trước đây thuộc địa bàn huyện Hà Tiên thuộc tỉnh Rạch Giá và sau đó thuộc tỉnh Kiên Giang, thuộc vùng kinh tế trọng điểm vùng đồng bằng sông Cửu Long và nằm trong vùng tam giác vàng du lịch của tỉnh: Rạch Giá - Hà Tiên - Phú Quốc.",
-    "parent_code": "91"
+    "parent_code": "91",
+    "latitude": 10.384118835062393,
+    "longitude": 104.48498572439811
   },
   "911": {
     "name": "Phú Quốc",
     "type": "thanh-pho",
     "slug": "phu-quoc",
     "description": "Phú Quốc là hòn đảo lớn nhất Việt Nam, nằm trong vịnh Thái Lan. Đảo Phú Quốc cùng với các đảo nhỏ hơn ở lân cận và quần đảo Thổ Chu nằm cách đó 55 hải lý về phía tây nam hợp thành thành phố Phú Quốc thuộc tỉnh Kiên Giang. Đây cũng là thành phố đảo đầu tiên của Việt Nam.",
-    "parent_code": "91"
+    "parent_code": "91",
+    "latitude": 10.286035530793603,
+    "longitude": 103.98319744227769
   },
   "930": {
     "name": "Vị Thanh",
     "type": "thanh-pho",
     "slug": "vi-thanh",
     "description": "Vị Thanh là thành phố tỉnh lỵ của tỉnh Hậu Giang, Việt Nam.",
-    "parent_code": "93"
+    "parent_code": "93",
+    "latitude": 9.781359591721074,
+    "longitude": 105.46587497662837
   },
   "931": {
     "name": "Ngã Bảy",
     "type": "thanh-pho",
     "slug": "nga-bay",
     "description": "Ngã Bảy là một thành phố thuộc tỉnh Hậu Giang, Việt Nam.",
-    "parent_code": "93"
+    "parent_code": "93",
+    "latitude": 9.811102187705519,
+    "longitude": 105.82052905332841
   },
   "941": {
     "name": "Sóc Trăng",
     "type": "thanh-pho",
     "slug": "soc-trang",
     "description": "Sóc Trăng là thành phố tỉnh lỵ của tỉnh Sóc Trăng, Việt Nam.",
-    "parent_code": "94"
+    "parent_code": "94",
+    "latitude": 9.600765963969089,
+    "longitude": 105.97384403416314
   },
   "954": {
     "name": "Bạc Liêu",
     "type": "thanh-pho",
     "slug": "bac-lieu",
     "description": "Bạc Liêu là thành phố tỉnh lỵ của tỉnh Bạc Liêu, Việt Nam. Thành phố nằm ở phía đông tỉnh Bạc Liêu, bên bờ rạch Bạc Liêu. Trung tâm thành phố cách biển 10 km và là trung tâm hành chính và đầu mối giao lưu trong và ngoài tỉnh, cơ cấu kinh tế của thành phố là thương mại - dịch vụ - công nghiệp và nông nghiệp.",
-    "parent_code": "95"
+    "parent_code": "95",
+    "latitude": 9.29210122262479,
+    "longitude": 105.72407877728438
   },
   "964": {
     "name": "Cà Mau",
     "type": "thanh-pho",
     "slug": "ca-mau",
     "description": "Cà Mau là thành phố tỉnh lỵ của tỉnh Cà Mau, Việt Nam.",
-    "parent_code": "96"
+    "parent_code": "96",
+    "latitude": 9.175371878796959,
+    "longitude": 105.15576391544192
   },
   "094": {
     "name": "Điện Biên Phủ",
     "type": "thanh-pho",
     "slug": "dien-bien-phu",
     "description": "Điện Biên Phủ là thành phố tỉnh lỵ của tỉnh Điện Biên, Việt Nam.",
-    "parent_code": "11"
+    "parent_code": "11",
+    "latitude": 21.39105348201694,
+    "longitude": 103.02290708559525
   },
   "070": {
     "name": "Tuyên Quang",
     "type": "thanh-pho",
     "slug": "tuyen-quang",
     "description": "Tuyên Quang là thành phố tỉnh lỵ của tỉnh Tuyên Quang, Việt Nam.",
-    "parent_code": "08"
+    "parent_code": "08",
+    "latitude": 21.823514612561112,
+    "longitude": 105.21187199977581
   },
   "040": {
     "name": "Cao Bằng",
     "type": "thanh-pho",
     "slug": "cao-bang",
     "description": "Cao Bằng là một thành phố trực thuộc tỉnh Cao Bằng, Việt Nam.",
-    "parent_code": "04"
+    "parent_code": "04",
+    "latitude": 22.667179368919424,
+    "longitude": 106.25965963930574
   },
   "080": {
     "name": "Lào Cai",
     "type": "thanh-pho",
     "slug": "lao-cai",
     "description": "Lào Cai là một thành phố biên giới phía bắc, tỉnh lỵ của tỉnh Lào Cai, Việt Nam. Thành phố Lào Cai có cửa khẩu quốc tế Lào Cai là nơi giao thương quan trọng ở phía bắc Việt Nam với phía nam Trung Quốc.",
-    "parent_code": "10"
+    "parent_code": "10",
+    "latitude": 22.479293855876215,
+    "longitude": 103.97447483219611
   },
   "024": {
     "name": "Hà Giang",
     "type": "thanh-pho",
     "slug": "ha-giang",
     "description": "Hà Giang là thành phố tỉnh lỵ của tỉnh Hà Giang, Việt Nam.",
-    "parent_code": "02"
+    "parent_code": "02",
+    "latitude": 22.822242653506727,
+    "longitude": 104.98559217432772
   },
   "058": {
     "name": "Bắc Kạn",
     "type": "thanh-pho",
     "slug": "bac-kan",
     "description": "Bắc Kạn là thành phố tỉnh lỵ của tỉnh Bắc Kạn, Việt Nam.",
-    "parent_code": "06"
+    "parent_code": "06",
+    "latitude": 22.14821421902985,
+    "longitude": 105.83498471252251
   },
   "01": {
     "name": "Hà Nội",
     "slug": "ha-noi",
     "type": "thanh-pho",
     "description": "Hà Nội, thủ đô của Việt Nam, nổi tiếng với kiến trúc trăm tuổi và nền văn hóa phong phú với sự ảnh hưởng của khu vực Đông Nam Á, Trung Quốc và Pháp. Trung tâm thành phố là Khu phố cổ nhộn nhịp, nơi các con phố hẹp được mang tên 'hàng'. Có rất nhiều ngôi đền nhỏ, bao gồm Bạch Mã, tôn vinh một con ngựa huyền thoại, cùng với chợ Đồng Xuân, bán hàng gia dụng và thức ăn đường phố.",
-    "parent_code": null
+    "parent_code": null,
+    "latitude": 21.027097396698395,
+    "longitude": 105.83475191031826
   }
 }

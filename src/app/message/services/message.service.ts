@@ -7,17 +7,18 @@ import { SENDGRID_API_KEY, SENDGRID_SENDER } from "@config/env";
 import * as SendGrid from "@sendgrid/mail";
 import { ServiceService } from "@app/service/index.service";
 import { ProjectLogger } from "@core/utils/loggers/log-service";
+import { LocationService } from "@app/location/index.service";
 @Injectable()
 export class MessageService extends BaseCrudService<Message> {
   constructor(
     private repo: MessageRepository,
     private customerService: CustomerService,
     private serviceService: ServiceService,
+    private locationService: LocationService,
   ) {
     super(repo);
   }
-  async testEmail() {
-    // TODO: Implement email sending serivce
+  async sendEmail() {
     SendGrid.setApiKey(SENDGRID_API_KEY);
     const msg = {
       to: "quangtupct@gmail.com",
@@ -60,5 +61,33 @@ export class MessageService extends BaseCrudService<Message> {
     } catch (error) {
       ProjectLogger.exception(error.stack);
     }
+  }
+
+  async getLocationInfoByMessageId(messageId: number) {
+    let name = "";
+    let latitude = 0;
+    let longitude = 0;
+    try {
+      const message = await this.repo.findOneOrFail({
+        id: messageId,
+      });
+      const locations = JSON.parse(message.interestResults);
+      if (locations && locations.length > 0) {
+        const locationId = locations[0];
+        const location = await this.locationService.findSimpleNodeById(
+          locationId,
+        );
+        name = location.name;
+        latitude = location.latitude;
+        longitude = location.longitude;
+      }
+    } catch (error) {
+      ProjectLogger.exception(error.stack);
+    }
+    return {
+      name,
+      latitude,
+      longitude,
+    };
   }
 }

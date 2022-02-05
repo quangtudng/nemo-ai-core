@@ -93,7 +93,7 @@ export class ConversationService extends BaseCrudService<Message> {
 
   private async _processNextAnswer(body: string, customer: Customer) {
     let nemoResponses = [];
-    let services = [];
+    let extraData = [];
     let interestResults = null;
     let type = QUESTION_TYPE.FREE_TEXT;
 
@@ -106,13 +106,13 @@ export class ConversationService extends BaseCrudService<Message> {
       } else {
         const fullData = await this._capturingHandler(body);
         nemoResponses = fullData.responses;
-        services = fullData.services;
+        extraData = fullData.extraData;
+        type = fullData.type;
       }
     }
 
-    if (services.length > 0) {
-      interestResults = JSON.stringify(services);
-      type = QUESTION_TYPE.RESULT_TEXT;
+    if (extraData.length > 0) {
+      interestResults = JSON.stringify(extraData);
     }
     const messages = nemoResponses.map((nemoResponse) => {
       return this.repo.create({
@@ -152,7 +152,8 @@ export class ConversationService extends BaseCrudService<Message> {
      * 3. Customer asks for service information
      */
     let responses = [];
-    let services = [];
+    let type = QUESTION_TYPE.FREE_TEXT;
+    let extraData = [];
 
     const nlpResult = await this.nlpService.parse(body);
     const isAskingInfo = nlpResult.intent?.name === NLP_INTENT.ASKING_INFO;
@@ -160,13 +161,19 @@ export class ConversationService extends BaseCrudService<Message> {
       const isAskingCovid = EntityUtil.hasCovidEntity(nlpResult.entities);
       const isAskingService = EntityUtil.hasServiceEntity(nlpResult.entities);
       const isAskingLocation = EntityUtil.hasLocationEntity(nlpResult.entities);
-
-      if (isAskingCovid) {
+      const isAskingWeather = EntityUtil.hasWeatherEntity(nlpResult.entities);
+      if (isAskingWeather) {
+        const fullData = await this._processWeatherResponse(nlpResult.entities);
+        responses = fullData.responses;
+        extraData = fullData.extraData;
+        type = QUESTION_TYPE.WEATHER_TEXT;
+      } else if (isAskingCovid) {
         responses = await this._processCovidResponse(nlpResult.entities);
       } else if (isAskingService) {
         const fullData = await this._processServiceResponse(nlpResult.entities);
         responses = fullData.responses;
-        services = fullData.services;
+        extraData = fullData.extraData;
+        type = QUESTION_TYPE.RESULT_TEXT;
       } else if (isAskingLocation) {
         responses = await this._processLocationResponse(nlpResult.entities);
       }
@@ -176,7 +183,29 @@ export class ConversationService extends BaseCrudService<Message> {
     }
     return {
       responses,
-      services,
+      extraData,
+      type,
+    };
+  }
+
+  private async _processWeatherResponse(entities: any) {
+    const responses = [];
+    let extraData = [];
+    const allLocations = await this.locationService.getLocationFromEntities(
+      entities,
+    );
+    if (allLocations.length > 0) {
+      extraData = allLocations.map((location) => location.id);
+      responses.push(
+        `Cảm ơn bạn, Nemo dã tìm thấy thông tin thời tiết tại địa điểm bạn tìm kiếm`,
+      );
+    } else {
+      //TODO: Improve response
+      responses.push(getRandomMessage(NEMO_PROMPT.LOCATION_FAILED));
+    }
+    return {
+      responses,
+      extraData,
     };
   }
 
@@ -196,7 +225,7 @@ export class ConversationService extends BaseCrudService<Message> {
 
   private async _processServiceResponse(entities: any) {
     const responses = [];
-    let services = [];
+    let extraData = [];
     // TODO: Implement alias here
     const allCategories = await this.categoryService.getCategoryFromEntities(
       entities,
@@ -212,14 +241,14 @@ export class ConversationService extends BaseCrudService<Message> {
         categoryIds,
         locationIds,
       );
-      services = foundServices.map((service) => service.id);
+      extraData = foundServices.map((service) => service.id);
       responses.push(
-        `Cảm ơn bạn, Nemo đã tìm thấy ${services.length} địa điểm du lịch khớp với kết quả của bạn`,
+        `Cảm ơn bạn, Nemo đã tìm thấy ${extraData.length} địa điểm du lịch khớp với kết quả của bạn`,
       );
     }
     return {
       responses,
-      services,
+      extraData,
     };
   }
 
