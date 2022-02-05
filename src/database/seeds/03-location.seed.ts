@@ -15,6 +15,8 @@ export default class CreateLocations implements Seeder {
   private async addVietnam(connection: Connection) {
     const location = new Location();
     location.name = "Việt Nam";
+    location.latitude = 14.674101776019196;
+    location.longitude = 107.76773792094505;
     location.type = "country";
     location.description = `Việt Nam, tên gọi chính thức là Cộng hòa Xã hội chủ nghĩa Việt Nam, là quốc gia nằm ở cực Đông của bán đảo Đông Dương thuộc khu vực Đông Nam Á,giáp với Lào, Campuchia, Trung Quốc, biển Đông và vịnh Thái Lan. Lãnh thổ Việt Nam xuất hiện con người sinh sống từ thời đại đồ đá cũ.`;
     await connection
@@ -31,6 +33,8 @@ export default class CreateLocations implements Seeder {
     Object.values(provinces).forEach((province) => {
       const location = new Location();
       location.name = province.name;
+      location.latitude = province.latitude || 0;
+      location.longitude = province.longitude || 0;
       location.type = "province";
       location.description = province.description;
       location.parent = parent;
@@ -46,6 +50,8 @@ export default class CreateLocations implements Seeder {
       if (!city.parent_code) {
         const location = new Location();
         location.name = city.name;
+        location.latitude = city.latitude || 0;
+        location.longitude = city.longitude || 0;
         location.type = "city";
         location.description = city.description;
         location.parent = parent;
@@ -69,6 +75,8 @@ export default class CreateLocations implements Seeder {
         const location = new Location();
         location.name = city.name;
         location.type = "city";
+        location.latitude = city.latitude || 0;
+        location.longitude = city.longitude || 0;
         location.description = city.description;
         const parent = provinces[city.parent_code] || cities[city.parent_code];
         if (parent) {

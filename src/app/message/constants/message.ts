@@ -7,6 +7,7 @@ const NLP_ENTITY = Object.freeze({
   LOCATION: "location",
   COVID: "covid_19",
   SERVICE: "service",
+  WEATHER: "weather",
 });
 const SPECIAL_COMMAND = Object.freeze({
   NEW: "new",

@@ -3,6 +3,8 @@ const QUESTION_TYPE = Object.freeze({
   FREE_TEXT: 1,
   // Result texts are texts with service information to show to customers
   RESULT_TEXT: 2,
+  // Weather result texts
+  WEATHER_TEXT: 3,
 });
 
 const MESSAGE_OWNER = Object.freeze({

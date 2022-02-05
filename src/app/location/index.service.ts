@@ -19,6 +19,11 @@ export class LocationService {
     private repo: LocationRepository,
     private categoryRepo: CategoryRepository,
   ) {}
+
+  async findSimpleNodeById(id: number) {
+    return this.repo.findOneOrFail(id);
+  }
+
   async findNode(id: number) {
     const location = await this.repo.findOneOrFail(id);
     const allDescendants = await this.repo.findAllDescendants(location);

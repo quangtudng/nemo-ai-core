@@ -37,4 +37,16 @@ export class EntityUtil {
       return false;
     }
   }
+
+  static hasWeatherEntity(entities: any[]): boolean {
+    try {
+      if (entities.length > 0) {
+        return entities.some((entity) => entity?.name === NLP_ENTITY.WEATHER);
+      }
+      return false;
+    } catch (error) {
+      ProjectLogger.exception(error);
+      return false;
+    }
+  }
 }

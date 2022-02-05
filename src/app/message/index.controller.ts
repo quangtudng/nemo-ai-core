@@ -41,4 +41,10 @@ export class MessageController {
   async getCustomerServiceByMessageId(@Param("messageId") messageId: number) {
     return this.messageService.getCustomerServiceByMessageId(messageId);
   }
+
+  @ApiOperation({ summary: "Get a customer's weather request by message id" })
+  @Get("/weather_request/:messageId")
+  async getLocationInfoByMessageId(@Param("messageId") messageId: number) {
+    return this.messageService.getLocationInfoByMessageId(messageId);
+  }
 }
