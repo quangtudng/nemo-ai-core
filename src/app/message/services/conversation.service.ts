@@ -13,6 +13,7 @@ import {
   getRandomMessage,
   NEMO_ASK,
   NEMO_PROMPT,
+  NLP_ENTITY,
   NLP_INTENT,
   SPECIAL_COMMAND,
 } from "../constants/message";
@@ -23,6 +24,7 @@ import { LocationService } from "@app/location/index.service";
 import { EntityUtil } from "../utils/entity";
 import { CategoryService } from "@app/category/index.service";
 import { ServiceService } from "@app/service/index.service";
+import { ProjectLogger } from "@core/utils/loggers/log-service";
 
 @Injectable()
 export class ConversationService extends BaseCrudService<Message> {
@@ -56,16 +58,17 @@ export class ConversationService extends BaseCrudService<Message> {
     const currentCustomer = await this.customerService.findOneOrFail({
       longId: dto.customerLongId,
     });
-
+    // Mark as unread
     await this.customerService.updateOne(currentCustomer.id, {
       viewed: 0,
     });
+    // Save customer's message
     const customerMessage = await this.repo.createOne({
       body: dto.body,
       owner: MESSAGE_OWNER.CUSTOMER,
       customer: currentCustomer,
     });
-
+    // Process next answer
     const nemoMessages = await this._processNextAnswer(
       dto.body,
       currentCustomer,
@@ -92,35 +95,36 @@ export class ConversationService extends BaseCrudService<Message> {
   }
 
   private async _processNextAnswer(body: string, customer: Customer) {
-    let nemoResponses = [];
-    let extraData = [];
+    let result = {
+      responses: [],
+      type: QUESTION_TYPE.FREE_TEXT,
+      extraData: [],
+    };
     let interestResults = null;
-    let type = QUESTION_TYPE.FREE_TEXT;
 
+    // Introduction stage
     if (customer.currentStage === CONVERSATION_STAGE.INTRODUCTION) {
-      nemoResponses = await this._introductionHandler(body, customer);
+      result = await this._introductionHandler(body, customer);
     }
+    // Capturing stage
     if (customer.currentStage === CONVERSATION_STAGE.CAPTURING) {
       if (body === SPECIAL_COMMAND.HELP) {
-        nemoResponses.push(getRandomMessage(NEMO_ASK.HELP));
+        result.responses.push(getRandomMessage(NEMO_ASK.HELP));
       } else {
-        const fullData = await this._capturingHandler(body);
-        nemoResponses = fullData.responses;
-        extraData = fullData.extraData;
-        type = fullData.type;
+        result = await this._capturingHandler(body);
       }
     }
 
-    if (extraData.length > 0) {
-      interestResults = JSON.stringify(extraData);
+    if (result.extraData.length > 0) {
+      interestResults = JSON.stringify(result.extraData);
     }
-    const messages = nemoResponses.map((nemoResponse) => {
+    const messages = result.responses.map((nemoResponse) => {
       return this.repo.create({
         body: nemoResponse,
         owner: MESSAGE_OWNER.NEMO,
         customer,
+        type: result.type,
         interestResults,
-        type,
       });
     });
     return this.repo.save(messages);
@@ -132,137 +136,130 @@ export class ConversationService extends BaseCrudService<Message> {
      * 2. If the customer chooses to skip, go on to the capturing phase
      * 3. If the customer fails to provide the email and skip, continue asking them about it.
      */
-    const response = [];
+    const result = {
+      responses: [],
+      type: QUESTION_TYPE.FREE_TEXT,
+      extraData: [],
+    };
+
     const email = EmailUtil.extractFromText(body);
     if (email || body.includes(SPECIAL_COMMAND.SKIP)) {
-      response.push(getRandomMessage(NEMO_ASK.HELP));
+      result.responses.push(getRandomMessage(NEMO_ASK.HELP));
       await this.customerService.updateOne(customer.id, {
         email,
         currentStage: CONVERSATION_STAGE.CAPTURING,
       });
     } else {
-      response.push(getRandomMessage(NEMO_PROMPT.EMAIL_FAILED));
+      result.responses.push(getRandomMessage(NEMO_PROMPT.EMAIL_FAILED));
     }
-    return response;
+    return result;
   }
   private async _capturingHandler(body: string) {
     /**
-     * 1. Customer asks for covid information
-     * 2. Customer asks for location information
+     * 1. Customer asks for weather information
+     * 2. Customer asks for covid information
      * 3. Customer asks for service information
+     * 4. Customer asks for location information
      */
-    let responses = [];
-    let type = QUESTION_TYPE.FREE_TEXT;
-    let extraData = [];
+    const result = {
+      responses: [],
+      type: QUESTION_TYPE.FREE_TEXT,
+      extraData: [],
+    };
+    try {
+      const nlpResult = await this.nlpService.parse(body);
+      const isAskingInfo = nlpResult.intent?.name === NLP_INTENT.ASKING_INFO;
+      const entities = nlpResult.entities;
 
-    const nlpResult = await this.nlpService.parse(body);
-    const isAskingInfo = nlpResult.intent?.name === NLP_INTENT.ASKING_INFO;
-    if (isAskingInfo) {
-      const isAskingCovid = EntityUtil.hasCovidEntity(nlpResult.entities);
-      const isAskingService = EntityUtil.hasServiceEntity(nlpResult.entities);
-      const isAskingLocation = EntityUtil.hasLocationEntity(nlpResult.entities);
-      const isAskingWeather = EntityUtil.hasWeatherEntity(nlpResult.entities);
-      if (isAskingWeather) {
-        const fullData = await this._processWeatherResponse(nlpResult.entities);
-        responses = fullData.responses;
-        extraData = fullData.extraData;
-        type = QUESTION_TYPE.WEATHER_TEXT;
-      } else if (isAskingCovid) {
-        responses = await this._processCovidResponse(nlpResult.entities);
-      } else if (isAskingService) {
-        const fullData = await this._processServiceResponse(nlpResult.entities);
-        responses = fullData.responses;
-        extraData = fullData.extraData;
-        type = QUESTION_TYPE.RESULT_TEXT;
-      } else if (isAskingLocation) {
-        responses = await this._processLocationResponse(nlpResult.entities);
+      if (isAskingInfo) {
+        const weather = EntityUtil.extractValue(entities, NLP_ENTITY.WEATHER);
+        const covid = EntityUtil.extractValue(entities, NLP_ENTITY.COVID);
+        const service = EntityUtil.extractValue(entities, NLP_ENTITY.SERVICE);
+        const location = EntityUtil.extractValue(entities, NLP_ENTITY.LOCATION);
+
+        // Is asking for weather information
+        if (weather) {
+          const allLocs = await this.locationService.findNodeByName(location);
+          if (allLocs?.length > 0) {
+            result.responses.push(getRandomMessage(NEMO_ASK.WEATHER_SUCCESS));
+            result.type = QUESTION_TYPE.WEATHER_TEXT;
+            result.extraData = allLocs[0]?.id ? [allLocs[0].id] : [];
+          } else {
+            result.responses.push(
+              getRandomMessage(NEMO_PROMPT.LOCATION_FAILED),
+            );
+          }
+          // Is asking for covid information
+        } else if (covid) {
+          const allLocs = await this.locationService.findNodeByName(location);
+          if (allLocs?.length > 0) {
+            result.responses = await this.locationService.getLocCovidData(
+              allLocs[0],
+            );
+          } else {
+            result.responses.push(
+              getRandomMessage(NEMO_PROMPT.LOCATION_FAILED),
+            );
+          }
+          // Is asking for service information
+        } else if (service) {
+          const category = await this.categoryService.findCategoryByName(
+            service,
+          );
+          const allLocs = await this.locationService.findNodeByName(
+            location,
+            true,
+          );
+          if (!category) {
+            result.responses.push(getRandomMessage(NEMO_PROMPT.SERVICE_FAILED));
+          } else if (allLocs?.length === 0) {
+            result.responses.push(
+              getRandomMessage(NEMO_PROMPT.LOCATION_FAILED),
+            );
+          } else if (category && allLocs?.length > 0) {
+            const locationIds = allLocs.map((loc) => loc.id);
+            const foundServices =
+              await this.serviceService.findByCategoryAndLocation(
+                [category.id],
+                locationIds,
+              );
+            if (foundServices.length > 0) {
+              result.extraData = foundServices.map((ser) => ser.id);
+              result.responses.push(
+                getRandomMessage(NEMO_ASK.SERVICE_SUCCESS).replace(
+                  "#service-count",
+                  foundServices.length.toString(),
+                ),
+              );
+              result.type = QUESTION_TYPE.RESULT_TEXT;
+            } else {
+              result.responses.push(
+                getRandomMessage(NEMO_PROMPT.SERVICE_FAILED),
+              );
+            }
+          }
+          // Is asking for location information
+        } else if (location) {
+          const allLocs = await this.locationService.findNodeByName(location);
+          if (allLocs.length > 0) {
+            result.responses = await this.locationService.getLocInfo(
+              allLocs[0],
+            );
+          } else {
+            result.responses.push(
+              getRandomMessage(NEMO_PROMPT.LOCATION_FAILED),
+            );
+          }
+        }
+
+        // Default to not understand message if there is no response
+        if (result.responses.length === 0) {
+          result.responses.push(getRandomMessage(NEMO_PROMPT.NOT_UNDERSTAND));
+        }
       }
+    } catch (error) {
+      ProjectLogger.exception(error.stack);
     }
-    if (responses.length === 0) {
-      responses.push(getRandomMessage(NEMO_PROMPT.NOT_UNDERSTAND));
-    }
-    return {
-      responses,
-      extraData,
-      type,
-    };
-  }
-
-  private async _processWeatherResponse(entities: any) {
-    const responses = [];
-    let extraData = [];
-    const allLocations = await this.locationService.getLocationFromEntities(
-      entities,
-    );
-    if (allLocations.length > 0) {
-      extraData = allLocations.map((location) => location.id);
-      responses.push(
-        `Cảm ơn bạn, Nemo dã tìm thấy thông tin thời tiết tại địa điểm bạn tìm kiếm`,
-      );
-    } else {
-      //TODO: Improve response
-      responses.push(getRandomMessage(NEMO_PROMPT.LOCATION_FAILED));
-    }
-    return {
-      responses,
-      extraData,
-    };
-  }
-
-  private async _processCovidResponse(entities: any) {
-    let responses = [];
-    const allLocations = await this.locationService.getLocationFromEntities(
-      entities,
-    );
-    if (allLocations.length > 0) {
-      responses = await this.locationService.getLocationCovidData(allLocations);
-    } else {
-      //TODO: Improve response
-      responses.push(getRandomMessage(NEMO_PROMPT.LOCATION_FAILED));
-    }
-    return responses;
-  }
-
-  private async _processServiceResponse(entities: any) {
-    const responses = [];
-    let extraData = [];
-    // TODO: Implement alias here
-    const allCategories = await this.categoryService.getCategoryFromEntities(
-      entities,
-    );
-    if (allCategories.length > 0) {
-      const allLocations = await this.locationService.getLocationFromEntities(
-        entities,
-        true,
-      );
-      const categoryIds = allCategories.map((cat) => cat.id);
-      const locationIds = allLocations.map((loc) => loc.id);
-      const foundServices = await this.serviceService.findByCategoryAndLocation(
-        categoryIds,
-        locationIds,
-      );
-      extraData = foundServices.map((service) => service.id);
-      responses.push(
-        `Cảm ơn bạn, Nemo đã tìm thấy ${extraData.length} địa điểm du lịch khớp với kết quả của bạn`,
-      );
-    }
-    return {
-      responses,
-      extraData,
-    };
-  }
-
-  private async _processLocationResponse(entities: any) {
-    let responses = [];
-    const allLocations = await this.locationService.getLocationFromEntities(
-      entities,
-    );
-    if (allLocations.length > 0) {
-      responses = await this.locationService.getAllLocationInfo(allLocations);
-    } else {
-      //TODO: Improve response
-      responses.push(getRandomMessage(NEMO_PROMPT.LOCATION_FAILED));
-    }
-    return responses;
+    return result;
   }
 }

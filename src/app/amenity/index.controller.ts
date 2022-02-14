@@ -26,12 +26,12 @@ export class AmenityController {
 
   @ApiOperation({ summary: "Create an amenity" })
   @Post()
-  @IsAuth([USER_ROLE.SUPERADMIN])
+  @IsAuth([USER_ROLE.SUPERADMIN, USER_ROLE.MODERATOR])
   createOne(@Body() body: CreateAmenityDto): Promise<Amenity> {
     return this.service.createOne(body);
   }
 
-  @ApiOperation({ summary: "Find many amenities" })
+  @ApiOperation({ summary: "Get many amenities" })
   @Get()
   findMany(@Query() param: FilterAmenityDTO) {
     return this.service.findMany(param);
@@ -45,7 +45,7 @@ export class AmenityController {
 
   @ApiOperation({ summary: "Update an amenity" })
   @Patch(":id")
-  @IsAuth([USER_ROLE.SUPERADMIN])
+  @IsAuth([USER_ROLE.SUPERADMIN, USER_ROLE.MODERATOR])
   updateOne(
     @Param("id", ParseIntPipe) id: number,
     @Body() body: UpdateAmenityDTO,

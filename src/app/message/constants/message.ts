@@ -29,19 +29,18 @@ const NEMO_ASK = Object.freeze({
     "Nếu bạn muốn nhân viên của chúng tôi hỗ trợ trực tiếp, Nemo sẽ cần lấy email của bạn (Bạn có thể gõ nhắn 'skip' để bỏ qua)",
     "Nếu bạn muốn hỗ trợ trực tiếp sau này, Nemo sẽ cần lấy email của bạn (Bạn có thể gõ nhắn 'skip' để bỏ qua)",
   ],
-  END_CONVERSATION: [
-    "Cảm ơn bạn đã quan tâm tới dịch vụ của Nemo, hẹn gặp lại bạn vào lần sau",
-    "Hẹn gặp bạn vào lần sau, cảm ơn bạn đã sử dụng dịch vụ của Nemo",
-    "Trân trọng cảm ơn quý khách đã sử dụng sản phẩm này, Nemo xin phép được đóng cuộc trò chuyện",
-    "Cảm ơn quý khách đã sử dụng dịch vụ của Nemo, hẹn gặp lại bạn vào lần sau",
-    "Cảm ơn bạn đã sử dụng dịch vụ của chúng tôi, Nemo mong bạn cảm thấy hài lòng với dịch vụ này",
-  ],
   HELP: [
-    "Bạn có thể hỏi Nemo các câu hỏi về: \n- Tình hình Covid của một tỉnh thành\n- Thông tin về một địa danh\n- Tìm kiếm địa điểm du lịch\n- Gõ từ khóa 'new' để bắt đầu lại cuộc trò chuyện",
-    "Nemo sẵn sàng giúp đỡ bạn các chủ đề sau: \n- Tình hình Covid của một tỉnh thành\n- Thông tin về một địa danh\n- Tìm kiếm địa điểm du lịch\n- Gõ từ khóa 'new' để bắt đầu lại cuộc trò chuyện",
-    "Tại thời điểm hiện tại, Nemo có thể giúp bạn tìm hiểu về: \n- Tình hình Covid của một tỉnh thành\n- Thông tin về một địa danh\n- Tìm kiếm địa điểm du lịch\n- Gõ từ khóa 'new' để bắt đầu lại cuộc trò chuyện",
-    "Bạn có thể hỏi Nemo các câu hỏi như: \n- Tình hình Covid của một tỉnh thành\n- Thông tin về một địa danh\n- Tìm kiếm địa điểm du lịch\n- Gõ từ khóa 'new' để bắt đầu lại cuộc trò chuyện",
-    "Nemo hiện tại có thể hỗ trợ bạn các câu hỏi về: \n- Tình hình Covid của một tỉnh thành\n- Thông tin về một địa danh\n- Tìm kiếm địa điểm du lịch\n- Gõ từ khóa 'new' để bắt đầu lại cuộc trò chuyện",
+    "Bạn có thể hỏi Nemo các câu hỏi về: \n- Tình hình Covid của một tỉnh thành\n- Thông tin về một địa danh\n- Tìm kiếm địa điểm du lịch\n- Dự báo thời tiết của một địa điểm",
+    "Nemo sẵn sàng giúp đỡ bạn các chủ đề sau: \n- Tình hình Covid của một tỉnh thành\n- Thông tin về một địa danh\n- Tìm kiếm địa điểm du lịch\n- Dự báo thời tiết của một địa điểm",
+    "Tại thời điểm hiện tại, Nemo có thể giúp bạn tìm hiểu về: \n- Tình hình Covid của một tỉnh thành\n- Thông tin về một địa danh\n- Tìm kiếm địa điểm du lịch\n- Dự báo thời tiết của một địa điểm",
+    "Bạn có thể hỏi Nemo các câu hỏi như: \n- Tình hình Covid của một tỉnh thành\n- Thông tin về một địa danh\n- Tìm kiếm địa điểm du lịch\n- Dự báo thời tiết của một địa điểm",
+    "Nemo hiện tại có thể hỗ trợ bạn các câu hỏi về: \n- Tình hình Covid của một tỉnh thành\n- Thông tin về một địa danh\n- Tìm kiếm địa điểm du lịch\n- Dự báo thời tiết của một địa điểm",
+  ],
+  WEATHER_SUCCESS: [
+    "Cảm ơn bạn, Nemo dã tìm thấy thông tin thời tiết tại thời điểm mà bạn tìm kiếm",
+  ],
+  SERVICE_SUCCESS: [
+    "Cảm ơn bạn, Nemo đã tìm thấy #service-count địa điểm du lịch khớp với kết quả của bạn",
   ],
 });
 const NEMO_PROMPT = Object.freeze({
@@ -87,9 +86,9 @@ const getRandomMessage = (messages: string[]): string => {
     const randomIndex = Math.floor(Math.random() * messages.length) || 0;
     return messages[randomIndex];
   } catch (error) {
-    // Fallback to first message in case of exception
+    // Fallback to default error message in case of exception
     ProjectLogger.exception(error.stack);
-    return messages[0];
+    return "Hiện tại Nemo đang gặp vấn đề về hệ thống. Xin lỗi vì sự bất tiện này";
   }
 };
 

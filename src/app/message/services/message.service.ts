@@ -3,8 +3,6 @@ import { BaseCrudService } from "@core/utils/crud/base-service";
 import { Message } from "../index.entity";
 import { MessageRepository } from "../index.repository";
 import { CustomerService } from "@app/customer/index.service";
-import { SENDGRID_API_KEY, SENDGRID_SENDER } from "@config/env";
-import * as SendGrid from "@sendgrid/mail";
 import { ServiceService } from "@app/service/index.service";
 import { ProjectLogger } from "@core/utils/loggers/log-service";
 import { LocationService } from "@app/location/index.service";
@@ -17,23 +15,6 @@ export class MessageService extends BaseCrudService<Message> {
     private locationService: LocationService,
   ) {
     super(repo);
-  }
-  async sendEmail() {
-    SendGrid.setApiKey(SENDGRID_API_KEY);
-    const msg = {
-      to: "quangtupct@gmail.com",
-      from: SENDGRID_SENDER,
-      subject: "Sending with SendGrid is Fun",
-      text: "and easy to do anywhere, even with Node.js",
-      html: "<strong>and easy to do anywhere, even with Node.js</strong>",
-    };
-    SendGrid.send(msg)
-      .then((response) => {
-        console.log(response);
-      })
-      .catch((error) => {
-        console.error(error);
-      });
   }
 
   async getCustomerMessages(customerLongId: string) {
@@ -52,15 +33,19 @@ export class MessageService extends BaseCrudService<Message> {
   }
 
   async getCustomerServiceByMessageId(messageId: number) {
+    let services = [];
     try {
       const message = await this.repo.findOneOrFail({
         id: messageId,
       });
-      const serviceIds = JSON.parse(message.interestResults);
-      return this.serviceService.findServicesByIds(serviceIds);
+      const serviceIds = this._parseInterestResults(message.interestResults);
+      if (serviceIds && serviceIds.length > 0) {
+        services = await this.serviceService.findServicesByIds(serviceIds);
+      }
     } catch (error) {
       ProjectLogger.exception(error.stack);
     }
+    return services;
   }
 
   async getLocationInfoByMessageId(messageId: number) {
@@ -71,12 +56,10 @@ export class MessageService extends BaseCrudService<Message> {
       const message = await this.repo.findOneOrFail({
         id: messageId,
       });
-      const locations = JSON.parse(message.interestResults);
+      const locations = this._parseInterestResults(message.interestResults);
       if (locations && locations.length > 0) {
         const locationId = locations[0];
-        const location = await this.locationService.findSimpleNodeById(
-          locationId,
-        );
+        const location = await this.locationService.findNodeById(locationId);
         name = location.name;
         latitude = location.latitude;
         longitude = location.longitude;
@@ -89,5 +72,15 @@ export class MessageService extends BaseCrudService<Message> {
       latitude,
       longitude,
     };
+  }
+
+  private _parseInterestResults(interestResults: string) {
+    let result = [];
+    try {
+      result = JSON.parse(interestResults);
+    } catch (error) {
+      ProjectLogger.exception(error.stack);
+    }
+    return result;
   }
 }

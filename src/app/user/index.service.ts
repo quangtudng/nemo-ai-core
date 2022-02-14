@@ -17,8 +17,10 @@ export class UserService extends BaseCrudService<User> {
   }
 
   async createOne(dto: CreateUserDto): Promise<User> {
+    // Check if email is unique
     await this.repo.checkDuplicateEmail(dto.email);
     const role = await this.roleRepository.findOneOrFail(dto.roleId);
+    // Hash password
     if (dto.password) {
       dto.password = await hashString(dto.password);
     }
@@ -28,6 +30,7 @@ export class UserService extends BaseCrudService<User> {
 
   async updateOne(id: number, dto: UpdateUserDTO): Promise<User> {
     const role = await this.roleRepository.findOneOrFail(dto.roleId);
+    // Hash password
     if (dto.password) {
       dto.password = await hashString(dto.password);
     }

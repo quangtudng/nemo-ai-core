@@ -13,6 +13,7 @@ import { CategoryRepository } from "@app/category/index.repository";
 import { unlink } from "fs/promises";
 import * as XLSX from "xlsx";
 import { PhoneNumberUtil } from "@core/utils/phone";
+import { ProjectLogger } from "@core/utils/loggers/log-service";
 @Injectable()
 export class ServiceService extends BaseCrudService<Service> {
   constructor(
@@ -29,10 +30,16 @@ export class ServiceService extends BaseCrudService<Service> {
     categoryIds: number[],
     locationIds: number[],
   ): Promise<Service[]> {
-    return this.serviceRepo.findManyByCategoryAndLocation(
-      categoryIds,
-      locationIds,
-    );
+    let services = [];
+    try {
+      services = await this.serviceRepo.findManyByCategoryAndLocation(
+        categoryIds,
+        locationIds,
+      );
+    } catch (error) {
+      ProjectLogger.exception(error.stack);
+    }
+    return services;
   }
 
   async createOne(dto: CreateServiceDto): Promise<Service> {
