@@ -8,6 +8,9 @@ import { HTTP_MESSAGE } from "@core/constants/error-message";
 @EntityRepository(User)
 export class UserRepository extends BaseCrudRepository<User> {
   async checkDuplicateEmail(email: string) {
+    /**
+     * Check for duplicate email
+     */
     const isUserExists = await this.findOne({
       where: {
         email,
@@ -19,6 +22,9 @@ export class UserRepository extends BaseCrudRepository<User> {
   }
 
   async findMany(param: FilterUserDTO): Promise<[User[], number]> {
+    /**
+     * Find many users using pagination
+     */
     const limit = param.limit || 5;
     const offset = param.page && param.page > 1 ? (param.page - 1) * limit : 0;
     let builder = this.createQueryBuilder("user").leftJoinAndSelect(

@@ -61,7 +61,7 @@ export class UserController {
 
   @ApiOperation({ summary: "Delete a user" })
   @Delete(":id")
-  @IsAuth([USER_ROLE.SUPERADMIN, USER_ROLE.MODERATOR])
+  @IsAuth([USER_ROLE.SUPERADMIN])
   deleteOne(@Param("id", ParseIntPipe) id: number): Promise<DeleteResult> {
     return this.service.deleteOne(id);
   }

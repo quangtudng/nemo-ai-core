@@ -1,260 +1,1028 @@
 {
   "results": [
-    "Bãi đỗ xe miễn phí",
-    "Internet tốc độ miễn phí (WiFi)",
-    "Bể bơi",
-    "Bữa sáng miễn phí",
-    "Cho thuê xe đạp",
-    "Có xe đạp",
-    "Trẻ em lưu trú miễn phí",
-    "Các hoạt động cho trẻ em (Phù hợp với trẻ em / gia đình)",
-    "Bãi đỗ xe có người phục vụ",
-    "Wifi",
-    "Khăn tắm bể bơi / bãi biển",
-    "Bể bơi ngoài trời",
-    "Nhà hàng",
-    "Quầy bar trên sân thượng",
-    "Có phục vụ bữa sáng",
-    "Bữa sáng tự chọn",
-    "Cà phê hòa tan miễn phí",
-    "Đồ uống chào mừng miễn phí",
-    "Khu ăn uống ngoài trời",
-    "Quầy đồ ăn nhanh",
-    "Đi thuyền",
-    "Chèo xuồng",
-    "Đi bộ đường dài",
-    "Chuyến tham quan bằng xe đạp",
-    "Sân hiên",
-    "Xe đưa đón sân bay",
-    "Dịch vụ xe buýt đưa đón",
-    "Thuê ô tô",
-    "Dịch vụ taxi",
-    "Trung tâm thương mại có truy cập Internet",
-    "Sân thượng",
-    "Bảo vệ 24 giờ",
-    "Khu để hành lý",
-    "Nhân viên hỗ trợ tiền sảnh",
-    "Cửa hàng tiện ích",
-    "Đổi tiền",
-    "Sử dụng sảnh chờ Executive",
-    "Cửa hàng quà tặng",
-    "Khu vực sảnh chờ / khu ngồi xem TV chung",
-    "Cửa hàng",
-    "Sân tắm nắng",
-    "Ghế tắm nắng / ghế bãi biển",
-    "Sân hiên tắm nắng",
-    "Ô dù che nắng",
-    "ATM trong khuôn viên",
-    "Dịch vụ nhân viên phục vụ",
-    "Nhân viên trực cửa",
-    "Ô dù",
-    "Nhận phòng 24 giờ",
-    "Tiếp tân 24 giờ",
-    "Nhận phòng / trả phòng nhanh",
-    "Nhận phòng / trả phòng riêng",
-    "Máy sấy quần áo",
-    "Giặt khô",
-    "Dịch vụ giặt là",
-    "Máy giặt",
-    "Dịch vụ là ủi",
-    "Phòng không gây dị ứng",
-    "Màn che ánh sáng",
-    "Điều hòa nhiệt độ",
-    "Bàn làm việc",
-    "Máy pha cà phê / trà",
-    "Truyền hình cáp / truyền hình vệ tinh",
-    "Giường siêu dài",
-    "Vòi rửa vệ sinh",
-    "Máy lọc không khí",
-    "Khu ăn uống",
-    "Dọn phòng",
-    "Ban công riêng",
-    "Két sắt",
-    "Khu vực ngồi",
-    "Khu ăn uống riêng",
-    "Tiện nghi phòng VIP",
-    "Tủ quần áo / tủ để đồ",
-    "Nước đóng chai",
-    "Giá quần áo",
-    "Bàn là",
-    "Tủ đựng máy tính xách tay",
-    "Phòng tắm riêng",
-    "Sàn gạch / sàn đá hoa cương",
-    "Dịch vụ đánh thức / đồng hồ báo thức",
-    "Quầy bar mini",
-    "Tủ lạnh",
-    "Ấm điện",
-    "Đồ dùng nấu bếp",
-    "TV màn hình phẳng",
-    "Vòi sen đứng",
-    "Đồ dùng nhà tắm miễn phí",
-    "Máy sấy tóc",
-    "Ngắm cảnh núi",
-    "Ngắm cảnh thành phố",
-    "Nhìn ra tòa nhà",
-    "Nhìn ra bể bơi",
-    "Phòng không hút thuốc",
-    "Phòng Suite",
-    "Phòng cho gia đình",
-    "Cho phép vật nuôi ( Cho phép chó / vật nuôi )",
-    "Internet",
-    "Bồn tắm / vòi sen",
-    "Câu cá",
-    "Khách sạn không hút thuốc",
-    "Quầy bar / sảnh chờ",
-    "Đánh giày",
-    "Điện thoại",
-    "Thực đơn cho chế độ ăn đặc biệt",
-    "Có phòng hút thuốc",
-    "Sân chơi cho trẻ em",
-    "Đồ chơi bể bơi",
-    "Bể bơi người lớn",
-    "Bể bơi riêng",
-    "Bể bơi có phần nước nông",
-    "Hàng rào quanh bể bơi",
-    "Bữa sáng tại phòng",
-    "Trà miễn phí",
-    "Giờ ưu đãi",
-    "Bữa ăn tự chọn phù hợp với trẻ em",
-    "Mạng truyền hình dành cho trẻ em",
-    "Bể bơi trẻ em",
-    "Có ghế ăn cho bé",
-    "Máy sao chép / máy fax ở quầy dịch vụ văn phòng",
-    "Spa",
-    "Đắp mặt nạ cơ thể",
-    "Mát xa theo cặp",
-    "Mát xa toàn thân",
-    "Mát xa",
-    "Mát xa cổ",
-    "Tiện nghi BBQ",
-    "Đồ đạc ngoài trời",
-    "Phòng bếp chung",
-    "Bếp nhỏ",
-    "Áo choàng tắm",
-    "Lò vi sóng",
-    "Bếp nấu",
-    "Dịch vụ phòng",
-    "Bãi đỗ xe riêng miễn phí ở gần",
-    "Bãi biển",
-    "Bãi đỗ xe có bảo vệ",
-    "Trò chơi cờ bàn / câu đố",
-    "Ngắm cảnh biển",
-    "Màn",
-    "Phòng cô dâu",
-    "Trung tâm thể dục thẩm mỹ",
-    "Bãi đỗ xe công cộng trả phí ở gần",
-    "Cửa hàng cà phê",
-    "Bãi đỗ xe công cộng miễn phí ở gần",
-    "Bida",
-    "Trò ném phi tiêu",
-    "Trông trẻ",
-    "Gara đỗ xe",
-    "Hồ bơi ngắm cảnh",
-    "Quầy bar cạnh bể bơi",
-    "Bữa ăn cho trẻ nhỏ",
-    "Rượu vang / rượu sâm banh",
-    "Bồn tắm ngoài trời",
-    "Báo",
-    "Lò sưởi ngoài trời",
-    "Phòng tắm chung",
-    "Phòng cách âm",
-    "Phòng tắm nắng",
-    "Bể bơi vô cực",
-    "Quầy bar phục vụ khách bơi lội",
-    "Phòng yến tiệc",
-    "Bồn ngâm chân",
-    "Mát xa bàn chân",
-    "Phòng tắm phụ",
-    "Lò sưởi",
-    "Sofa",
-    "Bộ dụng cụ cấp cứu",
-    "Sông lười",
-    "Bãi đỗ xe",
-    "Phòng chơi game",
-    "Chuyến tham quan đi dạo",
-    "Khu dã ngoại",
-    "Phòng thông nhau",
-    "Phòng họp",
-    "Lặn",
-    "Máy rửa bát",
-    "Bồn tắm nước nóng",
-    "Tự giặt là",
-    "Karaoke",
-    "Bãi đỗ xe riêng trả phí ở gần",
-    "Cho thuê dụng cụ chơi thể thao dưới nước",
-    "Lướt ván buồm",
-    "Bãi biển riêng",
-    "Salon",
-    "Nhà nguyện / đền thờ",
-    "Internet trả phí",
-    "Giải trí buổi tối",
-    "Tiện nghi cho hội nghị",
-    "Internet miễn phí",
-    "Bãi đỗ xe đường phố",
-    "Xe đẩy",
-    "Dịch vụ taxi hoặc xe đưa đón miễn phí",
-    "Bể bơi trên sân thượng",
-    "Bãi đỗ xe công cộng trả phí trong khuôn viên",
-    "Trạm sạc xe điện",
-    "Trạm nối iPod",
-    "Phòng tắm hơi",
-    "Bồn tắm suối nóng",
-    "Phòng xông hơi",
-    "Bãi đỗ xe riêng trả phí trong khuôn viên",
-    "Wifi trả phí",
-    "Đường trượt tuyết vào / ra",
-    "Lặn bằng ống thở",
-    "Công viên nước",
-    "Sân quần vợt",
-    "Mát xa bàn tay",
-    "Mát xa đầu",
-    "Lớp học yoga",
-    "Chèo xuồng ngoài khuôn viên",
-    "Trị liệu mặt",
-    "Làm móng",
-    "Ghế mát xa",
-    "Sơn sửa móng chân",
-    "Bệnh xá",
-    "Giường sofa",
-    "Nhân viên giải trí",
-    "Bóng bàn",
-    "Phòng tập yoga",
-    "Phòng có tủ để đồ ở trung tâm thể dục thẩm mỹ / spa",
-    "Lớp học thể dục thẩm mỹ",
-    "Huấn luyện viên cá nhân",
-    "Sách, DVD, âm nhạc cho trẻ em",
-    "Khu vui chơi trong nhà cho trẻ em",
-    "Câu lạc bộ trẻ em",
-    "Thiết bị vui chơi ngoài trời dành cho trẻ em",
-    "Xe đưa đón sân bay miễn phí",
-    "Dịch vụ tẩy lông",
-    "Phòng khách riêng",
-    "Bồn tắm nước xoáy",
-    "Bể bơi trong nhà",
-    "Bể bơi nước nóng",
-    "Câu lạc bộ đêm / DJ",
-    "Phim theo yêu cầu",
-    "Trị liệu bằng ánh sáng",
-    "Chăn điện",
-    "Dịch vụ trang điểm",
-    "Máy bán hàng tự động",
-    "Đài phát thanh",
-    "Wifi công cộng",
-    "Bể bơi nhỏ",
-    "Cầu lông",
-    "Bắn cung",
-    "Sân golf mini",
-    "Thể dục thẩm mỹ",
-    "Đường trượt nước",
-    "Sân quần vợt ngoài khuôn viên",
-    "Máy chơi game video cầm tay",
-    "Sân golf",
-    "Lò",
-    "Sòng bạc và đánh bạc",
-    "Bể bơi nước mặn",
-    "Công viên nước ngoài khuôn viên",
-    "Nhà tắm Thổ Nhĩ Kỳ",
-    "Bóng vợt",
-    "Bóng quần"
+    {
+      "label": "Bãi đỗ xe miễn phí",
+      "icon": "parking"
+    },
+    {
+      "label": "Internet tốc độ miễn phí (WiFi)",
+      "icon": "wifi"
+    },
+    {
+      "label": "Bể bơi",
+      "icon": "swimming-pool"
+    },
+    {
+      "label": "Bữa sáng miễn phí",
+      "icon": "utensils"
+    },
+    {
+      "label": "Cho thuê xe đạp",
+      "icon": "biking"
+    },
+    {
+      "label": "Có xe đạp",
+      "icon": "bicycle"
+    },
+    {
+      "label": "Trẻ em lưu trú miễn phí",
+      "icon": "baby-carriage"
+    },
+    {
+      "label": "Các hoạt động cho trẻ em (Phù hợp với trẻ em / gia đình)",
+      "icon": "child"
+    },
+    {
+      "label": "Bãi đỗ xe có người phục vụ",
+      "icon": "parking"
+    },
+    {
+      "label": "Wifi",
+      "icon": "wifi"
+    },
+    {
+      "label": "Khăn tắm bể bơi / bãi biển",
+      "icon": "swimming-pool"
+    },
+    {
+      "label": "Bể bơi ngoài trời",
+      "icon": "swimming-pool"
+    },
+    {
+      "label": "Nhà hàng",
+      "icon": "utensils"
+    },
+    {
+      "label": "Quầy bar trên sân thượng",
+      "icon": "cocktail"
+    },
+    {
+      "label": "Có phục vụ bữa sáng",
+      "icon": "utensils"
+    },
+    {
+      "label": "Bữa sáng tự chọn",
+      "icon": "utensils"
+    },
+    {
+      "label": "Cà phê hòa tan miễn phí",
+      "icon": "coffee"
+    },
+    {
+      "label": "Đồ uống chào mừng miễn phí",
+      "icon": "cocktail"
+    },
+    {
+      "label": "Khu ăn uống ngoài trời",
+      "icon": "utensils"
+    },
+    {
+      "label": "Quầy đồ ăn nhanh",
+      "icon": "utensils"
+    },
+    {
+      "label": "Đi thuyền",
+      "icon": "anchor"
+    },
+    {
+      "label": "Chèo xuồng",
+      "icon": "anchor"
+    },
+    {
+      "label": "Đi bộ đường dài",
+      "icon": "running"
+    },
+    {
+      "label": "Chuyến tham quan bằng xe đạp",
+      "icon": "biking"
+    },
+    {
+      "label": "Sân hiên",
+      "icon": "wind"
+    },
+    {
+      "label": "Xe đưa đón sân bay",
+      "icon": "taxi"
+    },
+    {
+      "label": "Dịch vụ xe buýt đưa đón",
+      "icon": "bus"
+    },
+    {
+      "label": "Thuê ô tô",
+      "icon": "car"
+    },
+    {
+      "label": "Dịch vụ taxi",
+      "icon": "taxi"
+    },
+    {
+      "label": "Trung tâm thương mại có truy cập Internet",
+      "icon": "wifi"
+    },
+    {
+      "label": "Sân thượng",
+      "icon": "wind"
+    },
+    {
+      "label": "Bảo vệ 24 giờ",
+      "icon": "lock"
+    },
+    {
+      "label": "Khu để hành lý",
+      "icon": "luggage-cart"
+    },
+    {
+      "label": "Nhân viên hỗ trợ tiền sảnh",
+      "icon": "suitcase-rolling"
+    },
+    {
+      "label": "Cửa hàng tiện ích",
+      "icon": "shopping-cart"
+    },
+    {
+      "label": "Đổi tiền",
+      "icon": "money-bill-alt"
+    },
+    {
+      "label": "Sử dụng sảnh chờ Executive",
+      "icon": "suitcase-rolling"
+    },
+    {
+      "label": "Cửa hàng quà tặng",
+      "icon": "gift"
+    },
+    {
+      "label": "Khu vực sảnh chờ / khu ngồi xem TV chung",
+      "icon": "suitcase-rolling"
+    },
+    {
+      "label": "Cửa hàng",
+      "icon": "shopping-cart"
+    },
+    {
+      "label": "Sân tắm nắng",
+      "icon": "umbrella-beach"
+    },
+    {
+      "label": "Ghế tắm nắng / ghế bãi biển",
+      "icon": "umbrella-beach"
+    },
+    {
+      "label": "Sân hiên tắm nắng",
+      "icon": "umbrella-beach"
+    },
+    {
+      "label": "Ô dù che nắng",
+      "icon": "umbrella-beach"
+    },
+    {
+      "label": "ATM trong khuôn viên",
+      "icon": "credit-card"
+    },
+    {
+      "label": "Dịch vụ nhân viên phục vụ",
+      "icon": "suitcase-rolling"
+    },
+    {
+      "label": "Nhân viên trực cửa",
+      "icon": "suitcase-rolling"
+    },
+    {
+      "label": "Ô dù",
+      "icon": "umbrella"
+    },
+    {
+      "label": "Nhận phòng 24 giờ",
+      "icon": "suitcase-rolling"
+    },
+    {
+      "label": "Tiếp tân 24 giờ",
+      "icon": "suitcase-rolling"
+    },
+    {
+      "label": "Nhận phòng / trả phòng nhanh",
+      "icon": "suitcase-rolling"
+    },
+    {
+      "label": "Nhận phòng / trả phòng riêng",
+      "icon": "suitcase-rolling"
+    },
+    {
+      "label": "Máy sấy quần áo",
+      "icon": "tshirt"
+    },
+    {
+      "label": "Giặt khô",
+      "icon": "tshirt"
+    },
+    {
+      "label": "Dịch vụ giặt là",
+      "icon": "tshirt"
+    },
+    {
+      "label": "Máy giặt",
+      "icon": "tshirt"
+    },
+    {
+      "label": "Dịch vụ là ủi",
+      "icon": "tshirt"
+    },
+    {
+      "label": "Phòng không gây dị ứng",
+      "icon": "shield-virus"
+    },
+    {
+      "label": "Màn che ánh sáng",
+      "icon": "sun"
+    },
+    {
+      "label": "Điều hòa nhiệt độ",
+      "icon": "wind"
+    },
+    {
+      "label": "Bàn làm việc",
+      "icon": "briefcase"
+    },
+    {
+      "label": "Máy pha cà phê / trà",
+      "icon": "coffee"
+    },
+    {
+      "label": "Truyền hình cáp / truyền hình vệ tinh",
+      "icon": "tv"
+    },
+    {
+      "label": "Giường siêu dài",
+      "icon": "bed"
+    },
+    {
+      "label": "Vòi rửa vệ sinh",
+      "icon": "toilet"
+    },
+    {
+      "label": "Máy lọc không khí",
+      "icon": "wind"
+    },
+    {
+      "label": "Khu ăn uống",
+      "icon": "utensils"
+    },
+    {
+      "label": "Dọn phòng",
+      "icon": "broom"
+    },
+    {
+      "label": "Ban công riêng",
+      "icon": "wind"
+    },
+    {
+      "label": "Két sắt",
+      "icon": "money-bill-alt"
+    },
+    {
+      "label": "Khu vực ngồi",
+      "icon": "couch"
+    },
+    {
+      "label": "Khu ăn uống riêng",
+      "icon": "utensils"
+    },
+    {
+      "label": "Tiện nghi phòng VIP",
+      "icon": "user-tie"
+    },
+    {
+      "label": "Tủ quần áo / tủ để đồ",
+      "icon": "tshirt"
+    },
+    {
+      "label": "Nước đóng chai",
+      "icon": "wine-bottle"
+    },
+    {
+      "label": "Giá quần áo",
+      "icon": "tshirt"
+    },
+    {
+      "label": "Bàn là",
+      "icon": "tshirt"
+    },
+    {
+      "label": "Tủ đựng máy tính xách tay",
+      "icon": "laptop"
+    },
+    {
+      "label": "Phòng tắm riêng",
+      "icon": "shower"
+    },
+    {
+      "label": "Sàn gạch / sàn đá hoa cương",
+      "icon": "road"
+    },
+    {
+      "label": "Dịch vụ đánh thức / đồng hồ báo thức",
+      "icon": "clock"
+    },
+    {
+      "label": "Quầy bar mini",
+      "icon": "cocktail"
+    },
+    {
+      "label": "Tủ lạnh",
+      "icon": "hamburger"
+    },
+    {
+      "label": "Ấm điện",
+      "icon": "mug-hot"
+    },
+    {
+      "label": "Đồ dùng nấu bếp",
+      "icon": "mug-hot"
+    },
+    {
+      "label": "TV màn hình phẳng",
+      "icon": "tv"
+    },
+    {
+      "label": "Vòi sen đứng",
+      "icon": "shower"
+    },
+    {
+      "label": "Đồ dùng nhà tắm miễn phí",
+      "icon": "shower"
+    },
+    {
+      "label": "Máy sấy tóc",
+      "icon": "shower"
+    },
+    {
+      "label": "Ngắm cảnh núi",
+      "icon": "mountain"
+    },
+    {
+      "label": "Ngắm cảnh thành phố",
+      "icon": "city"
+    },
+    {
+      "label": "Nhìn ra tòa nhà",
+      "icon": "city"
+    },
+    {
+      "label": "Nhìn ra bể bơi",
+      "icon": "swimming-pool"
+    },
+    {
+      "label": "Phòng không hút thuốc",
+      "icon": "smoking-ban"
+    },
+    {
+      "label": "Phòng Suite",
+      "icon": "suitcase-rolling"
+    },
+    {
+      "label": "Phòng cho gia đình",
+      "icon": "suitcase-rolling"
+    },
+    {
+      "label": "Cho phép vật nuôi ( Cho phép chó / vật nuôi )",
+      "icon": "paw"
+    },
+    {
+      "label": "Internet",
+      "icon": "wifi"
+    },
+    {
+      "label": "Bồn tắm / vòi sen",
+      "icon": "bath"
+    },
+    {
+      "label": "Câu cá",
+      "icon": "fish"
+    },
+    {
+      "label": "Khách sạn không hút thuốc",
+      "icon": "smoking-ban"
+    },
+    {
+      "label": "Quầy bar / sảnh chờ",
+      "icon": "cocktail"
+    },
+    {
+      "label": "Đánh giày",
+      "icon": "shoe-prints"
+    },
+    {
+      "label": "Điện thoại",
+      "icon": "phone-square-alt"
+    },
+    {
+      "label": "Thực đơn cho chế độ ăn đặc biệt",
+      "icon": "utensils"
+    },
+    {
+      "label": "Có phòng hút thuốc",
+      "icon": "smoking"
+    },
+    {
+      "label": "Sân chơi cho trẻ em",
+      "icon": "child"
+    },
+    {
+      "label": "Đồ chơi bể bơi",
+      "icon": "swimming-pool"
+    },
+    {
+      "label": "Bể bơi người lớn",
+      "icon": "swimming-pool"
+    },
+    {
+      "label": "Bể bơi riêng",
+      "icon": "swimming-pool"
+    },
+    {
+      "label": "Bể bơi có phần nước nông",
+      "icon": "swimming-pool"
+    },
+    {
+      "label": "Hàng rào quanh bể bơi",
+      "icon": "swimming-pool"
+    },
+    {
+      "label": "Bữa sáng tại phòng",
+      "icon": "utensils"
+    },
+    {
+      "label": "Trà miễn phí",
+      "icon": "mug-hot"
+    },
+    {
+      "label": "Giờ ưu đãi",
+      "icon": "money-bill-alt"
+    },
+    {
+      "label": "Bữa ăn tự chọn phù hợp với trẻ em",
+      "icon": "utensils"
+    },
+    {
+      "label": "Mạng truyền hình dành cho trẻ em",
+      "icon": "tv"
+    },
+    {
+      "label": "Bể bơi trẻ em",
+      "icon": "swimming-pool"
+    },
+    {
+      "label": "Có ghế ăn cho bé",
+      "icon": "child"
+    },
+    {
+      "label": "Máy sao chép / máy fax ở quầy dịch vụ văn phòng",
+      "icon": "fax"
+    },
+    {
+      "label": "Spa",
+      "icon": "spa"
+    },
+    {
+      "label": "Đắp mặt nạ cơ thể",
+      "icon": "spa"
+    },
+    {
+      "label": "Mát xa theo cặp",
+      "icon": "spa"
+    },
+    {
+      "label": "Mát xa toàn thân",
+      "icon": "spa"
+    },
+    {
+      "label": "Mát xa",
+      "icon": "spa"
+    },
+    {
+      "label": "Mát xa cổ",
+      "icon": "spa"
+    },
+    {
+      "label": "Tiện nghi BBQ",
+      "icon": "drumstick-bite"
+    },
+    {
+      "label": "Đồ đạc ngoài trời",
+      "icon": "umbrella-beach"
+    },
+    {
+      "label": "Phòng bếp chung",
+      "icon": "utensils"
+    },
+    {
+      "label": "Bếp nhỏ",
+      "icon": "utensils"
+    },
+    {
+      "label": "Áo choàng tắm",
+      "icon": "shower"
+    },
+    {
+      "label": "Lò vi sóng",
+      "icon": "utensils"
+    },
+    {
+      "label": "Bếp nấu",
+      "icon": "utensils"
+    },
+    {
+      "label": "Dịch vụ phòng",
+      "icon": "suitcase-rolling"
+    },
+    {
+      "label": "Bãi đỗ xe riêng miễn phí ở gần",
+      "icon": "parking"
+    },
+    {
+      "label": "Bãi biển",
+      "icon": "umbrella-beach"
+    },
+    {
+      "label": "Bãi đỗ xe có bảo vệ",
+      "icon": "parking"
+    },
+    {
+      "label": "Trò chơi cờ bàn / câu đố",
+      "icon": "gamepad"
+    },
+    {
+      "label": "Ngắm cảnh biển",
+      "icon": "umbrella-beach"
+    },
+    {
+      "label": "Màn",
+      "icon": "wind"
+    },
+    {
+      "label": "Phòng cô dâu",
+      "icon": "heart"
+    },
+    {
+      "label": "Trung tâm thể dục thẩm mỹ",
+      "icon": "dumbbell"
+    },
+    {
+      "label": "Bãi đỗ xe công cộng trả phí ở gần",
+      "icon": "parking"
+    },
+    {
+      "label": "Cửa hàng cà phê",
+      "icon": "coffee"
+    },
+    {
+      "label": "Bãi đỗ xe công cộng miễn phí ở gần",
+      "icon": "parking"
+    },
+    {
+      "label": "Bida",
+      "icon": "gamepad"
+    },
+    {
+      "label": "Trò ném phi tiêu",
+      "icon": "gamepad"
+    },
+    {
+      "label": "Trông trẻ",
+      "icon": "child"
+    },
+    {
+      "label": "Gara đỗ xe",
+      "icon": "parking"
+    },
+    {
+      "label": "Hồ bơi ngắm cảnh",
+      "icon": "swimming-pool"
+    },
+    {
+      "label": "Quầy bar cạnh bể bơi",
+      "icon": "cocktail"
+    },
+    {
+      "label": "Bữa ăn cho trẻ nhỏ",
+      "icon": "utensils"
+    },
+    {
+      "label": "Rượu vang / rượu sâm banh",
+      "icon": "wine-bottle"
+    },
+    {
+      "label": "Bồn tắm ngoài trời",
+      "icon": "bath"
+    },
+    {
+      "label": "Báo",
+      "icon": "newspaper"
+    },
+    {
+      "label": "Lò sưởi ngoài trời",
+      "icon": "sun"
+    },
+    {
+      "label": "Phòng tắm chung",
+      "icon": "bath"
+    },
+    {
+      "label": "Phòng cách âm",
+      "icon": "bath"
+    },
+    {
+      "label": "Phòng tắm nắng",
+      "icon": "bath"
+    },
+    {
+      "label": "Bể bơi vô cực",
+      "icon": "swimming-pool"
+    },
+    {
+      "label": "Quầy bar phục vụ khách bơi lội",
+      "icon": "cocktail"
+    },
+    {
+      "label": "Phòng yến tiệc",
+      "icon": "cocktail"
+    },
+    {
+      "label": "Bồn ngâm chân",
+      "icon": "spa"
+    },
+    {
+      "label": "Mát xa bàn chân",
+      "icon": "spa"
+    },
+    {
+      "label": "Phòng tắm phụ",
+      "icon": "bath"
+    },
+    {
+      "label": "Lò sưởi",
+      "icon": "mug-hot"
+    },
+    {
+      "label": "Sofa",
+      "icon": "couch"
+    },
+    {
+      "label": "Bộ dụng cụ cấp cứu",
+      "icon": "clinic-medical"
+    },
+    {
+      "label": "Sông lười",
+      "icon": "water"
+    },
+    {
+      "label": "Bãi đỗ xe",
+      "icon": "parking"
+    },
+    {
+      "label": "Phòng chơi game",
+      "icon": "gamepad"
+    },
+    {
+      "label": "Chuyến tham quan đi dạo",
+      "icon": "running"
+    },
+    {
+      "label": "Khu dã ngoại",
+      "icon": "hiking"
+    },
+    {
+      "label": "Phòng thông nhau",
+      "icon": "person-booth"
+    },
+    {
+      "label": "Phòng họp",
+      "icon": "person-booth"
+    },
+    {
+      "label": "Lặn",
+      "icon": "swimming-pool"
+    },
+    {
+      "label": "Máy rửa bát",
+      "icon": "utensils"
+    },
+    {
+      "label": "Bồn tắm nước nóng",
+      "icon": "bath"
+    },
+    {
+      "label": "Tự giặt là",
+      "icon": "tshirt"
+    },
+    {
+      "label": "Karaoke",
+      "icon": "music"
+    },
+    {
+      "label": "Bãi đỗ xe riêng trả phí ở gần",
+      "icon": "parking"
+    },
+    {
+      "label": "Cho thuê dụng cụ chơi thể thao dưới nước",
+      "icon": "swimming-pool"
+    },
+    {
+      "label": "Lướt ván buồm",
+      "icon": "wind"
+    },
+    {
+      "label": "Bãi biển riêng",
+      "icon": "umbrella-beach"
+    },
+    {
+      "label": "Salon",
+      "icon": "spa"
+    },
+    {
+      "label": "Nhà nguyện / đền thờ",
+      "icon": "church"
+    },
+    {
+      "label": "Internet trả phí",
+      "icon": "wifi"
+    },
+    {
+      "label": "Giải trí buổi tối",
+      "icon": "gamepad"
+    },
+    {
+      "label": "Tiện nghi cho hội nghị",
+      "icon": "briefcase"
+    },
+    {
+      "label": "Internet miễn phí",
+      "icon": "wifi"
+    },
+    {
+      "label": "Bãi đỗ xe đường phố",
+      "icon": "parking"
+    },
+    {
+      "label": "Xe đẩy",
+      "icon": "baby-carriage"
+    },
+    {
+      "label": "Dịch vụ taxi hoặc xe đưa đón miễn phí",
+      "icon": "taxi"
+    },
+    {
+      "label": "Bể bơi trên sân thượng",
+      "icon": "swimming-pool"
+    },
+    {
+      "label": "Bãi đỗ xe công cộng trả phí trong khuôn viên",
+      "icon": "parking"
+    },
+    {
+      "label": "Trạm sạc xe điện",
+      "icon": "parking"
+    },
+    {
+      "label": "Trạm nối iPod",
+      "icon": "mobile-alt"
+    },
+    {
+      "label": "Phòng tắm hơi",
+      "icon": "spa"
+    },
+    {
+      "label": "Bồn tắm suối nóng",
+      "icon": "spa"
+    },
+    {
+      "label": "Phòng xông hơi",
+      "icon": "spa"
+    },
+    {
+      "label": "Bãi đỗ xe riêng trả phí trong khuôn viên",
+      "icon": "parking"
+    },
+    {
+      "label": "Wifi trả phí",
+      "icon": "wifi"
+    },
+    {
+      "label": "Đường trượt tuyết vào / ra",
+      "icon": "skiing-nordic"
+    },
+    {
+      "label": "Lặn bằng ống thở",
+      "icon": "swimming-pool"
+    },
+    {
+      "label": "Công viên nước",
+      "icon": "swimming-pool"
+    },
+    {
+      "label": "Sân quần vợt",
+      "icon": "table-tennis"
+    },
+    {
+      "label": "Mát xa bàn tay",
+      "icon": "spa"
+    },
+    {
+      "label": "Mát xa đầu",
+      "icon": "spa"
+    },
+    {
+      "label": "Lớp học yoga",
+      "icon": "child"
+    },
+    {
+      "label": "Chèo xuồng ngoài khuôn viên",
+      "icon": "umbrella-beach"
+    },
+    {
+      "label": "Trị liệu mặt",
+      "icon": "spa"
+    },
+    {
+      "label": "Làm móng",
+      "icon": "spa"
+    },
+    {
+      "label": "Ghế mát xa",
+      "icon": "spa"
+    },
+    {
+      "label": "Sơn sửa móng chân",
+      "icon": "spa"
+    },
+    {
+      "label": "Bệnh xá",
+      "icon": "clinic-medical"
+    },
+    {
+      "label": "Giường sofa",
+      "icon": "couch"
+    },
+    {
+      "label": "Nhân viên giải trí",
+      "icon": "person-booth"
+    },
+    {
+      "label": "Bóng bàn",
+      "icon": "table-tennis"
+    },
+    {
+      "label": "Phòng tập yoga",
+      "icon": "child"
+    },
+    {
+      "label": "Phòng có tủ để đồ ở trung tâm thể dục thẩm mỹ / spa",
+      "icon": "spa"
+    },
+    {
+      "label": "Lớp học thể dục thẩm mỹ",
+      "icon": "child"
+    },
+    {
+      "label": "Huấn luyện viên cá nhân",
+      "icon": "child"
+    },
+    {
+      "label": "Sách, DVD, âm nhạc cho trẻ em",
+      "icon": "child"
+    },
+    {
+      "label": "Khu vui chơi trong nhà cho trẻ em",
+      "icon": "child"
+    },
+    {
+      "label": "Câu lạc bộ trẻ em",
+      "icon": "child"
+    },
+    {
+      "label": "Thiết bị vui chơi ngoài trời dành cho trẻ em",
+      "icon": "child"
+    },
+    {
+      "label": "Xe đưa đón sân bay miễn phí",
+      "icon": "taxi"
+    },
+    {
+      "label": "Dịch vụ tẩy lông",
+      "icon": "spa"
+    },
+    {
+      "label": "Phòng khách riêng",
+      "icon": "couch"
+    },
+    {
+      "label": "Bồn tắm nước xoáy",
+      "icon": "bath"
+    },
+    {
+      "label": "Bể bơi trong nhà",
+      "icon": "swimming-pool"
+    },
+    {
+      "label": "Bể bơi nước nóng",
+      "icon": "swimming-pool"
+    },
+    {
+      "label": "Câu lạc bộ đêm / DJ",
+      "icon": "music"
+    },
+    {
+      "label": "Phim theo yêu cầu",
+      "icon": "tv"
+    },
+    {
+      "label": "Trị liệu bằng ánh sáng",
+      "icon": "sun"
+    },
+    {
+      "label": "Chăn điện",
+      "icon": "bolt"
+    },
+    {
+      "label": "Dịch vụ trang điểm",
+      "icon": "person-booth"
+    },
+    {
+      "label": "Máy bán hàng tự động",
+      "icon": "shopping-cart"
+    },
+    {
+      "label": "Đài phát thanh",
+      "icon": "broadcast-tower"
+    },
+    {
+      "label": "Wifi công cộng",
+      "icon": "wifi"
+    },
+    {
+      "label": "Bể bơi nhỏ",
+      "icon": "swimming-pool"
+    },
+    {
+      "label": "Cầu lông",
+      "icon": "table-tennis"
+    },
+    {
+      "label": "Bắn cung",
+      "icon": "fist-raised"
+    },
+    {
+      "label": "Sân golf mini",
+      "icon": "golf-ball"
+    },
+    {
+      "label": "Thể dục thẩm mỹ",
+      "icon": "spa"
+    },
+    {
+      "label": "Đường trượt nước",
+      "icon": "skiing-nordic"
+    },
+    {
+      "label": "Sân quần vợt ngoài khuôn viên",
+      "icon": "table-tennis"
+    },
+    {
+      "label": "Máy chơi game video cầm tay",
+      "icon": "gamepad"
+    },
+    {
+      "label": "Sân golf",
+      "icon": "golf-ball"
+    },
+    {
+      "label": "Lò",
+      "icon": "utensils"
+    },
+    {
+      "label": "Sòng bạc và đánh bạc",
+      "icon": "dice"
+    },
+    {
+      "label": "Bể bơi nước mặn",
+      "icon": "swimming-pool"
+    },
+    {
+      "label": "Công viên nước ngoài khuôn viên",
+      "icon": "swimming-pool"
+    },
+    {
+      "label": "Nhà tắm Thổ Nhĩ Kỳ",
+      "icon": "bath"
+    },
+    {
+      "label": "Bóng vợt",
+      "icon": "table-tennis"
+    },
+    {
+      "label": "Bóng quần",
+      "icon": "table-tennis"
+    }
   ]
 }

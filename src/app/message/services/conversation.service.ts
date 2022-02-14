@@ -4,7 +4,11 @@ import { Message } from "../index.entity";
 import { MessageRepository } from "../index.repository";
 import { WebhookDto } from "../dto/conversation";
 import { CustomerService } from "@app/customer/index.service";
-import { CONVERSATION_STAGE, MESSAGE_OWNER } from "../constants/conversation";
+import {
+  CONVERSATION_STAGE,
+  MESSAGE_OWNER,
+  QUESTION_TYPE,
+} from "../constants/conversation";
 import {
   getRandomMessage,
   NEMO_ASK,
@@ -17,15 +21,10 @@ import { Customer } from "@app/customer/index.entity";
 import { NlpService } from "@app/nlp/index.service";
 import { EmailUtil } from "@core/utils/email";
 import { LocationService } from "@app/location/index.service";
-import { Location } from "@app/location/index.entity";
-import { ProjectLogger } from "@core/utils/loggers/log-service";
 import { EntityUtil } from "../utils/entity";
-import { CovidUtil } from "@core/utils/covid";
-import { LocationUtil } from "@core/utils/location";
-import { Category } from "@app/category/index.entity";
-import { Service } from "@app/service/index.entity";
 import { CategoryService } from "@app/category/index.service";
 import { ServiceService } from "@app/service/index.service";
+import { ProjectLogger } from "@core/utils/loggers/log-service";
 
 @Injectable()
 export class ConversationService extends BaseCrudService<Message> {
@@ -56,23 +55,28 @@ export class ConversationService extends BaseCrudService<Message> {
     /**
      * Continue an ongoing conversation, return new message and current customer
      */
-    const customer = await this.customerService.findOneOrFail({
+    const currentCustomer = await this.customerService.findOneOrFail({
       longId: dto.customerLongId,
     });
-
-    await this.customerService.updateOne(customer.id, {
+    // Mark as unread
+    await this.customerService.updateOne(currentCustomer.id, {
       viewed: 0,
     });
+    // Save customer's message
     const customerMessage = await this.repo.createOne({
       body: dto.body,
       owner: MESSAGE_OWNER.CUSTOMER,
-      customer,
+      customer: currentCustomer,
     });
-    const nemoMessages = await this._processNextAnswer(dto.body, customer);
+    // Process next answer
+    const nemoMessages = await this._processNextAnswer(
+      dto.body,
+      currentCustomer,
+    );
 
     return {
       messages: [customerMessage].concat(nemoMessages),
-      customer,
+      customer: currentCustomer,
     };
   }
 
@@ -91,22 +95,36 @@ export class ConversationService extends BaseCrudService<Message> {
   }
 
   private async _processNextAnswer(body: string, customer: Customer) {
-    let nemoResponses = [];
+    let result = {
+      responses: [],
+      type: QUESTION_TYPE.FREE_TEXT,
+      extraData: [],
+    };
+    let interestResults = null;
+
+    // Introduction stage
     if (customer.currentStage === CONVERSATION_STAGE.INTRODUCTION) {
-      nemoResponses = await this._introductionHandler(body, customer);
+      result = await this._introductionHandler(body, customer);
     }
+    // Capturing stage
     if (customer.currentStage === CONVERSATION_STAGE.CAPTURING) {
       if (body === SPECIAL_COMMAND.HELP) {
-        nemoResponses.push(getRandomMessage(NEMO_ASK.HELP));
+        result.responses.push(getRandomMessage(NEMO_ASK.HELP));
       } else {
-        nemoResponses = await this._capturingHandler(body);
+        result = await this._capturingHandler(body);
       }
     }
-    const messages = nemoResponses.map((nemoResponse) => {
+
+    if (result.extraData.length > 0) {
+      interestResults = JSON.stringify(result.extraData);
+    }
+    const messages = result.responses.map((nemoResponse) => {
       return this.repo.create({
         body: nemoResponse,
         owner: MESSAGE_OWNER.NEMO,
         customer,
+        type: result.type,
+        interestResults,
       });
     });
     return this.repo.save(messages);
@@ -118,170 +136,130 @@ export class ConversationService extends BaseCrudService<Message> {
      * 2. If the customer chooses to skip, go on to the capturing phase
      * 3. If the customer fails to provide the email and skip, continue asking them about it.
      */
-    const response = [];
+    const result = {
+      responses: [],
+      type: QUESTION_TYPE.FREE_TEXT,
+      extraData: [],
+    };
+
     const email = EmailUtil.extractFromText(body);
     if (email || body.includes(SPECIAL_COMMAND.SKIP)) {
-      response.push(getRandomMessage(NEMO_ASK.HELP));
+      result.responses.push(getRandomMessage(NEMO_ASK.HELP));
       await this.customerService.updateOne(customer.id, {
         email,
         currentStage: CONVERSATION_STAGE.CAPTURING,
       });
     } else {
-      response.push(getRandomMessage(NEMO_PROMPT.EMAIL_FAILED));
+      result.responses.push(getRandomMessage(NEMO_PROMPT.EMAIL_FAILED));
     }
-    return response;
+    return result;
   }
   private async _capturingHandler(body: string) {
     /**
-     * 1. Customer asks for covid information
-     * 2. Customer asks for location information
+     * 1. Customer asks for weather information
+     * 2. Customer asks for covid information
      * 3. Customer asks for service information
+     * 4. Customer asks for location information
      */
-    let responses = [];
-    const nlpResult = await this.nlpService.parse(body);
-    const entities = nlpResult.entities;
-    const allLocations = await this._getLocationFromEntities(entities);
-    if (nlpResult.intent?.name === NLP_INTENT.ASKING_INFO) {
-      if (EntityUtil.hasCovidEntity(entities)) {
-        if (allLocations.length > 0) {
-          responses = await this._getLocationCovidData(allLocations);
-        } else {
-          responses.push(getRandomMessage(NEMO_PROMPT.LOCATION_FAILED));
-        }
-      } else if (EntityUtil.hasServiceEntity(entities)) {
-        // TODO: Implement and improve service searching
-        // const allCategories = await this._getCategoryFromEntities(entities);
-        // if (allCategories.length > 0) {
-        //   const categoryIds = allCategories.map((cat) => cat.id);
-        //   const services = await this.serviceService.findServiceByCategoryIds(
-        //     categoryIds,
-        //   );
-        //   console.log(services);
-        // } else {
-        //   const allServices = await this._getServiceFromEntities(entities);
-        //   console.log(allServices);
-        // }
-      } else if (EntityUtil.hasLocationEntity(entities)) {
-        responses = await this._getAllLocationInfo(allLocations);
-      }
-    }
-    if (responses.length === 0) {
-      responses.push(getRandomMessage(NEMO_PROMPT.NOT_UNDERSTAND));
-    }
-    console.log(responses);
-    return responses;
-  }
+    const result = {
+      responses: [],
+      type: QUESTION_TYPE.FREE_TEXT,
+      extraData: [],
+    };
+    try {
+      const nlpResult = await this.nlpService.parse(body);
+      const isAskingInfo = nlpResult.intent?.name === NLP_INTENT.ASKING_INFO;
+      const entities = nlpResult.entities;
 
-  private async _getLocationFromEntities(entities: any[]): Promise<Location[]> {
-    /**
-     * Try to extract locations from entities collected by Rasa
-     */
-    const allLocations = [];
-    try {
-      const locationEntities = entities
-        .filter((entity) => entity.name === NLP_ENTITY.LOCATION)
-        .map((entity) => entity.value);
-      for (let i = 0; i < locationEntities.length; i++) {
-        const loc = await this.locationService.findNodeByName(
-          locationEntities[i],
-        );
-        allLocations.push(loc);
-      }
-      return allLocations.flat(2);
-    } catch (error) {
-      ProjectLogger.exception(error);
-      return allLocations;
-    }
-  }
-  private async _getLocationCovidData(locations: Location[]) {
-    const responses = [];
-    try {
-      for (let i = 0; i < locations.length; i++) {
-        const loc = locations[i];
-        const covidData = await CovidUtil.getCovidStatisticByName(loc.name);
-        if (covidData) {
-          const haveNoCovidData =
-            !covidData.death &&
-            !covidData.treating &&
-            !covidData.cases &&
-            !covidData.recovered &&
-            !covidData.casesToday;
-          if (haveNoCovidData) {
-            responses.push(getRandomMessage(NEMO_PROMPT.COVID_FAILED));
+      if (isAskingInfo) {
+        const weather = EntityUtil.extractValue(entities, NLP_ENTITY.WEATHER);
+        const covid = EntityUtil.extractValue(entities, NLP_ENTITY.COVID);
+        const service = EntityUtil.extractValue(entities, NLP_ENTITY.SERVICE);
+        const location = EntityUtil.extractValue(entities, NLP_ENTITY.LOCATION);
+
+        // Is asking for weather information
+        if (weather) {
+          const allLocs = await this.locationService.findNodeByName(location);
+          if (allLocs?.length > 0) {
+            result.responses.push(getRandomMessage(NEMO_ASK.WEATHER_SUCCESS));
+            result.type = QUESTION_TYPE.WEATHER_TEXT;
+            result.extraData = allLocs[0]?.id ? [allLocs[0].id] : [];
           } else {
-            const covidText =
-              `Hiện tại, số liệu covid-19 tại địa điểm du lịch ${LocationUtil.getTypeName(
-                loc.type,
-              )} ${loc.name}:` +
-              "\n• Tử vong: " +
-              covidData.death +
-              "\n• Đang chữa trị: " +
-              covidData.treating +
-              "\n• Ca nhiễm: " +
-              covidData.cases +
-              "\n• Hồi phục: " +
-              covidData.recovered +
-              "\n• Ca mới: " +
-              covidData.casesToday;
-            responses.push(covidText);
+            result.responses.push(
+              getRandomMessage(NEMO_PROMPT.LOCATION_FAILED),
+            );
+          }
+          // Is asking for covid information
+        } else if (covid) {
+          const allLocs = await this.locationService.findNodeByName(location);
+          if (allLocs?.length > 0) {
+            result.responses = await this.locationService.getLocCovidData(
+              allLocs[0],
+            );
+          } else {
+            result.responses.push(
+              getRandomMessage(NEMO_PROMPT.LOCATION_FAILED),
+            );
+          }
+          // Is asking for service information
+        } else if (service) {
+          const category = await this.categoryService.findCategoryByName(
+            service,
+          );
+          const allLocs = await this.locationService.findNodeByName(
+            location,
+            true,
+          );
+          if (!category) {
+            result.responses.push(getRandomMessage(NEMO_PROMPT.SERVICE_FAILED));
+          } else if (allLocs?.length === 0) {
+            result.responses.push(
+              getRandomMessage(NEMO_PROMPT.LOCATION_FAILED),
+            );
+          } else if (category && allLocs?.length > 0) {
+            const locationIds = allLocs.map((loc) => loc.id);
+            const foundServices =
+              await this.serviceService.findByCategoryAndLocation(
+                [category.id],
+                locationIds,
+              );
+            if (foundServices.length > 0) {
+              result.extraData = foundServices.map((ser) => ser.id);
+              result.responses.push(
+                getRandomMessage(NEMO_ASK.SERVICE_SUCCESS).replace(
+                  "#service-count",
+                  foundServices.length.toString(),
+                ),
+              );
+              result.type = QUESTION_TYPE.RESULT_TEXT;
+            } else {
+              result.responses.push(
+                getRandomMessage(NEMO_PROMPT.SERVICE_FAILED),
+              );
+            }
+          }
+          // Is asking for location information
+        } else if (location) {
+          const allLocs = await this.locationService.findNodeByName(location);
+          if (allLocs.length > 0) {
+            result.responses = await this.locationService.getLocInfo(
+              allLocs[0],
+            );
+          } else {
+            result.responses.push(
+              getRandomMessage(NEMO_PROMPT.LOCATION_FAILED),
+            );
           }
         }
-      }
-      return responses;
-    } catch (error) {
-      ProjectLogger.exception(error);
-      return responses;
-    }
-  }
-  private async _getCategoryFromEntities(entities: any[]): Promise<Category[]> {
-    let categories = [];
-    try {
-      const categoryEntities = entities
-        .filter((entity) => entity.name === NLP_ENTITY.SERVICE)
-        .map((entity) => entity.value);
-      for (let i = 0; i < categoryEntities.length; i++) {
-        const catName = categoryEntities[i];
-        const resultCat = await this.categoryService.findCategoriesByName(
-          catName,
-        );
-        categories.push(resultCat);
-      }
-      categories = categories.flat(2);
-      return categories;
-    } catch (error) {
-      ProjectLogger.exception(error);
-      return categories;
-    }
-  }
-  private async _getServiceFromEntities(entities: any[]): Promise<Service[]> {
-    return null;
-  }
-  private async _getAllLocationInfo(locations: Location[]) {
-    const responses = [];
-    try {
-      const ids = locations.map((location) => location.id);
-      for (let i = 0; i < ids.length; i++) {
-        const loc = await this.locationService.findNode(ids[i]);
-        if (loc.description) {
-          responses.push(loc.description);
-        }
-        if (loc.categoryCount && loc.categoryCount.length > 0) {
-          let serviceText = `Hiện tại trong hệ thống của Nemo, ở ${LocationUtil.getTypeName(
-            loc.type,
-          )} ${loc.name} có: \n`;
-          loc.categoryCount.forEach((category, index) => {
-            serviceText += `• ${category.count} ${category.category_title}`;
-            if (index !== loc.categoryCount.length - 1) {
-              serviceText += "\n";
-            }
-          });
-          responses.push(serviceText);
+
+        // Default to not understand message if there is no response
+        if (result.responses.length === 0) {
+          result.responses.push(getRandomMessage(NEMO_PROMPT.NOT_UNDERSTAND));
         }
       }
-      return responses;
     } catch (error) {
-      ProjectLogger.exception(error);
-      return responses;
+      ProjectLogger.exception(error.stack);
     }
+    return result;
   }
 }

@@ -4,7 +4,7 @@ import { IsOptional, Length, ValidateIf } from "class-validator";
 export class UploadCloudinaryDTO {
   @ApiProperty({ example: "UNCATEGORIZED" })
   @Length(5, 100)
-  @ValidateIf((object, value) => value !== null && value !== "")
+  @ValidateIf((_object, value) => value !== null && value !== "")
   @IsOptional()
   folder: string = "UNCATEGORIZED";
 }

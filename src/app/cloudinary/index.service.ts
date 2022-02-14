@@ -19,31 +19,4 @@ export class CloudinaryService {
       toStream(file.buffer).pipe(upload);
     });
   }
-
-  /**
-   * @Usage Delete images from Cloudinary, required urls with public ids in the query params
-   */
-  async deleteCloudinaryImages(urls: string[]): Promise<any> {
-    try {
-      if (urls && urls.length !== 0) {
-        const publicIds = urls.map((imageUrl) => {
-          const urlObj = new URL(imageUrl);
-          return urlObj.searchParams.get("public_id");
-        });
-        return new Promise((resolve, reject) => {
-          v2.api.delete_resources(publicIds, (error, result) => {
-            if (error) return reject(error);
-            resolve(result);
-          });
-        });
-      }
-      return {
-        deleted: {},
-      };
-    } catch (error) {
-      return {
-        deleted: {},
-      };
-    }
-  }
 }

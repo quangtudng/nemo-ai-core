@@ -10,6 +10,9 @@ export class ServiceRepository extends BaseCrudRepository<Service> {
     param: FilterServiceDTO,
     locationIds: number[],
   ): Promise<[Service[], number]> {
+    /**
+     * Find services using DTO
+     */
     try {
       const limit = param.limit || 5;
       const offset =
@@ -18,11 +21,13 @@ export class ServiceRepository extends BaseCrudRepository<Service> {
         .leftJoinAndSelect("service.location", "location")
         .leftJoinAndSelect("service.category", "category")
         .leftJoinAndSelect("service.serviceImages", "images")
-        .leftJoinAndSelect("service.amenities", "amenities")
-        .where("service.title like :title", {
+        .leftJoinAndSelect("service.amenities", "amenities");
+      if (param.title) {
+        builder = builder.where("service.title like :title", {
           title: `%${param.title}%`,
         });
-      if (locationIds.length > 0) {
+      }
+      if (locationIds?.length > 0) {
         builder = builder.andWhere("service.location_id IN (:...locationIds)", {
           locationIds,
         });
@@ -39,9 +44,39 @@ export class ServiceRepository extends BaseCrudRepository<Service> {
     }
   }
 
-  async findManyByCategoryId(ids: number[]) {
-    return this.createQueryBuilder("service")
-      .where("service.category_id IN (:...ids)", { ids })
-      .getMany();
+  async findManyByCategoryAndLocation(
+    categoryIds: number[],
+    locationIds: number[],
+  ) {
+    /**
+     * Find services using many categories and locations
+     */
+    const builder = this.createQueryBuilder("service");
+    if (categoryIds && categoryIds?.length > 0) {
+      builder.where("service.category_id IN (:...categoryIds)", {
+        categoryIds,
+      });
+    }
+    if (locationIds?.length) {
+      builder.andWhere("service.location_id IN (:...locationIds)", {
+        locationIds,
+      });
+    }
+    return builder.getMany();
+  }
+
+  async findManyByIds(servicesIds: number[]) {
+    /**
+     * Find services using many categories and locations
+     */
+    const builder = this.createQueryBuilder("service")
+      .leftJoinAndSelect("service.location", "location")
+      .leftJoinAndSelect("service.category", "category")
+      .leftJoinAndSelect("service.serviceImages", "images")
+      .leftJoinAndSelect("service.amenities", "amenities");
+    if (servicesIds?.length > 0) {
+      builder.where("service.id IN (:...servicesIds)", { servicesIds });
+    }
+    return builder.getMany();
   }
 }

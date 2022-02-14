@@ -13,6 +13,7 @@ import { CategoryRepository } from "@app/category/index.repository";
 import { unlink } from "fs/promises";
 import * as XLSX from "xlsx";
 import { PhoneNumberUtil } from "@core/utils/phone";
+import { ProjectLogger } from "@core/utils/loggers/log-service";
 @Injectable()
 export class ServiceService extends BaseCrudService<Service> {
   constructor(
@@ -24,8 +25,21 @@ export class ServiceService extends BaseCrudService<Service> {
   ) {
     super(serviceRepo);
   }
-  async findServiceByCategoryIds(ids: number[]): Promise<Service[]> {
-    return this.serviceRepo.findManyByCategoryId(ids);
+
+  async findByCategoryAndLocation(
+    categoryIds: number[],
+    locationIds: number[],
+  ): Promise<Service[]> {
+    let services = [];
+    try {
+      services = await this.serviceRepo.findManyByCategoryAndLocation(
+        categoryIds,
+        locationIds,
+      );
+    } catch (error) {
+      ProjectLogger.exception(error.stack);
+    }
+    return services;
   }
 
   async createOne(dto: CreateServiceDto): Promise<Service> {
@@ -174,5 +188,9 @@ export class ServiceService extends BaseCrudService<Service> {
       formattedData.push(data);
     }
     return this.serviceRepo.save(formattedData);
+  }
+
+  async findServicesByIds(ids: number[]): Promise<Service[]> {
+    return this.serviceRepo.findManyByIds(ids);
   }
 }

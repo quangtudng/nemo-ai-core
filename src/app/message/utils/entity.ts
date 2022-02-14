@@ -1,40 +1,25 @@
 import { ProjectLogger } from "@core/utils/loggers/log-service";
-import { NLP_ENTITY } from "../constants/message";
 
 export class EntityUtil {
-  static hasLocationEntity(entities: any[]): boolean {
+  static extractValue(entities: any[], type: string): string {
+    let entityValue = "";
     try {
-      if (entities.length > 0) {
-        return entities.some((entity) => entity?.name === NLP_ENTITY.LOCATION);
-      }
-      return false;
-    } catch (error) {
-      ProjectLogger.exception(error);
-      return false;
-    }
-  }
+      // Get all the entities of the given type and extract the confidence value
+      const values = entities
+        .filter((entity) => entity.name === type)
+        .map((entity) => entity.confidence);
 
-  static hasCovidEntity(entities: any[]): boolean {
-    try {
-      if (entities.length > 0) {
-        return entities.some((entity) => entity?.name === NLP_ENTITY.COVID);
+      if (values.length > 0) {
+        const maxValue = Math.max(...values);
+        // Right now, we only support single entity so we will get the entity with maximum confidence level
+        const bestEntity = entities.find(function (entity) {
+          return entity.confidence === maxValue && type === entity.name;
+        });
+        entityValue = bestEntity.value;
       }
-      return false;
     } catch (error) {
       ProjectLogger.exception(error);
-      return false;
     }
-  }
-
-  static hasServiceEntity(entities: any[]): boolean {
-    try {
-      if (entities.length > 0) {
-        return entities.some((entity) => entity?.name === NLP_ENTITY.SERVICE);
-      }
-      return false;
-    } catch (error) {
-      ProjectLogger.exception(error);
-      return false;
-    }
+    return entityValue;
   }
 }

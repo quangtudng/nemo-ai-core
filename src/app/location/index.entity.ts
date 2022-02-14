@@ -43,6 +43,18 @@ export class Location extends BaseTimeStampEntity {
   })
   description: string;
 
+  @Column({
+    type: "float",
+    default: 0,
+  })
+  latitude: number;
+
+  @Column({
+    type: "float",
+    default: 0,
+  })
+  longitude: number;
+
   @OneToMany(() => Service, (service) => service.location)
   services: Service[];
 
