@@ -21,11 +21,13 @@ export class ServiceRepository extends BaseCrudRepository<Service> {
         .leftJoinAndSelect("service.location", "location")
         .leftJoinAndSelect("service.category", "category")
         .leftJoinAndSelect("service.serviceImages", "images")
-        .leftJoinAndSelect("service.amenities", "amenities")
-        .where("service.title like :title", {
+        .leftJoinAndSelect("service.amenities", "amenities");
+      if (param.title) {
+        builder = builder.where("service.title like :title", {
           title: `%${param.title}%`,
         });
-      if (locationIds.length > 0) {
+      }
+      if (locationIds?.length > 0) {
         builder = builder.andWhere("service.location_id IN (:...locationIds)", {
           locationIds,
         });
@@ -49,10 +51,12 @@ export class ServiceRepository extends BaseCrudRepository<Service> {
     /**
      * Find services using many categories and locations
      */
-    const builder = this.createQueryBuilder("service").where(
-      "service.category_id IN (:...categoryIds)",
-      { categoryIds },
-    );
+    const builder = this.createQueryBuilder("service");
+    if (categoryIds && categoryIds?.length > 0) {
+      builder.where("service.category_id IN (:...categoryIds)", {
+        categoryIds,
+      });
+    }
     if (locationIds?.length) {
       builder.andWhere("service.location_id IN (:...locationIds)", {
         locationIds,
@@ -61,18 +65,18 @@ export class ServiceRepository extends BaseCrudRepository<Service> {
     return builder.getMany();
   }
 
-  async findManyByIds(ids: number[]) {
+  async findManyByIds(servicesIds: number[]) {
     /**
      * Find services using many categories and locations
      */
-    return this.createQueryBuilder("service")
+    const builder = this.createQueryBuilder("service")
       .leftJoinAndSelect("service.location", "location")
       .leftJoinAndSelect("service.category", "category")
       .leftJoinAndSelect("service.serviceImages", "images")
-      .leftJoinAndSelect("service.amenities", "amenities")
-      .where("service.id IN (:...ids)", {
-        ids,
-      })
-      .getMany();
+      .leftJoinAndSelect("service.amenities", "amenities");
+    if (servicesIds?.length > 0) {
+      builder.where("service.id IN (:...servicesIds)", { servicesIds });
+    }
+    return builder.getMany();
   }
 }

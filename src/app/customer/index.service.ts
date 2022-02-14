@@ -21,12 +21,11 @@ export class CustomerService extends BaseCrudService<Customer> {
       length: 100,
       charset: "alphanumeric",
     });
-    // TODO: Ip and location saving
     return this.createOne({
       longId,
       email: null,
       ip: null,
-      location: "Default location",
+      location: "Việt Nam",
       viewed: 0,
       currentStage: CONVERSATION_STAGE.INTRODUCTION,
     });
@@ -56,14 +55,18 @@ export class CustomerService extends BaseCrudService<Customer> {
     const customers = await this.repo.query(sql);
     for (let i = 0; i < customers.length; i++) {
       const customer = customers[i];
-      const selectedInterests = JSON.parse(customer.selected_interests);
-      if (selectedInterests) {
+      // Get customer interests
+      const selectedInterests = this._parseInterestResults(
+        customer.selected_interests,
+      );
+      if (selectedInterests?.length > 0) {
         customer.selectedInterests =
           await this.serviceService.findServicesByIds(selectedInterests);
       } else {
         customer.selectedInterests = [];
       }
     }
+
     return customers.map((customer: any) => ({
       id: customer.id,
       long_id: customer.long_id,
@@ -88,7 +91,8 @@ export class CustomerService extends BaseCrudService<Customer> {
         longId: customerLongId,
       });
       if (customer.selectedInterests) {
-        let interests = JSON.parse(customer.selectedInterests);
+        let interests = this._parseInterestResults(customer.selectedInterests);
+        // Add new service interest id
         interests.push(interestId);
         interests = [...new Set(interests)];
         customer.selectedInterests = JSON.stringify(interests);
@@ -100,5 +104,17 @@ export class CustomerService extends BaseCrudService<Customer> {
       ProjectLogger.exception(error);
       return null;
     }
+  }
+
+  private _parseInterestResults(selectedInterests: string) {
+    let result = [];
+    try {
+      if (selectedInterests) {
+        result = JSON.parse(selectedInterests);
+      }
+    } catch (error) {
+      ProjectLogger.exception(error.stack);
+    }
+    return result;
   }
 }

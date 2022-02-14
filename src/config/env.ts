@@ -25,9 +25,6 @@ export const AES_SECRET = env.AES_SECRET;
 export const CLOUDINARY_CLOUD_NAME = env.CLOUDINARY_CLOUD_NAME;
 export const CLOUDINARY_API_KEY = env.CLOUDINARY_API_KEY;
 export const CLOUDINARY_API_SECRET = env.CLOUDINARY_API_SECRET;
-
-export const SENDGRID_API_KEY = env.SENDGRID_API_KEY;
-export const SENDGRID_SENDER = env.SENDGRID_SENDER;
 export const RASA_SERVER = env.RASA_SERVER;
 function getLogLevel() {
   try {

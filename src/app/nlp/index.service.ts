@@ -13,6 +13,9 @@ export class NlpService extends BaseCrudService<Nlp> {
   }
 
   async parse(text: string) {
+    /**
+     * Parse the result from Rasa NLP server
+     */
     const CONFIDENCE_THRESHOLD = 0.75;
     const nlpParsedResponse = {
       intent: {
@@ -31,11 +34,11 @@ export class NlpService extends BaseCrudService<Nlp> {
           body: text,
           result: JSON.stringify(data),
         });
-        if (data.intent && data.intent.confidence >= CONFIDENCE_THRESHOLD) {
-          nlpParsedResponse.intent.name = data.intent.name;
-          nlpParsedResponse.intent.confidence = data.intent.confidence;
+        if (data?.intent?.confidence >= CONFIDENCE_THRESHOLD) {
+          nlpParsedResponse.intent.name = data?.intent?.name;
+          nlpParsedResponse.intent.confidence = data?.intent?.confidence;
         }
-        if (data.entities?.length > 0) {
+        if (data?.entities?.length > 0) {
           nlpParsedResponse.entities = data.entities
             .filter(
               (entity: any) => entity.confidence_entity >= CONFIDENCE_THRESHOLD,
@@ -46,15 +49,12 @@ export class NlpService extends BaseCrudService<Nlp> {
               value: entity.value,
             }));
         }
-        ProjectLogger.info(JSON.stringify(nlpParsedResponse));
-        return nlpParsedResponse;
       } else {
         ProjectLogger.exception(response.data);
-        return nlpParsedResponse;
       }
     } catch (e) {
       ProjectLogger.exception(e);
-      return nlpParsedResponse;
     }
+    return nlpParsedResponse;
   }
 }

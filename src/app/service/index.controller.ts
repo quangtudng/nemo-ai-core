@@ -22,6 +22,7 @@ import { IsAuth } from "@app/auth/decorators/is-auth.decorator";
 import { FilterServiceDTO } from "./dto/filter-many";
 import { FileInterceptor } from "@nestjs/platform-express";
 import { diskStorage } from "multer";
+import USER_ROLE from "@app/role/data/user-role";
 
 @ApiTags("services")
 @Controller("services")
@@ -30,7 +31,7 @@ export class ServiceController {
 
   @ApiOperation({ summary: "Create a service" })
   @Post()
-  @IsAuth()
+  @IsAuth([USER_ROLE.SUPERADMIN, USER_ROLE.MODERATOR])
   createOne(@Body() dto: CreateServiceDto) {
     return this.service.createOne(dto);
   }
@@ -56,7 +57,7 @@ export class ServiceController {
     );
   }
 
-  @ApiOperation({ summary: "Find many service" })
+  @ApiOperation({ summary: "Find many services" })
   @Get()
   findMany(@Query() param: FilterServiceDTO) {
     return this.service.findMany(param);
@@ -72,7 +73,7 @@ export class ServiceController {
 
   @ApiOperation({ summary: "Update a service" })
   @Patch(":id")
-  @IsAuth()
+  @IsAuth([USER_ROLE.SUPERADMIN, USER_ROLE.MODERATOR])
   updateOne(
     @Param("id", ParseIntPipe) id: number,
     @Body() dto: UpdateServiceDTO,
@@ -82,7 +83,7 @@ export class ServiceController {
 
   @ApiOperation({ summary: "Delete a service" })
   @Delete(":id")
-  @IsAuth()
+  @IsAuth([USER_ROLE.SUPERADMIN])
   deleteOne(@Param("id", ParseIntPipe) id: number): Promise<DeleteResult> {
     return this.service.deleteOne(id);
   }

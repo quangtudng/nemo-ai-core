@@ -17,10 +17,6 @@ const CONVERSATION_STAGE = Object.freeze({
   INTRODUCTION: 1,
   // Starting capturing phase
   CAPTURING: 2,
-  // Nemo asks if customer need anything else
-  ANYTHING_ELSE: 3,
-  // TODO: Conversation is automatically ended after 30 minutes of inactive
-  END_CONVERSATION: 4,
 });
 
 export { QUESTION_TYPE, CONVERSATION_STAGE, MESSAGE_OWNER };
