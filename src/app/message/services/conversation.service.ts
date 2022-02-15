@@ -251,11 +251,10 @@ export class ConversationService extends BaseCrudService<Message> {
             );
           }
         }
-
-        // Default to not understand message if there is no response
-        if (result.responses.length === 0) {
-          result.responses.push(getRandomMessage(NEMO_PROMPT.NOT_UNDERSTAND));
-        }
+      }
+      // Default to not understand message if there is no response
+      if (result.responses.length === 0) {
+        result.responses.push(getRandomMessage(NEMO_PROMPT.NOT_UNDERSTAND));
       }
     } catch (error) {
       ProjectLogger.exception(error.stack);
