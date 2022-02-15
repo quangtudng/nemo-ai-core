@@ -87,7 +87,7 @@ export class CustomerService extends BaseCrudService<Customer> {
       last_message: {
         id: customer.message_id,
         owner: customer.message_owner,
-        body: customer.message_body,
+        body: customer.message_body?.substring(0, 49),
       },
     }));
   }
