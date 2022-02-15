@@ -7,6 +7,7 @@ import { generate } from "randomstring";
 import { CONVERSATION_STAGE } from "@app/message/constants/conversation";
 import { ProjectLogger } from "@core/utils/loggers/log-service";
 import { ServiceService } from "@app/service/index.service";
+import { Service } from "@app/service/index.entity";
 
 @Injectable()
 export class CustomerService extends BaseCrudService<Customer> {
@@ -18,7 +19,7 @@ export class CustomerService extends BaseCrudService<Customer> {
   }
   async createNewCustomer() {
     const longId = generate({
-      length: 100,
+      length: 40,
       charset: "alphanumeric",
     });
     return this.createOne({
@@ -62,6 +63,14 @@ export class CustomerService extends BaseCrudService<Customer> {
       if (selectedInterests?.length > 0) {
         customer.selectedInterests =
           await this.serviceService.findServicesByIds(selectedInterests);
+        customer.selectedInterests = customer.selectedInterests.map(
+          (interest: Service) => ({
+            id: interest.id,
+            title: interest.title,
+            location: interest.location.name,
+            category: interest.category.title,
+          }),
+        );
       } else {
         customer.selectedInterests = [];
       }
@@ -71,16 +80,14 @@ export class CustomerService extends BaseCrudService<Customer> {
       id: customer.id,
       long_id: customer.long_id,
       email: customer.email,
-      location: customer.location,
       viewed: customer.viewed,
       first_contacted: customer.first_contacted,
       last_contacted: customer.message_created_at,
-      selectedInterests: customer.selectedInterests,
+      interests: customer.selectedInterests,
       last_message: {
         id: customer.message_id,
         owner: customer.message_owner,
         body: customer.message_body,
-        created_at: customer.message_created_at,
       },
     }));
   }
