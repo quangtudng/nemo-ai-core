@@ -37,10 +37,10 @@ const NEMO_ASK = Object.freeze({
     "Nemo hiện tại có thể hỗ trợ bạn các câu hỏi về: \n- Tình hình Covid của một tỉnh thành\n- Thông tin về một địa danh\n- Tìm kiếm địa điểm du lịch\n- Dự báo thời tiết của một địa điểm",
   ],
   WEATHER_SUCCESS: [
-    "Cảm ơn bạn, Nemo dã tìm thấy thông tin thời tiết tại thời điểm mà bạn tìm kiếm",
+    "Cảm ơn bạn, Nemo dã tìm thấy thông tin thời tiết tại thời điểm mà bạn tìm kiếm. Nguồn dữ liệu: OpenWeatherMap",
   ],
   SERVICE_SUCCESS: [
-    "Cảm ơn bạn, Nemo đã tìm thấy #service-count địa điểm du lịch khớp với kết quả của bạn",
+    "Cảm ơn bạn, Nemo đã tìm thấy #service-count địa điểm du lịch khớp với kết quả của bạn. Nguồn dữ liệu: TripAdvisor",
   ],
 });
 const NEMO_PROMPT = Object.freeze({
